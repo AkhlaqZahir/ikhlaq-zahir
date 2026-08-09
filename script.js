@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
+    /* =========================================
+       GET ELEMENTS
+       ========================================= */
+
     const menuButton =
         document.getElementById(
             "mobileMenuButton"
@@ -354,5 +358,53 @@ document.addEventListener("DOMContentLoaded", function () {
             initParticles();
         });
     }
+
+
+/* =========================================
+   SHRINKING NAVBAR ON SCROLL
+   ========================================= */
+
+const SCROLL_DOWN_THRESHOLD = 60;   // collapse past this
+const SCROLL_UP_THRESHOLD   = 20;   // re-expand only near the very top
+const NAV_LOCK_MS           = 500;  // ignore scroll events during the transition
+
+let navTicking = false;
+let navLocked  = false;
+
+function updateNavbarState() {
+    if (navLocked) {
+        navTicking = false;
+        return;
+    }
+
+    const isCompact = document.body.classList.contains("navbar-compact");
+    const y = window.scrollY;
+
+    if (!isCompact && y > SCROLL_DOWN_THRESHOLD) {
+        document.body.classList.add("navbar-compact");
+        navLocked = true;
+        setTimeout(() => { navLocked = false; }, NAV_LOCK_MS);
+    } else if (isCompact && y < SCROLL_UP_THRESHOLD) {
+        document.body.classList.remove("navbar-compact");
+        navLocked = true;
+        setTimeout(() => { navLocked = false; }, NAV_LOCK_MS);
+    }
+
+    navTicking = false;
+}
+
+// Run once immediately so a mid-page reload starts in the right state
+updateNavbarState();
+
+window.addEventListener(
+    "scroll",
+    function () {
+        if (!navTicking) {
+            requestAnimationFrame(updateNavbarState);
+            navTicking = true;
+        }
+    },
+    { passive: true }
+);
 
 });
