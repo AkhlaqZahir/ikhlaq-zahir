@@ -1,10 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
-    /* =========================================
-       GET ELEMENTS
-       ========================================= */
-
     const menuButton =
         document.getElementById(
             "mobileMenuButton"
