@@ -23,6 +23,9 @@
 
     --radius: 14px;
 
+    --nav-h-expanded: clamp(96px, 30vh, 300px);
+    --nav-h-compact: 72px;
+
     --transition: 0.25s ease;
 }
 
@@ -47,7 +50,7 @@ html {
     scroll-behavior: smooth;
 
     scroll-padding-top: 90px;
-
+    overflow-anchor: none;
 }
 
 
@@ -124,7 +127,7 @@ button {
 
     width: 100%;
 
-    height: 72px;
+    height: var(--nav-h-expanded);
 
     display: flex;
 
@@ -141,6 +144,27 @@ button {
         1px solid var(--border);
 
     z-index: 1000;
+
+    transition:
+        height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+
+.navbar-spacer {
+
+    height: var(--nav-h-expanded);
+
+    transition:
+        height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+
+body.navbar-compact .navbar,
+body.navbar-compact .navbar-spacer {
+
+    height: var(--nav-h-compact);
 
 }
 
@@ -169,13 +193,22 @@ button {
 
 .logo {
 
-    font-size: 1.05rem;
+    font-size: clamp(1.4rem, 5vw, 4.5rem);
 
     font-weight: 700;
 
     letter-spacing: -0.02em;
 
     white-space: nowrap;
+
+    transition: font-size 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+
+body.navbar-compact .logo {
+
+    font-size: 1.05rem;
 
 }
 
@@ -292,8 +325,6 @@ button {
     display: flex;
 
     align-items: center;
-
-    padding-top: 72px;
 
     position: relative;
 
@@ -1037,7 +1068,7 @@ footer {
 
         position: absolute;
 
-        top: 62px;
+        top: calc(100% + 10px);
 
         left: 0;
 
@@ -1465,6 +1496,20 @@ footer {
 
 }
 
+.project-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.project-actions .button {
+    flex: 1;
+}
+
+.project-actions .screenshot-btn {
+    width: auto;
+    margin-top: 0;
+}
 
 .screenshot-btn {
 
@@ -1812,5 +1857,122 @@ footer {
     z-index: 0;
 
     pointer-events: none;
+
+}
+
+
+/* =========================================================
+   IN DEVELOPMENT / RESEARCH PANEL
+   ========================================================= */
+
+.status-wip {
+
+    color: #9ab2ff;
+
+    background: rgba(124, 156, 255, 0.12);
+
+    border-color: rgba(124, 156, 255, 0.35);
+
+}
+
+
+.wip-panel {
+
+    padding: 34px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    border-left: 3px solid var(--accent);
+
+}
+
+
+.wip-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 26px;
+
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.wip-title {
+
+    font-size: 1.5rem;
+
+    margin-top: 4px;
+
+}
+
+
+.wip-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 1fr 1fr;
+
+    gap: 30px;
+
+}
+
+
+.wip-block h4 {
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    color: var(--accent);
+
+    margin-bottom: 12px;
+
+}
+
+
+.wip-block p {
+
+    color: var(--text-secondary);
+
+    font-size: 0.92rem;
+
+}
+
+
+.wip-block .feature-list {
+
+    margin-bottom: 0;
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .wip-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+    }
 
 }
