@@ -1212,3 +1212,465 @@ footer {
     }
 
 }
+
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(28px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+
+/* =========================================================
+   PROJECT CARD — STATUS BADGE + SCREENSHOT BUTTON
+   ========================================================= */
+
+.project-meta-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.status-badge {
+
+    flex-shrink: 0;
+
+    padding: 3px 10px;
+
+    border-radius: 999px;
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+
+    text-transform: uppercase;
+
+    border: 1px solid transparent;
+
+}
+
+
+.status-open {
+
+    color: #7cf0a8;
+
+    background: rgba(124, 240, 168, 0.1);
+
+    border-color: rgba(124, 240, 168, 0.3);
+
+}
+
+
+.status-closed {
+
+    color: #ffb877;
+
+    background: rgba(255, 184, 119, 0.1);
+
+    border-color: rgba(255, 184, 119, 0.3);
+
+}
+
+
+.project-image {
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.project-image::after {
+
+    content: "\1F5BC  Click to view";
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(11, 13, 18, 0.55);
+
+    color: var(--text);
+
+    font-size: 0.85rem;
+
+    opacity: 0;
+
+    transition: opacity var(--transition);
+
+}
+
+
+.project-image:hover::after {
+
+    opacity: 1;
+
+}
+
+
+.screenshot-btn {
+
+    width: 100%;
+
+    margin-top: 4px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.projects-cta {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 44px;
+
+}
+
+
+
+/* =========================================================
+   BUTTON RIPPLE
+   ========================================================= */
+
+.button {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.ripple {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    transform: scale(0);
+
+    background: rgba(255, 255, 255, 0.35);
+
+    animation: ripple-anim 0.6s ease-out;
+
+    pointer-events: none;
+
+}
+
+
+@keyframes ripple-anim {
+
+    to {
+
+        transform: scale(2.6);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   SCREENSHOT GALLERY MODAL
+   ========================================================= */
+
+.gallery-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(6, 7, 10, 0.78);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+}
+
+
+.gallery-overlay.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.gallery-modal {
+
+    width: min(640px, calc(100% - 40px));
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 28px;
+
+    position: relative;
+
+    transform: scale(0.92) translateY(10px);
+
+    transition: transform 0.3s ease;
+
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.gallery-overlay.active .gallery-modal {
+
+    transform: scale(1) translateY(0);
+
+}
+
+
+.gallery-close {
+
+    position: absolute;
+
+    top: 14px;
+
+    right: 14px;
+
+    width: 34px;
+
+    height: 34px;
+
+    border: 1px solid var(--border);
+
+    background: transparent;
+
+    color: var(--text-secondary);
+
+    border-radius: 8px;
+
+    font-size: 1.3rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        color var(--transition),
+        border-color var(--transition);
+
+}
+
+
+.gallery-close:hover {
+
+    color: var(--text);
+
+    border-color: rgba(255, 255, 255, 0.25);
+
+}
+
+
+.gallery-title {
+
+    font-size: 1.1rem;
+
+    margin-bottom: 18px;
+
+    padding-right: 40px;
+
+}
+
+
+.gallery-track-wrap {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.gallery-viewport {
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    flex: 1;
+
+}
+
+
+.gallery-track {
+
+    display: flex;
+
+    transition: transform 0.4s ease;
+
+}
+
+
+.gallery-slide {
+
+    flex: 0 0 100%;
+
+    aspect-ratio: 9 / 16;
+
+    max-height: 60vh;
+
+    background:
+        radial-gradient(
+            circle at 30% 20%,
+            rgba(124, 156, 255, 0.18),
+            transparent 60%
+        ),
+        var(--bg-secondary);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--text-muted);
+
+    font-size: 0.9rem;
+
+    text-align: center;
+
+    padding: 20px;
+
+}
+
+
+.gallery-nav {
+
+    flex-shrink: 0;
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--border);
+
+    background: var(--surface-hover);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-size: 0.9rem;
+
+    transition:
+        background var(--transition),
+        transform var(--transition);
+
+}
+
+
+.gallery-nav:hover {
+
+    background: rgba(124, 156, 255, 0.18);
+
+    transform: scale(1.08);
+
+}
+
+
+.gallery-counter {
+
+    text-align: center;
+
+    margin-top: 14px;
+
+    color: var(--text-muted);
+
+    font-size: 0.82rem;
+
+    letter-spacing: 0.05em;
+
+}
+
+
+
+/* =========================================================
+   HERO PARTICLE CANVAS
+   ========================================================= */
+
+.hero-particles {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+}
