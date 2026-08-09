@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const data = GALLERY_DATA[projectKey];
         if (!data) return;
 
-        titleEl.textContent = data.name + " — Screenshots";
+        titleEl.textContent = data.name + " - Screenshots";
         currentCount = data.count;
         currentSlide = 0;
 
@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // instead of a broken image icon.
             img.onerror = function () {
                 this.remove();
-                slide.textContent = data.name + " — Screenshot " + i + " (missing)";
+                slide.textContent = data.name + " - Screenshot " + i + " (missing)";
             };
 
             slide.appendChild(img);
