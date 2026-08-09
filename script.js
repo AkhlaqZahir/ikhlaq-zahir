@@ -158,4 +158,193 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
+
+    /* =========================================
+       SCROLL REVEAL
+       ========================================= */
+
+    const revealTargets = document.querySelectorAll(
+        ".reveal, .section-header, .research-card, " +
+        ".skill-group, .education-item, .about-grid, " +
+        ".contact-content"
+    );
+
+    revealTargets.forEach((el) => el.classList.add("reveal"));
+
+    const revealObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.15 }
+    );
+
+    revealTargets.forEach((el) => revealObserver.observe(el));
+
+
+    /* =========================================
+       BUTTON RIPPLE EFFECT
+       ========================================= */
+
+    document.querySelectorAll(".button").forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+            const rect = this.getBoundingClientRect();
+            const ripple = document.createElement("span");
+            const size = Math.max(rect.width, rect.height);
+
+            ripple.className = "ripple";
+            ripple.style.width = ripple.style.height = size + "px";
+            ripple.style.left = e.clientX - rect.left - size / 2 + "px";
+            ripple.style.top = e.clientY - rect.top - size / 2 + "px";
+
+            this.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 600);
+        });
+    });
+
+
+    /* =========================================
+       SCREENSHOT GALLERY MODAL
+       ========================================= */
+
+    const GALLERY_DATA = {
+        wordleworld: { name: "Wordle World", count: 4 },
+        numatrix: { name: "Numatrix", count: 4 },
+        memword: { name: "MemWord", count: 4 },
+    };
+
+    const overlay = document.getElementById("galleryOverlay");
+    const track = document.getElementById("galleryTrack");
+    const titleEl = document.getElementById("galleryTitle");
+    const counterEl = document.getElementById("galleryCounter");
+    const closeBtn = document.getElementById("galleryClose");
+    const prevBtn = document.getElementById("galleryPrev");
+    const nextBtn = document.getElementById("galleryNext");
+
+    let currentSlide = 0;
+    let currentCount = 0;
+
+    function openGallery(projectKey) {
+        const data = GALLERY_DATA[projectKey];
+        if (!data) return;
+
+        titleEl.textContent = data.name + " — Screenshots";
+        currentCount = data.count;
+        currentSlide = 0;
+
+        track.innerHTML = "";
+        for (let i = 1; i <= data.count; i++) {
+            const slide = document.createElement("div");
+            slide.className = "gallery-slide";
+            slide.textContent = data.name + " — Screenshot " + i;
+            // Swap this placeholder for: <img src="assets/{projectKey}-{i}.jpg">
+            track.appendChild(slide);
+        }
+
+        updateGalleryPosition();
+        overlay.classList.add("active");
+        overlay.setAttribute("aria-hidden", "false");
+    }
+
+    function closeGallery() {
+        overlay.classList.remove("active");
+        overlay.setAttribute("aria-hidden", "true");
+    }
+
+    function updateGalleryPosition() {
+        track.style.transform = "translateX(-" + currentSlide * 100 + "%)";
+        counterEl.textContent = (currentSlide + 1) + " / " + currentCount;
+    }
+
+    document.querySelectorAll("[data-gallery-trigger]").forEach((el) => {
+        el.addEventListener("click", function () {
+            const card = this.closest("[data-project]");
+            if (card) openGallery(card.dataset.project);
+        });
+    });
+
+    closeBtn.addEventListener("click", closeGallery);
+
+    overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) closeGallery();
+    });
+
+    prevBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + currentCount) % currentCount;
+        updateGalleryPosition();
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % currentCount;
+        updateGalleryPosition();
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (!overlay.classList.contains("active")) return;
+        if (e.key === "Escape") closeGallery();
+        if (e.key === "ArrowLeft") prevBtn.click();
+        if (e.key === "ArrowRight") nextBtn.click();
+    });
+
+
+    /* =========================================
+       HERO PARTICLE BACKGROUND
+       ========================================= */
+
+    const canvas = document.getElementById("heroParticles");
+
+    if (canvas) {
+        const ctx = canvas.getContext("2d");
+        let particles = [];
+        let width, height;
+
+        function resize() {
+            width = canvas.width = canvas.offsetWidth;
+            height = canvas.height = canvas.offsetHeight;
+        }
+
+        function initParticles() {
+            const count = Math.min(60, Math.floor(width / 20));
+            particles = Array.from({ length: count }, () => ({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                vx: (Math.random() - 0.5) * 0.25,
+                vy: (Math.random() - 0.5) * 0.25,
+                r: Math.random() * 1.6 + 0.6,
+            }));
+        }
+
+        function tick() {
+            ctx.clearRect(0, 0, width, height);
+
+            particles.forEach((p) => {
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > width) p.vx *= -1;
+                if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ctx.fillStyle = "rgba(124, 156, 255, 0.45)";
+                ctx.fill();
+            });
+
+            requestAnimationFrame(tick);
+        }
+
+        resize();
+        initParticles();
+        tick();
+
+        window.addEventListener("resize", () => {
+            resize();
+            initParticles();
+        });
+    }
+
 });
