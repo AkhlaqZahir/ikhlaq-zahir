@@ -1,5 +1,5 @@
 /* =========================================================
-   GLOBAL
+   VARIABLES
    ========================================================= */
 
 :root {
@@ -23,6 +23,11 @@
     --transition: 0.25s ease;
 }
 
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -31,6 +36,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -47,6 +53,8 @@ body {
     color: var(--text);
 
     line-height: 1.7;
+
+    overflow-x: hidden;
 }
 
 a {
@@ -57,6 +65,10 @@ a {
 img {
     max-width: 100%;
     display: block;
+}
+
+button {
+    font: inherit;
 }
 
 .container {
@@ -71,6 +83,7 @@ img {
 
 .navbar {
     position: fixed;
+
     top: 0;
     left: 0;
 
@@ -80,8 +93,10 @@ img {
     display: flex;
     align-items: center;
 
-    background: rgba(11, 13, 18, 0.85);
+    background: rgba(11, 13, 18, 0.88);
+
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 
     border-bottom: 1px solid var(--border);
 
@@ -90,6 +105,8 @@ img {
 
 .nav-container {
     width: min(100% - 40px, var(--max-width));
+    height: 100%;
+
     margin: 0 auto;
 
     display: flex;
@@ -100,7 +117,10 @@ img {
 .logo {
     font-size: 1.05rem;
     font-weight: 700;
+
     letter-spacing: -0.02em;
+
+    white-space: nowrap;
 }
 
 .logo span {
@@ -110,6 +130,7 @@ img {
 .nav-links {
     display: flex;
     align-items: center;
+
     gap: 28px;
 
     list-style: none;
@@ -117,6 +138,7 @@ img {
 
 .nav-links a {
     color: var(--text-secondary);
+
     font-size: 0.92rem;
 
     transition: color var(--transition);
@@ -124,6 +146,51 @@ img {
 
 .nav-links a:hover {
     color: var(--text);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    z-index: 1100;
+}
+
+.mobile-menu-button span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    background: var(--text);
+
+    border-radius: 2px;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
 }
 
 
@@ -140,6 +207,7 @@ img {
     padding-top: 72px;
 
     position: relative;
+
     overflow: hidden;
 }
 
@@ -148,15 +216,15 @@ img {
 
     position: absolute;
 
-    width: 600px;
-    height: 600px;
+    width: 650px;
+    height: 650px;
 
-    top: -200px;
-    right: -150px;
+    top: -230px;
+    right: -180px;
 
     background: radial-gradient(
         circle,
-        rgba(124, 156, 255, 0.12),
+        rgba(124, 156, 255, 0.13),
         transparent 70%
     );
 
@@ -165,6 +233,9 @@ img {
 
 .hero-content {
     max-width: 850px;
+
+    position: relative;
+    z-index: 1;
 }
 
 .hero-label {
@@ -174,6 +245,7 @@ img {
     font-weight: 600;
 
     letter-spacing: 0.08em;
+
     text-transform: uppercase;
 
     margin-bottom: 18px;
@@ -183,6 +255,7 @@ img {
     font-size: clamp(3rem, 8vw, 6rem);
 
     line-height: 1.02;
+
     letter-spacing: -0.05em;
 
     margin-bottom: 24px;
@@ -200,6 +273,7 @@ img {
 
 .hero-actions {
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 14px;
@@ -212,6 +286,7 @@ img {
 
 .button {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -235,6 +310,7 @@ img {
 
 .button-primary {
     background: var(--accent);
+
     color: #080a0f;
 }
 
@@ -244,11 +320,13 @@ img {
 
 .button-secondary {
     border: 1px solid var(--border);
+
     color: var(--text-secondary);
 }
 
 .button-secondary:hover {
     border-color: rgba(255, 255, 255, 0.2);
+
     color: var(--text);
 }
 
@@ -272,6 +350,7 @@ section {
     font-weight: 700;
 
     letter-spacing: 0.12em;
+
     text-transform: uppercase;
 
     margin-bottom: 10px;
@@ -281,6 +360,7 @@ section {
     font-size: clamp(2rem, 4vw, 3rem);
 
     line-height: 1.15;
+
     letter-spacing: -0.035em;
 }
 
@@ -321,6 +401,7 @@ section {
 
 .about-details {
     display: flex;
+
     flex-direction: column;
 
     gap: 20px;
@@ -338,6 +419,7 @@ section {
     color: var(--text-muted);
 
     font-size: 0.78rem;
+
     text-transform: uppercase;
 
     letter-spacing: 0.08em;
@@ -353,7 +435,7 @@ section {
 
 
 /* =========================================================
-   RESEARCH INTERESTS
+   RESEARCH
    ========================================================= */
 
 .research-grid {
@@ -435,9 +517,16 @@ section {
 .project-image {
     aspect-ratio: 16 / 9;
 
-    background: var(--bg-secondary);
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(124, 156, 255, 0.10),
+            transparent 65%
+        ),
+        var(--bg-secondary);
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -457,6 +546,7 @@ section {
     font-weight: 700;
 
     text-transform: uppercase;
+
     letter-spacing: 0.08em;
 
     margin-bottom: 8px;
@@ -478,6 +568,7 @@ section {
 
 .project-tags {
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 7px;
@@ -528,6 +619,7 @@ section {
 
 .skill-list {
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 8px;
@@ -558,6 +650,7 @@ section {
 
 .education-degree {
     font-size: 1.25rem;
+
     font-weight: 600;
 }
 
@@ -598,6 +691,7 @@ section {
 
 .contact-links {
     display: flex;
+
     justify-content: center;
 
     flex-wrap: wrap;
@@ -626,79 +720,61 @@ footer {
 /* =========================================================
    MOBILE
    ========================================================= */
-.mobile-menu-button {
-    display: none;
 
-    width: 42px;
-    height: 42px;
-
-    padding: 8px;
-
-    background: transparent;
-
-    border: 1px solid var(--border);
-    border-radius: 8px;
-
-    cursor: pointer;
-}
-
-.mobile-menu-button span {
-    display: block;
-
-    width: 20px;
-    height: 2px;
-
-    margin: 4px auto;
-
-    background: var(--text);
-
-    transition: transform 0.25s ease;
-}
 @media (max-width: 800px) {
 
+    .nav-container {
+        position: relative;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+    }
+
     .nav-links {
-    display: none;
+        display: none;
 
-    position: absolute;
+        position: absolute;
 
-    top: 72px;
-    left: 14px;
-    right: 14px;
+        top: 62px;
+        left: 0;
+        right: 0;
 
-    flex-direction: column;
-    align-items: stretch;
+        flex-direction: column;
 
-    gap: 0;
+        align-items: stretch;
 
-    padding: 10px;
+        gap: 4px;
 
-    background: var(--surface);
+        padding: 10px;
 
-    border: 1px solid var(--border);
-    border-radius: 12px;
+        background: rgba(21, 25, 34, 0.98);
 
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
-}
+        border: 1px solid var(--border);
 
-.nav-links.mobile-open {
-    display: flex;
-}
+        border-radius: 12px;
 
-.nav-links a {
-    display: block;
+        box-shadow:
+            0 15px 40px rgba(0, 0, 0, 0.45);
 
-    padding: 12px 14px;
+        list-style: none;
+    }
 
-    border-radius: 7px;
-}
+    .nav-links.mobile-open {
+        display: flex;
+    }
 
-.nav-links a:hover {
-    background: var(--surface-hover);
-}
+    .nav-links a {
+        display: block;
 
-.mobile-menu-button {
-    display: block;
-}
+        padding: 12px 14px;
+
+        border-radius: 7px;
+    }
+
+    .nav-links a:hover {
+        background: var(--surface-hover);
+    }
 
     .hero h1 {
         font-size: clamp(2.8rem, 14vw, 4.5rem);
@@ -725,6 +801,10 @@ footer {
 }
 
 
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
 @media (max-width: 500px) {
 
     .container,
@@ -734,10 +814,15 @@ footer {
 
     .hero-actions {
         flex-direction: column;
+
         align-items: stretch;
     }
 
     .button {
         width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
     }
 }
