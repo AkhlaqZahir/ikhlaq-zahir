@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function () {
        ========================================= */
 
     const GALLERY_DATA = {
-        wordleworld: { name: "Wordle World", count: 4 },
+        wordle: { name: "Wordle World", count: 4 },
         numatrix: { name: "Numatrix", count: 4 },
         memword: { name: "MemWord", count: 4 },
     };
@@ -240,8 +240,20 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 1; i <= data.count; i++) {
             const slide = document.createElement("div");
             slide.className = "gallery-slide";
-            slide.textContent = data.name + " — Screenshot " + i;
-            // Swap this placeholder for: <img src="assets/{projectKey}-{i}.jpg">
+
+            const img = document.createElement("img");
+            img.src = "assets/" + projectKey + "-" + i + ".jpg";
+            img.alt = data.name + " screenshot " + i;
+            img.loading = "lazy";
+
+            // If the file isn't there yet, fall back to a labeled placeholder
+            // instead of a broken image icon.
+            img.onerror = function () {
+                this.remove();
+                slide.textContent = data.name + " — Screenshot " + i + " (missing)";
+            };
+
+            slide.appendChild(img);
             track.appendChild(slide);
         }
 
