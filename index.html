@@ -4,328 +4,742 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta
+        name="description"
+        content="Ikhlaq Zahir - Computer Science graduate focused on game development, game AI, procedural content generation, and interactive systems."
+    >
+
     <title>Ikhlaq Zahir | Game Development & Computer Science</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+    <!-- =========================
+         NAVIGATION
+         ========================= -->
+
     <nav class="navbar">
+
         <div class="nav-container">
 
-            <div class="logo">
+            <a href="#home" class="logo">
                 Ikhlaq <span>Zahir</span>
-            </div>
+            </a>
 
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <button
+                class="mobile-menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navigation-menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navigation-menu">
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#research">Research</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
             </ul>
 
         </div>
+
     </nav>
 
-    <section class="hero">
-        <div class="container">
 
-            <div class="hero-content">
+    <main>
 
-                <div class="hero-label">
-                    Computer Science Graduate
+        <!-- =========================
+             HERO
+             ========================= -->
+
+        <section class="hero" id="home">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <div class="hero-label">
+                        Computer Science Graduate
+                    </div>
+
+                    <h1>
+                        Game Development,
+                        AI & Interactive Systems
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Computer Science graduate focused on game development,
+                        procedural content generation, game systems, artificial
+                        intelligence, and interactive software.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#projects"
+                            class="button button-primary"
+                        >
+                            View Projects
+                        </a>
+
+                        <a
+                            href="#contact"
+                            class="button button-secondary"
+                        >
+                            Contact
+                        </a>
+
+                    </div>
+
                 </div>
 
-                <h1>
-                    Game Development,
-                    AI & Interactive Systems
-                </h1>
+            </div>
 
-                <p class="hero-subtitle">
-                    Computer Science graduate focused on game development,
-                    procedural content generation, game systems, artificial
-                    intelligence, and interactive software.
-                </p>
+        </section>
 
-                <div class="hero-actions">
-                    <a href="#projects" class="button button-primary">
-                        View Projects
-                    </a>
 
-                    <a href="#contact" class="button button-secondary">
+        <!-- =========================
+             ABOUT
+             ========================= -->
+
+        <section id="about">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        About
+                    </div>
+
+                    <h2 class="section-title">
+                        About Me
+                    </h2>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div class="about-text">
+
+                        <p>
+                            I am a Computer Science graduate with a strong
+                            interest in game development, procedural content
+                            generation, artificial intelligence, and software
+                            engineering.
+                        </p>
+
+                        <p>
+                            I have independently designed and developed
+                            multiple games and Android applications, taking
+                            projects from concept and implementation through
+                            deployment and testing.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-details">
+
+                        <div class="detail-item">
+
+                            <span class="detail-label">
+                                Focus
+                            </span>
+
+                            <div class="detail-value">
+                                Game Development & AI
+                            </div>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span class="detail-label">
+                                Location
+                            </span>
+
+                            <div class="detail-value">
+                                Pakistan
+                            </div>
+
+                        </div>
+
+
+                        <div class="detail-item">
+
+                            <span class="detail-label">
+                                Status
+                            </span>
+
+                            <div class="detail-value">
+                                Graduate School Applicant
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESEARCH
+             ========================= -->
+
+        <section id="research">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        Research
+                    </div>
+
+                    <h2 class="section-title">
+                        Research Interests
+                    </h2>
+
+                    <p class="section-description">
+                        Areas of game technology and computer science that
+                        I am interested in exploring through graduate study
+                        and research.
+                    </p>
+
+                </div>
+
+
+                <div class="research-grid">
+
+                    <div class="research-card">
+
+                        <h3>
+                            Game AI
+                        </h3>
+
+                        <p>
+                            Intelligent gameplay systems, NPC behavior,
+                            adaptive difficulty, game agents, and
+                            player interaction.
+                        </p>
+
+                    </div>
+
+
+                    <div class="research-card">
+
+                        <h3>
+                            Procedural Content Generation
+                        </h3>
+
+                        <p>
+                            Algorithms for generating puzzles, levels,
+                            environments, and other forms of game content.
+                        </p>
+
+                    </div>
+
+
+                    <div class="research-card">
+
+                        <h3>
+                            Interactive Systems
+                        </h3>
+
+                        <p>
+                            Designing scalable systems for games,
+                            interactive applications, and digital
+                            experiences.
+                        </p>
+
+                    </div>
+
+
+                    <div class="research-card">
+
+                        <h3>
+                            AI-Assisted Game Development
+                        </h3>
+
+                        <p>
+                            Exploring how artificial intelligence and
+                            generative models can support game creation,
+                            design, and development workflows.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECTS
+             ========================= -->
+
+        <section id="projects">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        Projects
+                    </div>
+
+                    <h2 class="section-title">
+                        Selected Projects
+                    </h2>
+
+                    <p class="section-description">
+                        Selected games and software projects developed
+                        independently across game development, Android
+                        development, algorithms, and interactive systems.
+                    </p>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+                    <!-- WordLock -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+                            <span>
+                                Project Screenshot
+                            </span>
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="project-category">
+                                Android Game
+                            </div>
+
+                            <h3 class="project-title">
+                                WordLock
+                            </h3>
+
+                            <p class="project-description">
+                                A procedural word puzzle game involving
+                                simultaneous row and column constraints
+                                and algorithmic puzzle generation.
+                            </p>
+
+                            <ul class="project-tags">
+
+                                <li>Kotlin</li>
+                                <li>Android</li>
+                                <li>Algorithms</li>
+                                <li>Procedural Generation</li>
+
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Stealth Game -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+                            <span>
+                                Project Screenshot
+                            </span>
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="project-category">
+                                Unity Game
+                            </div>
+
+                            <h3 class="project-title">
+                                3D Stealth Platformer
+                            </h3>
+
+                            <p class="project-description">
+                                A 3D stealth and parkour game developed
+                                with Unity, incorporating character
+                                movement, enemy navigation, combat,
+                                animation, and level systems.
+                            </p>
+
+                            <ul class="project-tags">
+
+                                <li>Unity</li>
+                                <li>C#</li>
+                                <li>Game AI</li>
+                                <li>3D Game Development</li>
+
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Numatrix -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+                            <span>
+                                Project Screenshot
+                            </span>
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="project-category">
+                                Android Game
+                            </div>
+
+                            <h3 class="project-title">
+                                Numatrix
+                            </h3>
+
+                            <p class="project-description">
+                                A mathematical puzzle game based on
+                                numerical constraints and interactive
+                                row and column operations.
+                            </p>
+
+                            <ul class="project-tags">
+
+                                <li>Kotlin</li>
+                                <li>Android</li>
+                                <li>Puzzles</li>
+                                <li>Algorithms</li>
+
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Multiplayer Word Game -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+                            <span>
+                                Project Screenshot
+                            </span>
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="project-category">
+                                Multiplayer Game
+                            </div>
+
+                            <h3 class="project-title">
+                                WordleWorld
+                            </h3>
+
+                            <p class="project-description">
+                                A multiplayer word-game project featuring
+                                synchronized game state, multiple game
+                                modes, timed matches, and opponent
+                                progression.
+                            </p>
+
+                            <ul class="project-tags">
+
+                                <li>Kotlin</li>
+                                <li>Android</li>
+                                <li>Multiplayer</li>
+                                <li>Game Systems</li>
+
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SKILLS
+             ========================= -->
+
+        <section id="skills">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        Skills
+                    </div>
+
+                    <h2 class="section-title">
+                        Technical Skills
+                    </h2>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+                    <div class="skill-group">
+
+                        <h3>
+                            Programming
+                        </h3>
+
+                        <ul class="skill-list">
+                            <li>C#</li>
+                            <li>Kotlin</li>
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                        </ul>
+
+                    </div>
+
+
+                    <div class="skill-group">
+
+                        <h3>
+                            Game Development
+                        </h3>
+
+                        <ul class="skill-list">
+                            <li>Unity</li>
+                            <li>Game Systems</li>
+                            <li>Game AI</li>
+                            <li>Procedural Generation</li>
+                            <li>UI/UX</li>
+                            <li>Algorithms</li>
+                        </ul>
+
+                    </div>
+
+
+                    <div class="skill-group">
+
+                        <h3>
+                            Software Development
+                        </h3>
+
+                        <ul class="skill-list">
+                            <li>Android</li>
+                            <li>Git</li>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>MongoDB</li>
+                            <li>REST APIs</li>
+                        </ul>
+
+                    </div>
+
+
+                    <div class="skill-group">
+
+                        <h3>
+                            AI & Machine Learning
+                        </h3>
+
+                        <ul class="skill-list">
+                            <li>Python</li>
+                            <li>PyTorch</li>
+                            <li>Transformers</li>
+                            <li>Generative AI</li>
+                            <li>Machine Learning</li>
+                        </ul>
+
+                    </div>
+
+
+                    <div class="skill-group">
+
+                        <h3>
+                            Development Tools
+                        </h3>
+
+                        <ul class="skill-list">
+                            <li>GitHub</li>
+                            <li>Android Studio</li>
+                            <li>Unity</li>
+                            <li>Visual Studio</li>
+                            <li>Google Play Console</li>
+                        </ul>
+
+                    </div>
+
+
+                    <div class="skill-group">
+
+                        <h3>
+                            Platforms
+                        </h3>
+
+                        <ul class="skill-list">
+                            <li>Android</li>
+                            <li>Windows</li>
+                            <li>Google Play</li>
+                            <li>GitHub</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EDUCATION
+             ========================= -->
+
+        <section id="education">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        Education
+                    </div>
+
+                    <h2 class="section-title">
+                        Education
+                    </h2>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <div class="education-degree">
+                        Bachelor of Science in Computer Science
+                    </div>
+
+                    <div class="education-institution">
+                        University of Management and Technology
+                    </div>
+
+                    <div class="education-meta">
+                        Lahore, Pakistan
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+             ========================= -->
+
+        <section id="contact" class="contact">
+
+            <div class="container">
+
+                <div class="contact-content">
+
+                    <div class="section-label">
                         Contact
-                    </a>
-                </div>
+                    </div>
 
-            </div>
-
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-
-            <div class="section-header">
-                <div class="section-label">About</div>
-                <h2 class="section-title">About Me</h2>
-            </div>
-
-            <div class="about-grid">
-
-                <div class="about-text">
-                    <p>
-                        I am a Computer Science graduate with a strong interest
-                        in game development, procedural content generation,
-                        artificial intelligence, and software engineering.
-                    </p>
+                    <h2 class="section-title">
+                        Let's Connect
+                    </h2>
 
                     <p>
-                        I have independently designed and developed multiple
-                        Android applications and games, taking projects from
-                        concept and implementation through deployment and
-                        testing.
+                        I am interested in graduate research opportunities,
+                        game technology, artificial intelligence, and
+                        interactive systems.
                     </p>
-                </div>
 
-                <div class="about-details">
+                    <div class="contact-links">
 
-                    <div class="detail-item">
-                        <span class="detail-label">Focus</span>
-                        <div class="detail-value">
-                            Game Development & AI
-                        </div>
-                    </div>
-
-                    <div class="detail-item">
-                        <span class="detail-label">Location</span>
-                        <div class="detail-value">
-                            Pakistan
-                        </div>
-                    </div>
-
-                    <div class="detail-item">
-                        <span class="detail-label">Status</span>
-                        <div class="detail-value">
-                            Graduate School Applicant
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <section id="research">
-        <div class="container">
-
-            <div class="section-header">
-                <div class="section-label">Research</div>
-                <h2 class="section-title">Research Interests</h2>
-            </div>
-
-            <div class="research-grid">
-
-                <div class="research-card">
-                    <h3>Game AI</h3>
-                    <p>
-                        Intelligent gameplay systems, NPC behavior,
-                        adaptive difficulty and player interaction.
-                    </p>
-                </div>
-
-                <div class="research-card">
-                    <h3>Procedural Generation</h3>
-                    <p>
-                        Algorithms for creating puzzles, levels,
-                        environments and gameplay content.
-                    </p>
-                </div>
-
-                <div class="research-card">
-                    <h3>Interactive Systems</h3>
-                    <p>
-                        Building scalable systems for games
-                        and interactive applications.
-                    </p>
-                </div>
-
-                <div class="research-card">
-                    <h3>AI-Assisted Development</h3>
-                    <p>
-                        Applying machine learning and AI
-                        to game creation and design workflows.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-
-            <div class="section-header">
-                <div class="section-label">Projects</div>
-                <h2 class="section-title">Selected Projects</h2>
-            </div>
-
-            <div class="projects-grid">
-
-                <div class="project-card">
-                    <div class="project-image">
-                        Project Screenshot
-                    </div>
-
-                    <div class="project-content">
-
-                        <div class="project-category">
-                            Android Game
-                        </div>
-
-                        <h3 class="project-title">
-                            WordLock
-                        </h3>
-
-                        <p class="project-description">
-                            Procedural word puzzle game using
-                            algorithmic puzzle generation.
-                        </p>
+                        <a
+                            href="https://github.com/ikhlaq-zahir"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button button-secondary"
+                        >
+                            GitHub
+                        </a>
 
                     </div>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        Project Screenshot
-                    </div>
-
-                    <div class="project-content">
-
-                        <div class="project-category">
-                            Unity
-                        </div>
-
-                        <h3 class="project-title">
-                            3D Stealth Platformer
-                        </h3>
-
-                        <p class="project-description">
-                            Parkour and stealth-focused game
-                            built with Unity.
-                        </p>
-
-                    </div>
                 </div>
 
             </div>
 
-        </div>
-    </section>
+        </section>
 
-    <section id="skills">
-        <div class="container">
+    </main>
 
-            <div class="section-header">
-                <div class="section-label">Skills</div>
-                <h2 class="section-title">Technical Skills</h2>
-            </div>
 
-            <div class="skills-grid">
-
-                <div class="skill-group">
-                    <h3>Programming</h3>
-
-                    <ul class="skill-list">
-                        <li>C#</li>
-                        <li>Kotlin</li>
-                        <li>Java</li>
-                        <li>Python</li>
-                    </ul>
-                </div>
-
-                <div class="skill-group">
-                    <h3>Game Development</h3>
-
-                    <ul class="skill-list">
-                        <li>Unity</li>
-                        <li>Game Systems</li>
-                        <li>UI/UX</li>
-                        <li>Algorithms</li>
-                    </ul>
-                </div>
-
-                <div class="skill-group">
-                    <h3>Software</h3>
-
-                    <ul class="skill-list">
-                        <li>Android</li>
-                        <li>Git</li>
-                        <li>MongoDB</li>
-                        <li>Node.js</li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <section id="education">
-        <div class="container">
-
-            <div class="section-header">
-                <div class="section-label">Education</div>
-                <h2 class="section-title">Education</h2>
-            </div>
-
-            <div class="education-item">
-
-                <div class="education-degree">
-                    Bachelor of Science in Computer Science
-                </div>
-
-                <div class="education-institution">
-                    University of Management and Technology
-                </div>
-
-                <div class="education-meta">
-                    Lahore, Pakistan
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-
-            <div class="contact-content">
-
-                <div class="section-label">Contact</div>
-
-                <h2 class="section-title">
-                    Let's Connect
-                </h2>
-
-                <p>
-                    Interested in research collaboration,
-                    graduate opportunities or technical discussions.
-                </p>
-
-            </div>
-
-        </div>
-    </section>
+    <!-- =========================
+         FOOTER
+         ========================= -->
 
     <footer>
-        © 2026 Ikhlaq Zahir
+        <div class="container">
+            © 2026 Ikhlaq Zahir
+        </div>
     </footer>
-<script src="script.js"></script>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
