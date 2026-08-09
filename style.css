@@ -626,12 +626,79 @@ footer {
 /* =========================================================
    MOBILE
    ========================================================= */
+.mobile-menu-button {
+    display: none;
 
+    width: 42px;
+    height: 42px;
+
+    padding: 8px;
+
+    background: transparent;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.mobile-menu-button span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    margin: 4px auto;
+
+    background: var(--text);
+
+    transition: transform 0.25s ease;
+}
 @media (max-width: 800px) {
 
     .nav-links {
-        display: none;
-    }
+    display: none;
+
+    position: absolute;
+
+    top: 72px;
+    left: 14px;
+    right: 14px;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 10px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.nav-links.mobile-open {
+    display: flex;
+}
+
+.nav-links a {
+    display: block;
+
+    padding: 12px 14px;
+
+    border-radius: 7px;
+}
+
+.nav-links a:hover {
+    background: var(--surface-hover);
+}
+
+.mobile-menu-button {
+    display: block;
+}
 
     .hero h1 {
         font-size: clamp(2.8rem, 14vw, 4.5rem);
