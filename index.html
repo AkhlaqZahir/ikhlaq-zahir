@@ -121,6 +121,8 @@
             id="home"
         >
 
+            <canvas class="hero-particles" id="heroParticles"></canvas>
+
             <div class="container">
 
                 <div class="hero-content">
@@ -424,12 +426,12 @@
 
                     <!-- PROJECT 1 -->
 
-                    <article class="project-card">
+                    <article class="project-card reveal" data-project="wordleworld">
 
-                        <div class="project-image">
+                        <div class="project-image" data-gallery-trigger>
 
                             <span>
-                                Project Screenshot
+                                Wordle World — Screenshots
                             </span>
 
                         </div>
@@ -437,22 +439,31 @@
 
                         <div class="project-content">
 
-                            <div class="project-category">
-                                Android Game
+                            <div class="project-meta-row">
+
+                                <div class="project-category">
+                                    Narrative Puzzle Game
+                                </div>
+
+                                <span class="status-badge status-open">
+                                    Open Testing
+                                </span>
+
                             </div>
 
 
                             <h3 class="project-title">
-                                WordLock
+                                Wordle World
                             </h3>
 
 
                             <p class="project-description">
 
-                                A procedural word puzzle game
-                                involving simultaneous row and
-                                column constraints and algorithmic
-                                puzzle generation.
+                                Not just a word puzzle — a quest to hold
+                                existence together. Every solved word pushes
+                                back a slow, encroaching extinction, and every
+                                level advances a thought-provoking narrative
+                                about memory, language, and disappearance.
 
                             </p>
 
@@ -461,10 +472,19 @@
 
                                 <li>Kotlin</li>
                                 <li>Android</li>
-                                <li>Algorithms</li>
+                                <li>Narrative Design</li>
                                 <li>Procedural Generation</li>
 
                             </ul>
+
+
+                            <button
+                                class="button button-secondary screenshot-btn"
+                                type="button"
+                                data-gallery-trigger
+                            >
+                                View Screenshots
+                            </button>
 
                         </div>
 
@@ -474,12 +494,12 @@
 
                     <!-- PROJECT 2 -->
 
-                    <article class="project-card">
+                    <article class="project-card reveal" data-project="numatrix">
 
-                        <div class="project-image">
+                        <div class="project-image" data-gallery-trigger>
 
                             <span>
-                                Project Screenshot
+                                Numatrix — Screenshots
                             </span>
 
                         </div>
@@ -487,58 +507,16 @@
 
                         <div class="project-content">
 
-                            <div class="project-category">
-                                Unity Game
-                            </div>
+                            <div class="project-meta-row">
 
+                                <div class="project-category">
+                                    Logic Puzzle Game
+                                </div>
 
-                            <h3 class="project-title">
-                                3D Stealth Platformer
-                            </h3>
+                                <span class="status-badge status-closed">
+                                    Closed Testing
+                                </span>
 
-
-                            <p class="project-description">
-
-                                A 3D stealth and parkour game
-                                developed with Unity, incorporating
-                                character movement, enemy navigation,
-                                combat, animation, and level systems.
-
-                            </p>
-
-
-                            <ul class="project-tags">
-
-                                <li>Unity</li>
-                                <li>C#</li>
-                                <li>Game AI</li>
-                                <li>3D Game Development</li>
-
-                            </ul>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PROJECT 3 -->
-
-                    <article class="project-card">
-
-                        <div class="project-image">
-
-                            <span>
-                                Project Screenshot
-                            </span>
-
-                        </div>
-
-
-                        <div class="project-content">
-
-                            <div class="project-category">
-                                Android Game
                             </div>
 
 
@@ -549,10 +527,11 @@
 
                             <p class="project-description">
 
-                                A mathematical puzzle game based
-                                on numerical constraints and
-                                interactive row and column
-                                operations.
+                                A number-logic puzzle built to sharpen the
+                                brain. Every row and column enforces
+                                simultaneous arithmetic constraints, forcing
+                                you to hold multiple operations in mind at
+                                once to advance.
 
                             </p>
 
@@ -561,10 +540,19 @@
 
                                 <li>Kotlin</li>
                                 <li>Android</li>
-                                <li>Puzzles</li>
                                 <li>Algorithms</li>
+                                <li>Cognitive Training</li>
 
                             </ul>
+
+
+                            <button
+                                class="button button-secondary screenshot-btn"
+                                type="button"
+                                data-gallery-trigger
+                            >
+                                View Screenshots
+                            </button>
 
                         </div>
 
@@ -572,14 +560,14 @@
 
 
 
-                    <!-- PROJECT 4 -->
+                    <!-- PROJECT 3 -->
 
-                    <article class="project-card">
+                    <article class="project-card reveal" data-project="memword">
 
-                        <div class="project-image">
+                        <div class="project-image" data-gallery-trigger>
 
                             <span>
-                                Project Screenshot
+                                MemWord — Screenshots
                             </span>
 
                         </div>
@@ -587,22 +575,32 @@
 
                         <div class="project-content">
 
-                            <div class="project-category">
-                                Multiplayer Game
+                            <div class="project-meta-row">
+
+                                <div class="project-category">
+                                    Learning App
+                                </div>
+
+                                <span class="status-badge status-closed">
+                                    Closed Testing
+                                </span>
+
                             </div>
 
 
                             <h3 class="project-title">
-                                WordleWorld
+                                MemWord
                             </h3>
 
 
                             <p class="project-description">
 
-                                A multiplayer word-game project
-                                featuring synchronized game state,
-                                multiple game modes, timed matches,
-                                and opponent progression.
+                                A vocabulary-building app grounded in memory
+                                retention research. Each word is learned
+                                through every channel at once — observed,
+                                heard, written, and applied — building the
+                                multi-sensory encoding that neuroscience
+                                shows makes memory stick.
 
                             </p>
 
@@ -611,10 +609,19 @@
 
                                 <li>Kotlin</li>
                                 <li>Android</li>
-                                <li>Multiplayer</li>
-                                <li>Game Systems</li>
+                                <li>Neuroscience-Informed Learning</li>
+                                <li>Spaced Repetition</li>
 
                             </ul>
+
+
+                            <button
+                                class="button button-secondary screenshot-btn"
+                                type="button"
+                                data-gallery-trigger
+                            >
+                                View Screenshots
+                            </button>
 
                         </div>
 
@@ -622,9 +629,63 @@
 
                 </div>
 
+
+                <div class="projects-cta reveal">
+
+                    <a
+                        href="https://play.google.com/store/apps/developer?id=IsolatedVertex+Studios"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="button button-primary"
+                    >
+                        View All of My Deployed Projects
+                    </a>
+
+                </div>
+
             </div>
 
         </section>
+
+
+
+        <!-- =========================================
+             SCREENSHOT GALLERY MODAL
+             ========================================= -->
+
+        <div class="gallery-overlay" id="galleryOverlay" aria-hidden="true">
+
+            <div class="gallery-modal" role="dialog" aria-modal="true" aria-label="Project screenshots">
+
+                <button class="gallery-close" id="galleryClose" type="button" aria-label="Close gallery">
+                    &times;
+                </button>
+
+                <h3 class="gallery-title" id="galleryTitle"></h3>
+
+                <div class="gallery-track-wrap">
+
+                    <button class="gallery-nav gallery-prev" id="galleryPrev" type="button" aria-label="Previous screenshot">
+                        &#10094;
+                    </button>
+
+                    <div class="gallery-viewport">
+
+                        <div class="gallery-track" id="galleryTrack"></div>
+
+                    </div>
+
+                    <button class="gallery-nav gallery-next" id="galleryNext" type="button" aria-label="Next screenshot">
+                        &#10095;
+                    </button>
+
+                </div>
+
+                <div class="gallery-counter" id="galleryCounter"></div>
+
+            </div>
+
+        </div>
 
 
 
@@ -833,8 +894,6 @@
         </section>
 
 
-
-```html
 <!-- =========================================
      CONTACT
      ========================================= -->
@@ -917,7 +976,6 @@
     </div>
 
 </section>
-```
 
 
     <!-- =========================================
@@ -933,7 +991,6 @@
         </div>
 
     </footer>
-
 
 
     <!-- JavaScript -->
