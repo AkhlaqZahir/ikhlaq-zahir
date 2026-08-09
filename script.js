@@ -1,26 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    const menuButton = document.querySelector(".mobile-menu-button");
     const navLinks = document.querySelector(".nav-links");
 
-    if (!navLinks) {
+    if (!menuButton || !navLinks) {
         return;
     }
 
-    const navbar = document.querySelector(".navbar");
 
-    const menuButton = document.createElement("button");
-
-    menuButton.className = "mobile-menu-button";
-    menuButton.setAttribute("aria-label", "Toggle navigation menu");
-    menuButton.setAttribute("aria-expanded", "false");
-
-    menuButton.innerHTML = `
-        <span></span>
-        <span></span>
-        <span></span>
-    `;
-
-    navbar.querySelector(".nav-container").appendChild(menuButton);
+    /* ==========================================
+       MOBILE MENU TOGGLE
+       ========================================== */
 
     menuButton.addEventListener("click", () => {
 
@@ -31,9 +21,23 @@ document.addEventListener("DOMContentLoaded", () => {
             isOpen ? "true" : "false"
         );
 
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+        );
+
     });
 
-    navLinks.querySelectorAll("a").forEach(link => {
+
+    /* ==========================================
+       CLOSE MENU AFTER CLICKING A LINK
+       ========================================== */
+
+    const navigationLinks = navLinks.querySelectorAll("a");
+
+    navigationLinks.forEach((link) => {
 
         link.addEventListener("click", () => {
 
@@ -44,7 +48,41 @@ document.addEventListener("DOMContentLoaded", () => {
                 "false"
             );
 
+            menuButton.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
         });
+
+    });
+
+
+    /* ==========================================
+       CLOSE MENU WHEN CLICKING OUTSIDE
+       ========================================== */
+
+    document.addEventListener("click", (event) => {
+
+        const clickedInsideNavigation =
+            navLinks.contains(event.target) ||
+            menuButton.contains(event.target);
+
+        if (!clickedInsideNavigation) {
+
+            navLinks.classList.remove("mobile-open");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+        }
 
     });
 
