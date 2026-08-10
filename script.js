@@ -215,6 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
         wordle: { name: "Wordle World", count: 4 },
         numatrix: { name: "Numatrix", count: 4 },
         memword: { name: "MemWord", count: 4 },
+        hsk: { name: "HSK Vocabulary", count: 4 },
     };
 
     const overlay = document.getElementById("galleryOverlay");
