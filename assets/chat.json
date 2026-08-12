@@ -1,0 +1,368 @@
+[
+  {
+    "id": "greeting",
+    "questions": ["hi", "hello", "hey", "who are you", "greetings"],
+    "answers": [
+      "Hello there! I'm the Guardian of this portfolio. What would you like to know about?",
+      "Greetings, traveler! Ask me anything about Ikhlaq Zahir.",
+      "Hi! I'm here to answer questions about Ikhlaq. What interests you?"
+    ],
+    "buttons": [
+      { "label": "Tell me about Ikhlaq Zahir", "next": "about_menu" },
+      { "label": "Projects", "next": "projects_menu" },
+      { "label": "Research Interests", "next": "research" },
+      { "label": "Skills", "next": "skills" }
+    ]
+  },
+  {
+    "id": "about_menu",
+    "questions": ["about ikhlaq zahir", "tell me about him", "who is ikhlaq"],
+    "answers": [
+      "Ikhlaq Zahir was born on 23rd Dec 2000 in District Ghizer of Gilgit Baltistan, often called the crown jewel of Pakistan. Born in a respectable family with a lawyer father, he was taught values and discipline. Want me to tell you more about his education, inspiration, goals, or something else?",
+      "Ikhlaq is from Gilgit Baltistan, Pakistan. He's a CS graduate with a passion for game dev and AI. What aspect of his life would you like to explore?",
+      "Ikhlaq Zahir – a dreamer from the mountains of Gilgit. He's now a game developer and researcher. Shall I tell you about his education, inspiration, or professional philosophy?"
+    ],
+    "buttons": [
+      { "label": "Education", "next": "about_education" },
+      { "label": "Inspiration", "next": "about_inspiration" },
+      { "label": "Philosophy & Values", "next": "about_philosophy" },
+      { "label": "Goals", "next": "about_goals" },
+      { "label": "Tools", "next": "about_tools" },
+      { "label": "Contact", "next": "about_contact" },
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "about_education",
+    "questions": ["education", "academic background", "study", "university"],
+    "answers": [
+      "Ikhlaq was always a high achiever and his extraordinary academic skills led him to study in the most prestigious school and college of Pakistan – Aga Khan Higher Secondary School. After that, he pursued Computer Science from the University of Management and Technology, Lahore.",
+      "He attended Aga Khan Higher Secondary School and later earned a B.Sc. in Computer Science from UMT Lahore (2020–2024).",
+      "His academic journey: Aga Khan Higher Secondary School, then UMT Lahore for CS, with a focus on game development, AI, and HCI."
+    ],
+    "followUp": {
+      "text": "Want to know more about his education?",
+      "options": [
+        { "label": "Yes, tell me about inspiration", "next": "about_inspiration" },
+        { "label": "No, back to menu", "next": "about_menu" }
+      ]
+    }
+  },
+  {
+    "id": "about_inspiration",
+    "questions": ["inspiration", "why this field", "what inspired him"],
+    "answers": [
+      "From early childhood he had a strange fascination towards Sci-Fi and computers. The time he truly fell in love with science and technology was when he watched 'Iron Man'. This inspired him to pursue engineering and later leaned towards computer science for his love of games and development.",
+      "His inspiration came from Sci-Fi and 'Iron Man'. That led him to engineering, then computer science, and finally game development.",
+      "A childhood love for science fiction, especially 'Iron Man', sparked his interest in technology and eventually game development."
+    ],
+    "followUp": {
+      "text": "Want to hear about his professional philosophy?",
+      "options": [
+        { "label": "Yes", "next": "about_philosophy" },
+        { "label": "No, back to menu", "next": "about_menu" }
+      ]
+    }
+  },
+  {
+    "id": "about_philosophy",
+    "questions": ["philosophy", "values", "professional philosophy"],
+    "answers": [
+      "He believes time is the ultimate teacher and the process of learning never stops at any age. Knowledge is growing every second, and he wants to wrap his arms around as much as he can while there's still time.",
+      "Ikhlaq’s philosophy: learning never ends; knowledge grows every second, and we should embrace it constantly.",
+      "He values continuous learning and believes in making the most of time to acquire knowledge."
+    ],
+    "followUp": {
+      "text": "Now, would you like to know his ultimate goal?",
+      "options": [
+        { "label": "Yes", "next": "about_goals" },
+        { "label": "No, back to menu", "next": "about_menu" }
+      ]
+    }
+  },
+  {
+    "id": "about_goals",
+    "questions": ["goals", "future goal", "what does he want to achieve"],
+    "answers": [
+      "His ultimate future goal is to create one of the biggest Game Studios of the country that not only creates games but creates emotions and teaches something valuable every time.",
+      "He dreams of building a major game studio in Pakistan that makes games which evoke emotions and impart wisdom.",
+      "His vision: a game studio that produces emotionally rich and educational games."
+    ],
+    "followUp": {
+      "text": "Shall I tell you about his major tools?",
+      "options": [
+        { "label": "Yes", "next": "about_tools" },
+        { "label": "No, back to menu", "next": "about_menu" }
+      ]
+    }
+  },
+  {
+    "id": "about_tools",
+    "questions": ["tools", "major tool", "software he uses"],
+    "answers": [
+      "Ikhlaq frequently uses Python for procedural content generation algorithms and Android Studio for integration into apps/games. He has the most expertise using the Unity Engine, but given the lack of resources and scale of projects, he sticks to small-scale projects for now, though blueprints for bigger, ambitious projects are already ready.",
+      "He uses Python for PCG, Android Studio for mobile, and Unity for larger game projects when resources allow. His ambition is bigger than his current tools.",
+      "His tools: Python (PCG), Android Studio (apps), and Unity (game engine). He's prepared for larger projects in the future."
+    ],
+    "followUp": {
+      "text": "Do you need his contact information?",
+      "options": [
+        { "label": "Yes, contact", "next": "about_contact" },
+        { "label": "No, back to menu", "next": "about_menu" }
+      ]
+    }
+  },
+  {
+    "id": "about_contact",
+    "questions": ["contact", "how to reach", "email", "phone"],
+    "answers": [
+      "He can be contacted via WhatsApp at +92 317 5958721, Gmail at akhlaqzahir810@gmail.com, and LinkedIn at linkedin.com/in/akhlaq-zahir-260831142. Feel free to reach him anytime.",
+      "Contact: WhatsApp +92 317 5958721, email akhlaqzahir810@gmail.com, LinkedIn linkedin.com/in/akhlaq-zahir-260831142.",
+      "You can reach Ikhlaq on WhatsApp, email, or LinkedIn. Details are in the contact section of the portfolio."
+    ],
+    "buttons": [
+      { "label": "Back to main menu", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "projects_menu",
+    "questions": ["projects", "portfolio", "what has he built"],
+    "answers": [
+      "Ikhlaq has several projects. Which one would you like to know about?",
+      "Here are his main projects. Pick one to learn more.",
+      "Choose a project:"
+    ],
+    "buttons": [
+      { "label": "Wordle World", "next": "wordle" },
+      { "label": "HSK Vocabulary", "next": "hsk" },
+      { "label": "Numatrix", "next": "numatrix" },
+      { "label": "WordLock", "next": "wordlock" },
+      { "label": "MemWord", "next": "memword" },
+      { "label": "Scientific Civilization", "next": "sciciv" },
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "wordle",
+    "questions": ["wordle world", "wordle", "word puzzle"],
+    "answers": [
+      "This was one of his earliest projects and has one of the strangest backstories. It incorporates a smart procedural generation algorithm that efficiently creates levels from a huge pool of words, handling 5–8 letter words with ease. Want to know the story behind this project?",
+      "Wordle World combines a narrative word puzzle with PCG. It has a fascinating origin story. Do you want to hear it?",
+      "A word-guessing adventure with a deep story and smart level generation. Shall I share the backstory?"
+    ],
+    "followUp": {
+      "text": "Want to know the story behind this project?",
+      "options": [
+        { "label": "Yes", "next": "wordle_story_intro" },
+        { "label": "No, other projects", "next": "projects_menu" }
+      ]
+    }
+  },
+  {
+    "id": "wordle_story_intro",
+    "questions": ["story behind wordle"],
+    "answers": [
+      "He says one night he had a strange dream that he kept on thinking about for weeks and couldn't get it out of his head. Neither could he explain it to his friends or near ones. So he wrote a story that covers that feeling and tries to convey it to the people. But he wasn't a writer; he couldn't write a book. However, there was something he could do to tell his story – build a game. So he did, and this is the result. Want to know what the story is about?",
+      "The idea came from a recurring dream. He decided to turn that feeling into a game because words failed him. Want to hear the plot?",
+      "A dream inspired him to create Wordle World. The game is his way of telling a story that he couldn't put into words. Shall I explain the story?"
+    ],
+    "followUp": {
+      "text": "Want to know what the story is about?",
+      "options": [
+        { "label": "Yes", "next": "wordle_story_plot" },
+        { "label": "No, other projects", "next": "projects_menu" }
+      ]
+    }
+  },
+  {
+    "id": "wordle_story_plot",
+    "questions": ["story of wordle", "what is the story"],
+    "answers": [
+      "The story is about an entity called 'THE NOTHING' that existed before anything else. He had a kingdom of nothingness, but when THE LIGHT emerged, his kingdom was pushed away. Now it's back, devouring everything in existence one word at a time, and we have to save existence. Interestingly, Ikhlaq has already written the ending of the story. The entire story consists of 23 chapters, and every chapter gives the player a new perspective. Do you want to know how the story ends?",
+      "It's about THE NOTHING, a primordial entity that returns to consume reality word by word. The full story has 23 chapters. Want to know the ending?",
+      "A cosmic tale of nothingness versus light, told through word puzzles. The ending is already written. Shall I reveal it?"
+    ],
+    "followUp": {
+      "text": "Do you want to know how the story ends?",
+      "options": [
+        { "label": "Yes", "next": "wordle_story_ending" },
+        { "label": "No", "next": "wordle_story_no_ending" }
+      ]
+    }
+  },
+  {
+    "id": "wordle_story_ending",
+    "questions": ["ending of wordle story"],
+    "answers": [
+      "That's confidential 😉 but Ikhlaq says after this, people will not look at this world the same way they used to. So stay tuned. The first 3 chapters are already out and can be played in the game; more to come soon.",
+      "The ending is a secret, but Ikhlaq promises it will change how players see the world. The first three chapters are playable now.",
+      "I can't reveal the ending, but it will be mind‑bending. The game currently includes the first three chapters."
+    ],
+    "buttons": [
+      { "label": "Other projects", "next": "projects_menu" },
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "wordle_story_no_ending",
+    "questions": ["no ending"],
+    "answers": [
+      "Alright, the story of Wordle World ends here. What other project do you want to talk about?",
+      "Okay, no spoilers then. Which other project would you like to know about?",
+      "Fine, we'll leave the mystery intact. Choose another project."
+    ],
+    "buttons": [
+      { "label": "Other projects", "next": "projects_menu" },
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "hsk",
+    "questions": ["hsk vocabulary", "chinese", "language learning"],
+    "answers": [
+      "This was the second project after Wordle World. It focuses on preparing vocabulary for students taking the Chinese language test HSK. It covers all HSK levels from 1 to 6 and creates custom quizzes based on them. Quizzes include multiple choice, listening, and meaning. Users can track weak words and revise them instantly for better retention.",
+      "HSK Vocabulary is a language learning app for Chinese HSK exams. It has quizzes, progress tracking, and smart revision of weak words. It's in closed testing.",
+      "A vocabulary app for HSK levels 1–6, with custom quizzes (multiple choice, listening, meaning) and instant weak‑word revision."
+    ],
+    "buttons": [
+      { "label": "Other projects", "next": "projects_menu" },
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "numatrix",
+    "questions": ["numatrix", "number puzzle", "cross-sum"],
+    "answers": [
+      "Numatrix is another masterpiece that incorporates procedural content generation. Imagine a 10×10 grid where every number in every cell must be valid for its row and column arithmetic. This game generates a valid level within 1 second, and all arithmetic happens in real time. There's also an experimental mode 'Number Forge' that uses arithmetic operations to reach a specific goal.",
+      "It's a cross‑sum puzzle with algorithmic level generation. Each 10×10 grid is solvable and generated instantly. Number Forge adds a creative arithmetic mode.",
+      "Numatrix challenges players with grid‑based arithmetic where every cell matters. It uses PCG to create valid boards and includes a sandbox mode."
+    ],
+    "buttons": [
+      { "label": "Other projects", "next": "projects_menu" },
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "wordlock",
+    "questions": ["wordlock", "procedural word puzzle", "word grid"],
+    "answers": [
+      "This is procedural generation on steroids… imagine a 5×5 grid where every cell contains a letter. It can either participate in making a word or not, but if it does, it must contribute to its row and column simultaneously. The main reason it's still under development is that a simple 5×5 grid level generation took 45 minutes. Ikhlaq is thinking of creating a model with pre‑trained data, but data creation is taking time due to limited resources and CPU power.",
+      "WordLock is a hardcore constraint‑satisfaction problem: generate a grid where every active letter forms valid words both across and down. Current algorithms are too slow (45 min for 5×5), so he's exploring ML‑assisted generation.",
+      "It's an in‑development puzzle generator. The challenge is simultaneous row/column word constraints. Ikhlaq is researching faster approaches, possibly using trained models."
+    ],
+    "buttons": [
+      { "label": "Other projects", "next": "projects_menu" },
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "memword",
+    "questions": ["memword", "vocabulary", "memory app"],
+    "answers": [
+      "This is a vocabulary building app, not ordinary flip‑card apps. It's a memory retention system with core neural anchor methods that permanently engrave words in the brain. It includes Observe, Listen, Read, Write, daily 5 words, and the Knowledge Tower where a wrong block collapses the tower. It also has quizzes, IELTS/TOEFL marking, certificates, and result sharing. It's currently in closed testing.",
+      "MemWord uses a four‑step Neural Anchor process to make words unforgettable. It includes speech recognition, daily practice, and a Knowledge Tower game to reinforce learning. It's highly effective and in closed testing.",
+      "This app is built for deep vocabulary retention using multi‑sensory methods and gamified revision. Features include Knowledge Tower, quizzes, and shareable results."
+    ],
+    "buttons": [
+      { "label": "Other projects", "next": "projects_menu" },
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "sciciv",
+    "questions": ["scientific civilization", "educational game", "simulation"],
+    "answers": [
+      "This is another ambitious project that will take a lot of time given the thought and effort required and overall complexity. The theme is simple: suppose you go back thousands of years in time and you have to explain the 21st century to the people of that time – not only explain but rebuild everything from scratch. This triggers users’ intrigue towards learning how things were actually built and how things work. This also has one of the greatest stories, and the story is in progress. This project incorporates all science and non‑science concepts.",
+      "Scientific Civilization is a large‑scale educational simulation where you rebuild technology from raw materials. It uses a technology‑dependency model and has a rich narrative. It's in pre‑production.",
+      "In this game, you time‑travel to an ancient village and must reconstruct modern science and technology. It combines resource management, experimentation, and a deep story."
+    ],
+    "buttons": [
+      { "label": "Other projects", "next": "projects_menu" },
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "research",
+    "questions": ["research", "research interests", "what do you want to study"],
+    "answers": [
+      "Ikhlaq's research interests include Game Development & Architecture, Game AI, HCI, Procedural Content Generation, Educational Games, and XR/Immersive Experiences.",
+      "He wants to explore how games can teach complex concepts through procedural generation, adaptive AI, and interactive simulation. His graduate focus would be at the intersection of these fields.",
+      "His research goals: intelligent game systems, PCG for coherent open worlds, human-AI collaboration in games, and using games for learning."
+    ],
+    "buttons": [
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "skills",
+    "questions": ["skills", "tech stack", "technologies", "what can you do"],
+    "answers": [
+      "Ikhlaq is skilled in Unity/C#, Kotlin/Android, Python/PyTorch, and UI/UX design. He works with game engines, procedural generation, AI, and HCI.",
+      "Core skills: Game Development (Unity, C#), Android (Kotlin, Jetpack Compose), AI/ML (Python, PyTorch), and Human-Computer Interaction.",
+      "He's proficient in C#, Kotlin, Python, JavaScript, and tools like Unity, Android Studio, PyTorch, and Hugging Face. His focus is interactive systems."
+    ],
+    "buttons": [
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "pcg",
+    "questions": ["procedural content generation", "pcg", "how does pcg work"],
+    "answers": [
+      "Procedural Content Generation (PCG) is using algorithms to create game content automatically. Ikhlaq is fascinated by how to generate not just puzzles but entire coherent worlds that respect objectives and narrative.",
+      "PCG means designing rules that produce valid, interesting content. Ikhlaq's work in WordLock and Numatrix involves constraint-based generation—ensuring every output is solvable and meaningful.",
+      "Ikhlaq explores PCG for complex environments: generating levels, quests, and worlds that don't contradict game logic or player goals. He's especially interested in open-world generation with narrative coherence."
+    ],
+    "buttons": [
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "ai_ml",
+    "questions": ["ai", "machine learning", "ml", "artificial intelligence", "pytorch", "llm"],
+    "answers": [
+      "Ikhlaq works with Python, PyTorch, and LLMs. He's interested in AI for game systems—NPC behavior, adaptive difficulty, and AI-assisted development.",
+      "Yes, he has ML fundamentals, generative AI, and large language model experience. His focus is on using AI to enhance games and interactive learning.",
+      "He uses PyTorch and Hugging Face for experiments. His research includes how AI agents can become intelligent tutors or companions in games."
+    ],
+    "buttons": [
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "game_dev",
+    "questions": ["game development", "unity", "game engine", "c#", "game developer"],
+    "answers": [
+      "Ikhlaq develops games in Unity with C#. He's built 2D and 3D projects, designed game systems, AI, pathfinding, and procedural generation. His latest is the educational simulation 'Scientific Civilization'.",
+      "He is a game developer using Unity and C#. His portfolio includes shipped Android games and a large-scale educational game in development.",
+      "He has deep experience in game architecture, mechanics, and systems. From puzzle games to simulation, he loves building interactive worlds."
+    ],
+    "buttons": [
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "android",
+    "questions": ["android", "kotlin", "mobile", "app development", "google play"],
+    "answers": [
+      "Ikhlaq builds Android apps with Kotlin and Jetpack Compose. He has multiple apps on Google Play (open/closed testing), including Wordle World, Numatrix, MemWord, and HSK Vocabulary.",
+      "His Android stack includes Kotlin, Android SDK, Jetpack Compose, SQLite, and in-app billing. He handles the full cycle from concept to deployment.",
+      "He has independently published several Android applications. You can find them on Google Play under 'IsolatedVertex Studios'."
+    ],
+    "buttons": [
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  },
+  {
+    "id": "contact",
+    "questions": ["contact", "email", "linkedin", "how to reach", "whatsapp"],
+    "answers": [
+      "You can contact Ikhlaq via email at akhlaqzahir810@gmail.com, or find him on LinkedIn and GitHub. Links are in the contact section below.",
+      "Email: akhlaqzahir810@gmail.com | WhatsApp: +92 317 5958721 | LinkedIn: linkedin.com/in/akhlaq-zahir-260831142",
+      "Check the 'Contact' section for his email, LinkedIn, WhatsApp, and other links. His portfolio is akhlaqzahir.github.io/ikhlaq-zahir."
+    ],
+    "buttons": [
+      { "label": "Back to main", "next": "greeting" }
+    ]
+  }
+]
