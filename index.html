@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Ikhlaq Zahir – Game Development, AI & Interactive Systems" />
     <title>Ikhlaq Zahir | Game Development & Computer Science</title>
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
     <style>
         /* =========================================================
@@ -188,6 +190,77 @@
         .wip-panel:hover {
             border-color: rgba(124, 156, 255, 0.2);
         }
+
+        /* =========================================================
+           PROFILE CARD (ABOUT SECTION)
+           ========================================================= */
+        .profile-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;          /* clips the image to the circle */
+            background: var(--bg-secondary);
+            border: 2px solid var(--accent);
+        }
+
+        /* The image fills the circle perfectly */
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;         /* scales the image to cover, cropping if needed */
+            display: block;
+        }
+
+        .profile-avatar span {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .profile-name {
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+        }
+
+        .profile-academic {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: var(--text-secondary);
+            font-size: 1.3rem;
+            transition: color var(--transition);
+        }
+
+        .social-icons a:hover {
+            color: var(--accent);
+        }
+
+        .cv-button {
+            margin-top: auto;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -238,7 +311,7 @@
     </section>
 
     <!-- =========================================================
-    ABOUT (unchanged)
+    ABOUT – Updated with profile card
     ========================================================= -->
     <section id="about">
         <div class="container">
@@ -261,26 +334,29 @@
                         meaningful player experiences.
                     </p>
                 </div>
-                <div class="about-details">
-                    <div class="detail-item">
-                        <span class="detail-label">Focus</span>
-                        <div class="detail-value">Game Dev, AI &amp; HCI</div>
+                <!-- New profile card replaces old about-details -->
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <img src="assets/DP.png" alt="Ikhlaq Zahir" class="profile-img" />
                     </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Location</span>
-                        <div class="detail-value">Pakistan</div>
+                    <h3 class="profile-name">Ikhlaq Zahir</h3>
+                    <p class="profile-academic">
+                        B.Sc. in Computer Science<br>
+                        University of Management and Technology, Lahore, Pakistan
+                    </p>
+                    <div class="social-icons">
+                        <a href="mailto:akhlaqzahir810@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/akhlaq-zahir-260831142/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/ikhlaq-zahir" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Status</span>
-                        <div class="detail-value">Graduate School Applicant</div>
-                    </div>
-                </div>
+                    <a href="uploads/My_CV.pdf" class="button button-primary cv-button" download>Download CV</a>
+                </div>  
             </div>
         </div>
     </section>
 
     <!-- =========================================================
-    RESEARCH (unchanged)
+    RESEARCH – Elaborated interests
     ========================================================= -->
     <section id="research">
         <div class="container">
@@ -293,20 +369,44 @@
                 </p>
             </div>
             <div class="research-grid">
-                <div class="research-card"><h3>Game Development &amp; Game Technology</h3><p>Core game systems, engines, and the technical foundations that games are built on.</p></div>
-                <div class="research-card"><h3>Game AI &amp; Intelligent Interactive Systems</h3><p>Intelligent gameplay systems, NPC behavior, adaptive difficulty, game agents, and player interaction.</p></div>
-                <div class="research-card"><h3>Human-Computer Interaction (HCI)</h3><p>User experience, interaction design, and how people engage with interactive and game-based systems.</p></div>
-                <div class="research-card"><h3>Procedural Content Generation</h3><p>Algorithms for generating puzzles, levels, environments, and other forms of game content.</p></div>
-                <div class="research-card"><h3>Educational &amp; Serious Games</h3><p>Using game systems to communicate complex concepts and support learning through interactive experience.</p></div>
-                <div class="research-card"><h3>AI-Assisted Game Development</h3><p>Exploring how artificial intelligence and generative models can support game creation, design, and development workflows.</p></div>
-                <div class="research-card"><h3>Interactive Learning Systems</h3><p>Adaptive, player-driven systems that teach through discovery rather than static explanation.</p></div>
-                <div class="research-card"><h3>XR &amp; Computational Game Architecture</h3><p>Immersive interaction technologies and the systems-level design of large-scale interactive game architectures.</p></div>
+                <div class="research-card">
+                    <h3>Game Development &amp; Game Technology</h3>
+                    <p>I am deeply curious about the engineering behind modern game engines, how they manage real-time rendering, physics, asset streaming, and complex entity systems at scale. My interest lies in understanding the architecture that allows vast, dynamic worlds to run smoothly, and in pushing these technologies to enable new forms of interactive storytelling.</p>
+                </div>
+                <div class="research-card">
+                    <h3>Game AI &amp; Intelligent Interactive Systems</h3>
+                    <p>Beyond simple state machines, I am fascinated by AI that can reason, adapt, and surprise players. I want to explore techniques like reinforcement learning, planning, and player modeling to create non‑player characters that feel alive, and systems that tailor challenge and narrative to each individual without breaking immersion.</p>
+                </div>
+                <div class="research-card">
+                    <h3>Human-Computer Interaction (HCI)</h3>
+                    <p>I see games as the ultimate testbed for HCI, where feedback, affordances, and cognitive load must be balanced perfectly to keep players in flow. My research interest lies in understanding how users perceive and interact with complex systems, and how we can design interfaces that make advanced AI and simulation tools intuitive for creators and players alike.</p>
+                </div>
+                <div class="research-card">
+                    <h3>Procedural Content Generation</h3>
+                    <p>I am captivated by the idea of algorithms that can generate entire worlds, not just isolated puzzles, but coherent, objective‑driven open environments where every terrain feature, quest, and NPC has purpose. My research curiosity revolves around constraint‑aware generation that respects gameplay logic, narrative arcs, and player progression, making each playthrough unique yet meaningfully designed.</p>
+                </div>
+                <div class="research-card">
+                    <h3>Educational &amp; Serious Games</h3>
+                    <p>Games have an unparalleled ability to teach through doing. I am intrigued by how we can embed complex scientific or historical concepts into interactive systems that encourage experimentation and failure, transforming abstract ideas into tangible, memorable experiences. I aim to investigate design principles that maximize learning outcomes while preserving the intrinsic motivation of play.</p>
+                </div>
+                <div class="research-card">
+                    <h3>AI-Assisted Game Development</h3>
+                    <p>The rise of generative AI opens new frontiers for creators, from procedural asset generation to intelligent design assistants. I want to explore how machine learning models can collaborate with human designers, accelerating workflows while preserving artistic control, and how we can build tools that understand game design intent to suggest rather than replace.</p>
+                </div>
+                <div class="research-card">
+                    <h3>Interactive Learning Systems</h3>
+                    <p>I envision learning environments that adapt not just to a student’s knowledge level, but to their curiosity. My interest focuses on systems that guide discovery rather than deliver instruction, using branching narratives, dynamic feedback, and AI‑driven mentorship to foster deep understanding across STEM and humanities.</p>
+                </div>
+                <div class="research-card">
+                    <h3>XR &amp; Computational Game Architecture</h3>
+                    <p>Extended reality merges the digital and physical in ways that demand rethinking spatial computing, latency, and interaction paradigms. I am keen to research the systems‑level challenges of building large‑scale XR experiences, handling massive state synchronization, persistent virtual worlds, and novel input methods that feel seamless and immersive.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- =========================================================
-    PROJECTS (unchanged – shortened for brevity)
+    PROJECTS (unchanged)
     ========================================================= -->
     <section id="projects">
         <div class="container">
@@ -693,7 +793,6 @@ JAVASCRIPT
 
         /* =========================================================
            EXISTING: mobile menu, reveal, ripple, gallery, hero particles, navbar shrink
-           (copied from the original script.js – only the gallery data is preserved)
            ========================================================= */
 
         // ---- mobile menu ----
@@ -893,7 +992,7 @@ JAVASCRIPT
         }, { passive: true });
 
 
-                /* =========================================================
+        /* =========================================================
            NEW: SCIENTIFIC CIVILIZATION – MERGE SIMULATION (Canvas)
            ========================================================= */
 
@@ -904,14 +1003,12 @@ JAVASCRIPT
 
             function resizeMerge() {
                 const rect = mergeCanvas.getBoundingClientRect();
-                // Ensure dimensions never drop to 0, which breaks canvas rendering
                 mw = mergeCanvas.width = Math.max(300, rect.width || 600);
                 mh = mergeCanvas.height = Math.max(200, rect.height || (mw * 0.625));
             }
             resizeMerge();
             window.addEventListener("resize", resizeMerge);
 
-            // ---- merge chain definition ----
             const merges = [{
                 left: { label: "Wood", color: "#8B6B4A", shape: "rect" },
                 right: { label: "Stone", color: "#9AA0A6", shape: "circle" },
@@ -933,7 +1030,7 @@ JAVASCRIPT
             }];
 
             let mergeIndex = 0;
-            let phase = 0; // 0: intro, 1: merging, 2: result, 3: theory
+            let phase = 0;
             let progress = 0;
             let frame = 0;
             const DURATION_INTRO = 40;
@@ -964,16 +1061,12 @@ JAVASCRIPT
 
             function drawShape(ctx, x, y, w, h, shape, color, label, scale) {
                 const s = scale || 1;
-                const sw = Math.max(1, w * s); // Prevent 0 width
-                const sh = Math.max(1, h * s); // Prevent 0 height
+                const sw = Math.max(1, w * s);
+                const sh = Math.max(1, h * s);
                 ctx.save();
                 ctx.translate(x, y);
-
-                // shadow
                 ctx.shadowColor = "rgba(0,0,0,0.3)";
                 ctx.shadowBlur = 12;
-
-                // draw shape
                 ctx.beginPath();
                 if (shape === "rect") {
                     ctx.roundRect(-sw / 2, -sh / 2, sw, sh, 4);
@@ -1018,7 +1111,6 @@ JAVASCRIPT
                     ctx.arc(0, 0, sw / 2, 0, Math.PI * 2);
                 }
                 ctx.closePath();
-
                 const grad = ctx.createRadialGradient(-sw * 0.2, -sh * 0.2, 2, 0, 0, sw);
                 grad.addColorStop(0, lightenColor(color, 40));
                 grad.addColorStop(1, color);
@@ -1028,412 +1120,199 @@ JAVASCRIPT
                 ctx.strokeStyle = "rgba(255,255,255,0.15)";
                 ctx.lineWidth = 1;
                 ctx.stroke();
-
-                // label
                 ctx.shadowBlur = 0;
                 ctx.fillStyle = "#f1f3f5";
                 ctx.font = "bold " + Math.round(sw * 0.22) + "px system-ui, sans-serif";
                 ctx.textAlign = "center";
                 ctx.textBaseline = "middle";
                 ctx.fillText(label, 0, 2);
-
                 ctx.restore();
             }
 
             function lightenColor(color, amt) {
-                let r = parseInt(color.slice(1, 2), 16) * 17 || parseInt(color.slice(1, 3), 16);
-                let g = parseInt(color.slice(2, 3), 16) * 17 || parseInt(color.slice(3, 5), 16);
-                let b = parseInt(color.slice(3, 4), 16) * 17 || parseInt(color.slice(5, 7), 16);
-                if (color.length === 7) { r = parseInt(color.slice(1, 3), 16);
-                    g = parseInt(color.slice(3, 5), 16);
-                    b = parseInt(color.slice(5, 7), 16); }
-                r = Math.min(255, r + amt);
-                g = Math.min(255, g + amt);
-                b = Math.min(255, b + amt);
+                let r, g, b;
+                if (color.length === 7) { r = parseInt(color.slice(1, 3), 16); g = parseInt(color.slice(3, 5), 16); b = parseInt(color.slice(5, 7), 16); }
+                else { r = parseInt(color.slice(1, 2), 16) * 17; g = parseInt(color.slice(2, 3), 16) * 17; b = parseInt(color.slice(3, 4), 16) * 17; }
+                r = Math.min(255, r + amt); g = Math.min(255, g + amt); b = Math.min(255, b + amt);
                 return "rgb(" + r + "," + g + "," + b + ")";
             }
 
-            // roundRect polyfill for canvas if needed
             if (!CanvasRenderingContext2D.prototype.roundRect) {
                 CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
-                    if (r > w / 2) r = w / 2;
-                    if (r > h / 2) r = h / 2;
-                    this.moveTo(x + r, y);
-                    this.lineTo(x + w - r, y);
-                    this.quadraticCurveTo(x + w, y, x + w, y + r);
-                    this.lineTo(x + w, y + h - r);
-                    this.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
-                    this.lineTo(x + r, y + h);
-                    this.quadraticCurveTo(x, y + h, x, y + h - r);
-                    this.lineTo(x, y + r);
-                    this.quadraticCurveTo(x, y, x + r, y);
+                    if (r > w / 2) r = w / 2; if (r > h / 2) r = h / 2;
+                    this.moveTo(x + r, y); this.lineTo(x + w - r, y); this.quadraticCurveTo(x + w, y, x + w, y + r);
+                    this.lineTo(x + w, y + h - r); this.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+                    this.lineTo(x + r, y + h); this.quadraticCurveTo(x, y + h, x, y + h - r); this.lineTo(x, y + r); this.quadraticCurveTo(x, y, x + r, y);
                     return this;
                 };
             }
 
             const theoryEl = document.getElementById("mergeTheory");
-
             function updateMerge() {
                 if (!mergeCanvas) return;
                 mctx.clearRect(0, 0, mw, mh);
-
                 const data = merges[mergeIndex];
-                const cx = mw / 2,
-                    cy = mh / 2;
+                const cx = mw / 2, cy = mh / 2;
                 const size = Math.min(mw, mh) * 0.28;
                 const spacing = size * 1.5;
                 const leftX = cx - spacing;
                 const rightX = cx + spacing;
 
-                // ---- particles ----
                 particles.forEach((p) => {
-                    p.x += p.vx;
-                    p.y += p.vy;
-                    p.vy += p.gravity;
-                    p.life--;
+                    p.x += p.vx; p.y += p.vy; p.vy += p.gravity; p.life--;
                     const alpha = Math.max(0, p.life / p.maxLife);
                     mctx.globalAlpha = alpha;
-                    mctx.beginPath();
-                    mctx.arc(p.x, p.y, p.r * (0.5 + 0.5 * (p.life / p.maxLife)), 0, Math.PI * 2);
-                    mctx.fillStyle = p.color;
-                    mctx.fill();
+                    mctx.beginPath(); mctx.arc(p.x, p.y, p.r * (0.5 + 0.5 * (p.life / p.maxLife)), 0, Math.PI * 2);
+                    mctx.fillStyle = p.color; mctx.fill();
                     mctx.globalAlpha = 1;
                 });
                 particles = particles.filter(p => p.life > 0);
 
-                // ---- phase logic ----
                 const totalDuration = DURATION_INTRO + DURATION_MERGE + DURATION_RESULT + DURATION_THEORY + DURATION_PAUSE;
-
-                let leftScale = 1,
-                    rightScale = 1,
-                    resultScale = 0;
-                let leftOpacity = 1,
-                    rightOpacity = 1,
-                    resultOpacity = 0;
-                let leftXOff = 0,
-                    rightXOff = 0;
+                let leftScale = 1, rightScale = 1, resultScale = 0, leftOpacity = 1, rightOpacity = 1, resultOpacity = 0, leftXOff = 0, rightXOff = 0;
 
                 if (progress < DURATION_INTRO) {
                     const t = progress / DURATION_INTRO;
-                    leftScale = 0.6 + 0.4 * t;
-                    rightScale = 0.6 + 0.4 * t;
-                    leftOpacity = 1;
-                    rightOpacity = 1;
+                    leftScale = 0.6 + 0.4 * t; rightScale = 0.6 + 0.4 * t; leftOpacity = 1; rightOpacity = 1;
                 } else if (progress < DURATION_INTRO + DURATION_MERGE) {
                     const t = (progress - DURATION_INTRO) / DURATION_MERGE;
                     const ease = 1 - Math.pow(1 - t, 3);
-                    leftXOff = spacing * ease * 0.6;
-                    rightXOff = -spacing * ease * 0.6;
-                    leftScale = 1 - 0.2 * ease;
-                    rightScale = 1 - 0.2 * ease;
-                    leftOpacity = 1 - 0.3 * ease;
-                    rightOpacity = 1 - 0.3 * ease;
-                    if (t > 0.3 && t < 0.7 && particles.length < 80) {
-                        spawnParticles(cx, cy, "#FFB74D", 4);
-                        spawnParticles(cx, cy, "#FF6B35", 3);
-                    }
+                    leftXOff = spacing * ease * 0.6; rightXOff = -spacing * ease * 0.6;
+                    leftScale = 1 - 0.2 * ease; rightScale = 1 - 0.2 * ease;
+                    leftOpacity = 1 - 0.3 * ease; rightOpacity = 1 - 0.3 * ease;
+                    if (t > 0.3 && t < 0.7 && particles.length < 80) { spawnParticles(cx, cy, "#FFB74D", 4); spawnParticles(cx, cy, "#FF6B35", 3); }
                 } else if (progress < DURATION_INTRO + DURATION_MERGE + DURATION_RESULT) {
                     const t = (progress - DURATION_INTRO - DURATION_MERGE) / DURATION_RESULT;
-                    resultScale = 0.3 + 0.7 * t;
-                    resultOpacity = t;
-                    leftOpacity = 1 - t;
-                    rightOpacity = 1 - t;
-                    leftScale = 1 - 0.7 * t;
-                    rightScale = 1 - 0.7 * t;
-                    if (t < 0.2 && particles.length < 120) {
-                        spawnParticles(cx, cy, data.result.color, 15);
-                    }
+                    resultScale = 0.3 + 0.7 * t; resultOpacity = t; leftOpacity = 1 - t; rightOpacity = 1 - t; leftScale = 1 - 0.7 * t; rightScale = 1 - 0.7 * t;
+                    if (t < 0.2 && particles.length < 120) { spawnParticles(cx, cy, data.result.color, 15); }
                 } else if (progress < DURATION_INTRO + DURATION_MERGE + DURATION_RESULT + DURATION_THEORY) {
-                    resultScale = 1;
-                    resultOpacity = 1;
-                    leftOpacity = 0;
-                    rightOpacity = 0;
+                    resultScale = 1; resultOpacity = 1; leftOpacity = 0; rightOpacity = 0;
                     const t2 = (progress - DURATION_INTRO - DURATION_MERGE - DURATION_RESULT) / DURATION_THEORY;
-                    theoryEl.style.opacity = Math.min(1, t2 * 2);
-                    theoryEl.innerHTML = data.short;
+                    theoryEl.style.opacity = Math.min(1, t2 * 2); theoryEl.innerHTML = data.short;
                 } else {
                     const t3 = (progress - DURATION_INTRO - DURATION_MERGE - DURATION_RESULT - DURATION_THEORY) / DURATION_PAUSE;
-                    resultScale = 1 - 0.3 * t3;
-                    resultOpacity = 1 - 0.5 * t3;
-                    leftOpacity = 0;
-                    rightOpacity = 0;
-                    
-                    // FIX: Removed the 'return;' that was killing the requestAnimationFrame loop
+                    resultScale = 1 - 0.3 * t3; resultOpacity = 1 - 0.5 * t3; leftOpacity = 0; rightOpacity = 0;
                 }
 
-                // ---- draw left ----
-                if (leftOpacity > 0.01) {
-                    mctx.globalAlpha = leftOpacity;
-                    drawShape(mctx, leftX + leftXOff, cy, size * 0.8, size * 0.6, data.left.shape, data.left.color, data.left.label, leftScale);
-                    mctx.globalAlpha = 1;
-                }
-
-                // ---- draw right ----
-                if (rightOpacity > 0.01) {
-                    mctx.globalAlpha = rightOpacity;
-                    drawShape(mctx, rightX + rightXOff, cy, size * 0.8, size * 0.6, data.right.shape, data.right.color, data.right.label, rightScale);
-                    mctx.globalAlpha = 1;
-                }
-
-                // ---- draw result ----
+                if (leftOpacity > 0.01) { mctx.globalAlpha = leftOpacity; drawShape(mctx, leftX + leftXOff, cy, size * 0.8, size * 0.6, data.left.shape, data.left.color, data.left.label, leftScale); mctx.globalAlpha = 1; }
+                if (rightOpacity > 0.01) { mctx.globalAlpha = rightOpacity; drawShape(mctx, rightX + rightXOff, cy, size * 0.8, size * 0.6, data.right.shape, data.right.color, data.right.label, rightScale); mctx.globalAlpha = 1; }
                 if (resultOpacity > 0.01) {
                     mctx.globalAlpha = resultOpacity;
                     const glow = mctx.createRadialGradient(cx, cy, 2, cx, cy, Math.max(1, size * 0.8));
-                    glow.addColorStop(0, "rgba(124, 156, 255, 0.15)");
-                    glow.addColorStop(1, "rgba(124, 156, 255, 0)");
-                    mctx.fillStyle = glow;
-                    mctx.beginPath();
-                    mctx.arc(cx, cy, Math.max(1, size * 0.8), 0, Math.PI * 2);
-                    mctx.fill();
-
+                    glow.addColorStop(0, "rgba(124, 156, 255, 0.15)"); glow.addColorStop(1, "rgba(124, 156, 255, 0)");
+                    mctx.fillStyle = glow; mctx.beginPath(); mctx.arc(cx, cy, Math.max(1, size * 0.8), 0, Math.PI * 2); mctx.fill();
                     drawShape(mctx, cx, cy, size * 0.9, size * 0.7, data.result.shape, data.result.color, data.result.label, resultScale);
                     mctx.globalAlpha = 1;
                 }
 
-                // ---- connection line / energy ----
                 if (progress < DURATION_INTRO + DURATION_MERGE && progress > DURATION_INTRO * 0.5) {
                     const t = Math.min(1, (progress - DURATION_INTRO * 0.5) / (DURATION_INTRO * 0.5));
                     const alpha = 0.15 * (1 - t);
-                    mctx.globalAlpha = alpha;
-                    mctx.strokeStyle = "#7c9cff";
-                    mctx.lineWidth = 2;
-                    mctx.setLineDash([6, 8]);
-                    mctx.beginPath();
-                    mctx.moveTo(leftX + leftXOff + size * 0.4, cy);
-                    mctx.lineTo(rightX + rightXOff - size * 0.4, cy);
-                    mctx.stroke();
-                    mctx.setLineDash([]);
-                    mctx.globalAlpha = 1;
+                    mctx.globalAlpha = alpha; mctx.strokeStyle = "#7c9cff"; mctx.lineWidth = 2; mctx.setLineDash([6, 8]);
+                    mctx.beginPath(); mctx.moveTo(leftX + leftXOff + size * 0.4, cy); mctx.lineTo(rightX + rightXOff - size * 0.4, cy); mctx.stroke();
+                    mctx.setLineDash([]); mctx.globalAlpha = 1;
                 }
 
-                // ---- advance ----
-                frame++;
-                progress += 1;
-                
-                // FIX: Handle cycle reset safely
-                if (progress > totalDuration) {
-                    progress = 0;
-                    mergeIndex = (mergeIndex + 1) % merges.length;
-                    particles = [];
-                    theoryEl.style.opacity = 0;
-                    theoryEl.innerHTML = merges[mergeIndex].short;
-                }
-                
+                frame++; progress++;
+                if (progress > totalDuration) { progress = 0; mergeIndex = (mergeIndex + 1) % merges.length; particles = []; theoryEl.style.opacity = 0; theoryEl.innerHTML = merges[mergeIndex].short; }
                 requestAnimationFrame(updateMerge);
             }
-
-            // start the merge loop
-            theoryEl.innerHTML = merges[0].short;
-            theoryEl.style.opacity = 0;
+            theoryEl.innerHTML = merges[0].short; theoryEl.style.opacity = 0;
             setTimeout(() => { theoryEl.style.opacity = 1; }, 300);
             updateMerge();
         }
-        /* =========================================================
-           NEW: WORDLOCK – Grid Self-Assembly (div-based)
-           ========================================================= */
 
+        /* =========================================================
+           NEW: WORDLOCK – Grid Self-Assembly
+           ========================================================= */
         const gridEl = document.getElementById("wordlockGrid");
         if (gridEl) {
-            // Hard-coded 5x5 grid of words (rows and columns)
-            // We'll use a grid where each row is a word and each column is a word.
-            // Using:  R O B O T
-            //         A P P L E
-            //         B E R R Y
-            //         B E A N S
-            //         I D E A S
-            // But we want columns to also be words, so let's use a word square.
-            // Using this word square (all rows and columns are words):
-            //   C R O S S
-            //   R A I S E
-            //   O I L E D
-            //   S E E T H
-            //   S S D H S   ← not a word.
-            // Instead, use a known valid word square:
-            //   H E A R T
-            //   E M B E R
-            //   A B U S E
-            //   R E S I N
-            //   T R E N D
-            // Columns: HEART, EMBES, ABUEN, RESID, TRNND — not all words.
-            //
-            // Let's use a grid where rows are words, and we highlight them.
-            // For the simulation we animate a grid filling with random letters,
-            // then invalid ones fade out, leaving the valid words.
-
             const wordRows = [
-                ['R', 'O', 'B', 'O', 'T'],
-                ['A', 'P', 'P', 'L', 'E'],
-                ['B', 'E', 'R', 'R', 'Y'],
-                ['B', 'E', 'A', 'N', 'S'],
-                ['I', 'D', 'E', 'A', 'S']
+                ['R','O','B','O','T'],
+                ['A','P','P','L','E'],
+                ['B','E','R','R','Y'],
+                ['B','E','A','N','S'],
+                ['I','D','E','A','S']
             ];
-
-            // Also define column words for highlighting
             const colWords = [
-                ['R', 'A', 'B', 'B', 'I'],
-                ['O', 'P', 'E', 'E', 'D'],
-                ['B', 'P', 'R', 'A', 'E'],
-                ['O', 'L', 'R', 'N', 'S'],
-                ['T', 'E', 'Y', 'S', 'S']
+                ['R','A','B','B','I'],
+                ['O','P','E','E','D'],
+                ['B','P','R','A','E'],
+                ['O','L','R','N','S'],
+                ['T','E','Y','S','S']
             ];
-            // Only some columns form words — we'll just highlight rows.
-
-            // We'll create a 5x5 grid of divs.
             const cells = [];
             for (let r = 0; r < 5; r++) {
                 for (let c = 0; c < 5; c++) {
                     const cell = document.createElement("div");
                     cell.className = "wordlock-cell";
-                    cell.dataset.row = r;
-                    cell.dataset.col = c;
+                    cell.dataset.row = r; cell.dataset.col = c;
                     cell.textContent = wordRows[r][c];
                     gridEl.appendChild(cell);
                     cells.push(cell);
                 }
             }
-
-            // Animation state
-            let gridPhase = 0; // 0: random fill, 1: validation, 2: stable
             let gridProgress = 0;
-            const GRID_CYCLE = 280; // frames per full cycle
-
-            // Random letter generator
-            function randomLetter() {
-                return String.fromCharCode(65 + Math.floor(Math.random() * 26));
-            }
-
-            // Check if a cell is part of a valid row word
-            function isValidCell(row, col) {
-                // A cell is valid if it's part of a row that forms a word
-                // All rows in wordRows are words, so all cells are valid.
-                // But we want some cells to be invalid to show the filtering.
-                // We'll mark some cells as invalid based on a pattern.
-                // For the demo, we'll make cells that are at odd positions invalid initially.
-                // But we want the final grid to show the words.
-                // So we'll animate from random -> filtered.
-
-                // For the demo: every cell is valid in the final state.
-                // During the animation, some cells will be shown as invalid and then removed.
-                // We'll use a deterministic pattern: cells where row+col is odd are "initially invalid"
-                // but they become valid later.
-                return true; // all cells are valid in the final grid
-            }
-
-            // The grid will show random letters initially, then slowly reveal the correct letters.
-            // We'll use a time-based animation.
+            const GRID_CYCLE = 280;
 
             function updateWordlock() {
                 const total = GRID_CYCLE;
-                const p = gridProgress / total; // 0..1
-
-                // Phase 0: random letters (0..0.3)
-                // Phase 1: letters start to settle (0.3..0.7)
-                // Phase 2: stable (0.7..1.0)
-
+                const p = gridProgress / total;
                 const randomPhase = Math.min(1, p / 0.3);
                 const settlePhase = Math.max(0, Math.min(1, (p - 0.3) / 0.4));
                 const stablePhase = Math.max(0, Math.min(1, (p - 0.7) / 0.3));
 
-                // For each cell, decide if it's showing random or correct letter
-                cells.forEach((cell, idx) => {
+                cells.forEach((cell) => {
                     const r = parseInt(cell.dataset.row);
                     const c = parseInt(cell.dataset.col);
                     const correct = wordRows[r][c];
-
-                    // Random letter: use a seeded random based on position and time
                     const seed = (r * 7 + c * 13 + Math.floor(gridProgress / 2)) % 26;
                     const random = String.fromCharCode(65 + seed);
-
-                    // Determine what to show
                     let showChar = correct;
                     let isValid = true;
                     let isRevealed = false;
 
                     if (randomPhase < 1) {
-                        // Show random letters with some probability
                         const randMix = Math.random() * 0.3 + 0.2;
-                        if (Math.random() < randMix * (1 - randomPhase * 0.8)) {
-                            showChar = random;
-                            isValid = false;
-                        } else {
-                            showChar = correct;
-                            isValid = true;
-                        }
+                        if (Math.random() < randMix * (1 - randomPhase * 0.8)) { showChar = random; isValid = false; }
+                        else { showChar = correct; isValid = true; }
                     } else if (settlePhase < 1) {
-                        // Gradually reveal correct letters
                         const revealProb = settlePhase * 0.9 + 0.1;
-                        if (Math.random() < 1 - revealProb) {
-                            showChar = random;
-                            isValid = false;
-                        } else {
-                            showChar = correct;
-                            isValid = true;
-                        }
+                        if (Math.random() < 1 - revealProb) { showChar = random; isValid = false; }
+                        else { showChar = correct; isValid = true; }
                         isRevealed = true;
                     } else {
-                        // Stable: show correct letters
-                        showChar = correct;
-                        isValid = true;
-                        isRevealed = true;
+                        showChar = correct; isValid = true; isRevealed = true;
                     }
 
                     cell.textContent = showChar;
-
-                    // Styling
                     cell.className = "wordlock-cell";
                     if (isValid && isRevealed) {
                         cell.classList.add("valid");
-                        // Check if it's part of a row word (all rows are words)
                         const rowWord = wordRows[r].join('');
                         const colWord = colWords.map(row => row[c]).join('');
-                        // Highlight rows and columns that form words
-                        const isRowWord = true; // all rows are words
-                        const isColWord = colWord.length === 5 && colWord === colWord.toUpperCase(); // just a check
-                        if (isRowWord && isColWord) {
-                            cell.classList.add("both");
-                        } else if (isRowWord) {
-                            cell.classList.add("highlight-row");
-                        } else if (isColWord) {
-                            cell.classList.add("highlight-col");
-                        }
+                        if (rowWord && colWord) cell.classList.add("both");
+                        else if (rowWord) cell.classList.add("highlight-row");
+                        else if (colWord) cell.classList.add("highlight-col");
                     } else if (!isValid) {
                         cell.classList.add("invalid");
                     }
-
-                    // Pop animation for newly revealed cells
-                    if (isRevealed && !cell.dataset.revealed) {
-                        cell.classList.add("pop");
-                        cell.dataset.revealed = "true";
-                    }
-                    if (!isRevealed) {
-                        cell.dataset.revealed = "false";
-                    }
+                    if (isRevealed && !cell.dataset.revealed) { cell.classList.add("pop"); cell.dataset.revealed = "true"; }
+                    if (!isRevealed) cell.dataset.revealed = "false";
                 });
 
-                // Update theory text
                 const theoryEl2 = document.getElementById("wordlockTheory");
-                if (stablePhase > 0.8) {
-                    theoryEl2.innerHTML = '&#10003; Grid stabilized &nbsp;·&nbsp; <strong>ROBOT · APPLE · BERRY · BEANS · IDEAS</strong>';
-                } else if (settlePhase > 0.3) {
-                    theoryEl2.innerHTML = '&#9889; Resolving valid letters …';
-                } else {
-                    theoryEl2.innerHTML = '&#128065; Seeding random letters …';
-                }
+                if (stablePhase > 0.8) theoryEl2.innerHTML = '&#10003; Grid stabilized &nbsp;·&nbsp; <strong>ROBOT · APPLE · BERRY · BEANS · IDEAS</strong>';
+                else if (settlePhase > 0.3) theoryEl2.innerHTML = '&#9889; Resolving valid letters …';
+                else theoryEl2.innerHTML = '&#128065; Seeding random letters …';
 
                 gridProgress++;
-                if (gridProgress > total) {
-                    gridProgress = 0;
-                    // Reset revealed state
-                    cells.forEach(c => { c.dataset.revealed = "false"; });
-                }
+                if (gridProgress > total) { gridProgress = 0; cells.forEach(c => { c.dataset.revealed = "false"; }); }
                 requestAnimationFrame(updateWordlock);
             }
-
-            // Start the WordLock loop
             updateWordlock();
         }
-
-    }); // end DOMContentLoaded
+    });
 </script>
 
 </body>
