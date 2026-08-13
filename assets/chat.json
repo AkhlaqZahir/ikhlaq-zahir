@@ -60,6 +60,26 @@
   { "label": "Main menu", "next": "greeting" }
 ]
   },
+    {
+  "id": "gb_special",
+  "questions": [
+    "gilgit baltistan", "tell me about gilgit baltistan", "what makes gilgit baltistan special",
+    "why is gilgit baltistan called the crown jewel of pakistan", "what is the crown jewel of pakistan",
+    "what is gb", "about gilgit baltistan", "gb special", "crown jewel of pakistan meaning",
+    "where is he from", "what is his hometown like", "describe gilgit baltistan",
+    "why is his region special", "what is special about his birthplace"
+  ],
+  "answers": [
+    "Gilgit Baltistan is often called the 'Crown Jewel of Pakistan' because of its breathtaking mountain landscapes, rich cultural heritage, and strategic location at the crossroads of the Karakoram, Himalayas, and Hindu Kush ranges. Ikhlaq grew up surrounded by these colossal peaks, and he says that environment shaped his imagination and resilience. It's a place where nature feels untamed and possibilities feel endless.",
+    "Imagine waking up every day to some of the highest mountains on Earth. That's Gilgit Baltistan for you. For Ikhlaq, growing up there meant being exposed to both incredible natural beauty and the reality of limited resources. He often credits that contrast for his drive to build something meaningful through technology.",
+    "GB, as locals call it, is Pakistan's mountainous northern region, home to K2 and countless other peaks. It's culturally diverse, with a deep history of trade and mountaineering. Ikhlaq considers his origins a huge part of his identity, and he's proud to represent his region on a bigger stage.",
+    "The crown jewel of Pakistan is Gilgit Baltistan – a region of towering peaks, turquoise rivers, and ancient traditions. For Ikhlaq, it's not just a scenic postcard; it's the place that taught him to dream big despite isolation. He's always eager to give back to his community through education and technology."
+  ],
+  "buttons": [
+    { "label": "His childhood", "next": "computer_journey" },
+    { "label": "Main menu", "next": "greeting" }
+  ]
+},
   {
     "id": "ambition_ai_games",
     "questions": [
@@ -288,6 +308,7 @@
     ],
    "buttons": [
   { "label": "Education", "next": "about_education" },
+  { "label":"Gilgit", "next": "gb_special"},
   { "label": "Inspiration", "next": "about_inspiration" },
   { "label": "Philosophy", "next": "about_philosophy" },
   { "label": "Goals", "next": "about_goals" },
