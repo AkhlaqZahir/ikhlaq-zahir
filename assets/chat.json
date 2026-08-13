@@ -1,8 +1,130 @@
 [
+    {
+  "id": "aims_dreams",
+  "questions": [
+    "what does he want to achieve", "what are his aims and dreams", "what is his deeper goal",
+    "what does he ultimately want", "what is his life mission", "what does he dream of achieving",
+    "what is his biggest ambition", "what does he want to accomplish",
+    "what is the goal beyond games", "what does he want to build with others",
+    "what kind of people does he want to work with", "what is his ultimate dream"
+  ],
+  "answers": [
+    "At the core, Ikhlaq dreams of building a group of people who share the same level of curiosity, humility, and individuality. Together, he wants to achieve something that no one has ever accomplished before. It's not just about his own success, it's about creating a collective force capable of extraordinary things.",
+    "His ultimate aim is to surround himself with people who are endlessly curious, deeply humble, and unapologetically individual. With that kind of team, he believes they can create something truly unprecedented, something that changes how we think about games, AI, and learning.",
+    "Ikhlaq wants more than a career; he wants a movement. He imagines a team of like‑minded dreamers, people who are curious, humble, and true to themselves. Together, they would push the limits of what's possible and achieve something the world has never seen.",
+    "The dream is not just to build games, but to build a community. A community of people driven by curiosity, grounded in humility, and free enough to be individuals. With that foundation, Ikhlaq believes they can achieve what no one else ever could."
+  ],
+  "buttons": [
+  { "label": "AI & Games vision", "next": "ambition_ai_games" },
+  { "label": "Family pressure", "next": "family_pressure" },
+  { "label": "Freelancing?", "next": "freelancing" },
+  { "label": "Main menu", "next": "greeting" }
+]
+},
+  {
+    "id": "daily_routine",
+    "questions": [
+      "daily routine", "what is his typical day like", "how does he structure his day", "work habits",
+      "when does he code", "how does he stay productive", "daily schedule", "what time does he wake up",
+      "is he a morning person", "does he sleep late", "how does he manage his time"
+    ],
+    "answers": [
+      "Actually, Ikhlaq is a night owl, not an early riser. He works late into the night – often until 4 or 5 AM – because the internet in his area is fastest after midnight when traffic is lowest. It's a bit of a drawback, but he's adapted to it. Sometimes he doesn't sleep at all when he's deep in a project.",
+      "His schedule is unconventional: he starts his focused work late in the evening and continues through the early morning hours. The slow daytime internet makes it hard to download resources or watch tutorials, so he capitalizes on the fast connection at night.",
+      "Ikhlaq rarely sees sunrise unless he's still awake from the night before. His day typically starts in the afternoon, then he works in cycles until dawn. It's not ideal, but it's how he makes the most of limited resources.",
+      "You could say his prime time is 11 PM to 5 AM. That's when his internet actually works, so that's when he codes, researches, and learns. It's a sacrifice, but he's used to it."
+    ],
+    "buttons": [
+  { "label": "Freelancing?", "next": "freelancing" },
+  { "label": "His aims", "next": "aims_dreams" },
+  { "label": "Main menu", "next": "greeting" }
+]
+  },
+  {
+    "id": "freelancing",
+    "questions": [
+      "freelancing", "why doesn't he do freelance", "does he freelance", "freelance work",
+      "why no freelancing", "freelance developer", "why doesn't he take freelance projects",
+      "what does he think about freelancing", "is freelancing good for him"
+    ],
+    "answers": [
+      "Freelancing is a great way to earn through skill, and Ikhlaq fully acknowledges that. But he has a fear that if he starts freelancing, he'll settle for it and diverge from his ultimate goal. He doesn't trust his brain in that context, because in his area, earning well often leads to settling down – no big moves. He wants to break that chain.",
+      "He avoids freelancing not because he can't do it, but because he's afraid of comfort. Once you start earning decent money, it's easy to stop chasing the bigger dream. He wants to build something extraordinary, and freelancing feels like a detour.",
+      "Ikhlaq has thought a lot about freelancing. It's tempting, but he knows himself: if he starts, he might never stop, and his research and game development ambitions would fade. So he stays focused on the long game.",
+      "He's not against freelancing in principle – he just knows that for him, it could become a trap. The safe path is often the enemy of the groundbreaking path, and he's committed to the latter."
+    ],
+    "buttons": [
+  { "label": "His ambition", "next": "ambition_ai_games" },
+  { "label": "Family view", "next": "family_pressure" },
+  { "label": "Breaking chain", "next": "breaking_chain" },
+  { "label": "Main menu", "next": "greeting" }
+]
+  },
+  {
+    "id": "ambition_ai_games",
+    "questions": [
+      "ambition", "what does he want to achieve", "his biggest ambition", "what drives his ambition",
+      "what does he want to create", "his vision for AI and games", "push boundaries",
+      "reshape procedural generation", "what does he want to change in game development",
+      "what is his ultimate goal in tech"
+    ],
+    "answers": [
+      "Ikhlaq wants to push the boundaries of what's possible in AI and games. He dreams of creating things so capable that no one has ever done before – completely reshaping what procedural generation is thought to be and taking it to an entirely new level.",
+      "His ambition is to redefine procedural content generation. He doesn't want to just generate random levels; he wants to build systems that generate entire coherent worlds with meaningful narratives, quests, and characters – all constrained by game logic and player experience.",
+      "He wants to be at the forefront of AI-driven game development. Imagine games that adapt, learn, and create content in real time. That's the future he's working toward, and he's determined to be part of it.",
+      "Ikhlaq believes that the combination of AI and games can change how we learn and play. He wants to build the foundational technology that makes this possible – not for one game, but for the entire industry."
+    ],
+    "buttons": [
+  { "label": "Family reaction", "next": "family_pressure" },
+  { "label": "Breaking chain", "next": "breaking_chain" },
+  { "label": "Ultimate dream", "next": "aims_dreams" },
+  { "label": "Main menu", "next": "greeting" }
+]
+  },
+  {
+    "id": "family_pressure",
+    "questions": [
+      "family pressure", "what does his family think", "how does his family react", "family expectations",
+      "do his parents support him", "what do his parents want", "does his family understand his work",
+      "family disagreement", "pressure to get a job"
+    ],
+    "answers": [
+      "Despite his vision, his family doesn't fully see it. They keep insisting on freelancing or a stable job, which is understandable – they want security for him. But Ikhlaq is resilient and a bit rebellious when he knows he can achieve something far greater than a 9-to-5 job. They don't understand the way he looks at the world.",
+      "His family loves him and worries about him. They push for a steady income, freelance work, or a conventional career. But Ikhlaq has a deeper conviction – he believes his path is different, and he's willing to be the one who breaks the mold, even if they don't see it yet.",
+      "There's tension between his family's desire for safety and his own drive for innovation. He respects their concern but refuses to settle. He knows that playing it safe is exactly what kills creativity and big dreams in his community.",
+      "His family's advice comes from love, but Ikhlaq has a fire they don't fully comprehend. He's determined to prove that a person from a small mountain town can build something world-changing, even if it means going against their wishes for now."
+    ],
+    "buttons": [
+  { "label": "Breaking chain", "next": "breaking_chain" },
+  { "label": "Freelancing?", "next": "freelancing" },
+  { "label": "His ambition", "next": "ambition_ai_games" },
+  { "label": "Main menu", "next": "greeting" }
+]
+  },
+  {
+    "id": "breaking_chain",
+    "questions": [
+      "breaking the chain", "what does he think about playing it safe", "why does he want to break the chain",
+      "safe job vs big dreams", "why is he rebellious", "what does he mean by breaking the chain",
+      "innovation vs security", "why doesn't he settle for a normal job"
+    ],
+    "answers": [
+      "Ikhlaq sees a pattern in his community: once someone earns a decent income, they settle. No big moves, no risk, no innovation. He calls it a chain – and he's determined to break it. He believes that playing it safe kills creativity and stops people from reaching their full potential.",
+      "He's not rebellious for the sake of it; he's rebellious because he sees a better way. The usual path – get a job, earn, settle – is exactly what he wants to avoid. He wants to show that you can dream big and achieve big, even from a small town.",
+      "Breaking the chain means refusing to accept mediocrity as the final answer. It's about proving that one person can push beyond the limits set by their environment. Ikhlaq is that person, and every project he builds is a strike against the chain.",
+      "He knows that if he takes the safe route, he'll live comfortably but never truly live. He wants to create something that matters, something that changes the game – literally and figuratively."
+    ],
+    "buttons": [
+  { "label": "Family view", "next": "family_pressure" },
+  { "label": "His aims", "next": "aims_dreams" },
+  { "label": "Main menu", "next": "greeting" }
+]
+  },
+
   {
     "id": "greeting",
     "questions": [
-    "hi", "hello", "salam","assalamualaikum","assalamu alaikum","hey", "who are you", "greetings", "yo", "sup",
+    "hi", "hello","hey", "who are you", "greetings", "yo", "sup",
     "good morning", "good evening", "good afternoon", "howdy", "what's up",
     "hi there", "hello guardian", "are you there", "can you help me",
     "start", "begin", "let's talk", "who are you?", "what can you do",
@@ -11,8 +133,9 @@
     "what's good", "how are you", "you there?", "guardian?", "bot?",
     "chatbot?", "are you online", "are you awake", "wake up", "hello?",
     "hiiii", "heya", "good to see you", "nice to meet you", "let's go",
-    "talk to me","help","salam alaikum", "aoa"
+    "talk to me","help"
   ],
+
     "answers": [
       "Hello there! I'm the Guardian of this portfolio. What would you like to know about?",
       "Greetings, traveler! Ask me anything about Ikhlaq Zahir.",
@@ -22,11 +145,30 @@
       "Oh, a visitor! Curious about the person behind these projects, or the projects themselves?"
     ],
     "buttons": [
-      { "label": "Tell me about Ikhlaq Zahir", "next": "about_menu" },
-      { "label": "Projects", "next": "projects_menu" },
-      { "label": "Research Interests", "next": "research" },
-      { "label": "Skills", "next": "skills" }
-    ]
+  { "label": "About", "next": "about_menu" },
+  { "label": "Projects", "next": "projects_menu" },
+  { "label": "Research", "next": "research" },
+  { "label": "Skills", "next": "skills" },
+  { "label": "Routine", "next": "daily_routine" }
+]
+  },
+  {
+    "id": "islamic_greeting",
+    "questions": ["salam","salam alaikum", 
+    "aoa", "assalamualaikum","assalamu alaikum"],
+    "answers":["Waalaikum! I'm the Guardian of this portfolio. What would you like to know about?",
+      "Walaikum as salam, traveler! Ask me anything about Ikhlaq Zahir.",
+      "Waalaikumassalam! I'm here to answer questions about Ikhlaq. What interests you?",
+      "Waalaikum assalam! I keep watch over this portfolio and everything in it. Where should we start?",
+      "Wassalam. I know pretty much everything about Ikhlaq, his projects, and his research. Ask away.",
+      "Walaikum! Curious about the person behind these projects, or the projects themselves?"],
+    "buttons": [
+  { "label": "About", "next": "about_menu" },
+  { "label": "Projects", "next": "projects_menu" },
+  { "label": "Research", "next": "research" },
+  { "label": "Skills", "next": "skills" },
+  { "label": "Routine", "next": "daily_routine" }
+]
   },
    {
         "id": "achievements",
@@ -55,9 +197,10 @@
             "There are 8 achievements hidden through the site, unlocked by actually exploring it - projects, scrolling, screenshots, and this very chat all count toward them. Finish the set for a surprise."
         ],
         "buttons": [
-            { "label": "What's the secret reward?", "next": "secret_reward" },
-            { "label": "Back to main", "next": "greeting" }
-        ]
+  { "label": "Secret reward?", "next": "secret_reward" },
+  { "label": "About Ikhlaq", "next": "about_menu" },
+  { "label": "Main menu", "next": "greeting" }
+]
     },
     {
         "id": "secret_reward",
@@ -85,9 +228,9 @@
             "I could tell you... but where's the fun in that? Complete the set and find out for yourself."
         ],
         "buttons": [
-            { "label": "Show me the achievements", "next": "achievements" },
-            { "label": "Back to main", "next": "greeting" }
-        ]
+  { "label": "Show achievements", "next": "achievements" },
+  { "label": "Main menu", "next": "greeting" }
+]
     },
     {
         "id": "cv_resume",
@@ -116,8 +259,9 @@
             { "label": "View CV", "url": "uploads/My_Resume.pdf", "icon": "fas fa-eye", "download": false }
         ],
         "buttons": [
-            { "label": "Back to main", "next": "greeting" }
-        ]
+  { "label": "Contact", "next": "about_contact" },
+  { "label": "Main menu", "next": "greeting" }
+]
     },
   {
     "id": "about_menu",
@@ -142,15 +286,17 @@
       "He grew up in the mountains of Gilgit Baltistan and turned a childhood love of Sci-Fi into an actual career building games and AI systems. What would you like to dig into?",
       "Short version: mountain kid, lawyer's son, CS graduate, now building games and researching AI. Long version available on request - education, inspiration, goals, tools, or contact?"
     ],
-    "buttons": [
-      { "label": "Education", "next": "about_education" },
-      { "label": "Inspiration", "next": "about_inspiration" },
-      { "label": "Philosophy & Values", "next": "about_philosophy" },
-      { "label": "Goals", "next": "about_goals" },
-      { "label": "Tools", "next": "about_tools" },
-      { "label": "Contact", "next": "about_contact" },
-      { "label": "Back to main", "next": "greeting" }
-    ]
+   "buttons": [
+  { "label": "Education", "next": "about_education" },
+  { "label": "Inspiration", "next": "about_inspiration" },
+  { "label": "Philosophy", "next": "about_philosophy" },
+  { "label": "Goals", "next": "about_goals" },
+  { "label": "Tools", "next": "about_tools" },
+  { "label": "Contact", "next": "about_contact" },
+  { "label": "Routine", "next": "daily_routine" },
+  { "label": "Ambition", "next": "ambition_ai_games" },
+  { "label": "Main menu", "next": "greeting" }
+]
   },
   {
     "id": "about_education",
@@ -177,12 +323,14 @@
       "Solid academic pedigree: one of Pakistan's top secondary schools, followed by a CS degree from UMT Lahore focused on the intersection of games and intelligent systems."
     ],
     "followUp": {
-      "text": "Want to know more about his education?",
-      "options": [
-        { "label": "Yes, tell me about inspiration", "next": "about_inspiration" },
-        { "label": "No, back to menu", "next": "about_menu" }
-      ]
-    }
+  "text": "Want more?",
+  "options": [
+    { "label": "Inspiration", "next": "about_inspiration" },
+    { "label": "Philosophy", "next": "about_philosophy" },
+    { "label": "Goals", "next": "about_goals" },
+    { "label": "About menu", "next": "about_menu" }
+  ]
+}
   },
   {
     "id": "about_inspiration",
@@ -210,12 +358,14 @@
       "It started with Sci-Fi movies and never really stopped. 'Iron Man' specifically pushed him toward engineering, and from there computer science and game development felt inevitable."
     ],
     "followUp": {
-      "text": "Want to hear about his professional philosophy?",
-      "options": [
-        { "label": "Yes", "next": "about_philosophy" },
-        { "label": "No, back to menu", "next": "about_menu" }
-      ]
-    }
+  "text": "Continue?",
+  "options": [
+    { "label": "Philosophy", "next": "about_philosophy" },
+    { "label": "Education", "next": "about_education" },
+    { "label": "Goals", "next": "about_goals" },
+    { "label": "About menu", "next": "about_menu" }
+  ]
+}
   },
   {
     "id": "about_philosophy",
@@ -242,12 +392,14 @@
       "He treats time as the ultimate teacher - every day is another chance to learn something, and he tries not to let that chance go to waste."
     ],
     "followUp": {
-      "text": "Now, would you like to know his ultimate goal?",
-      "options": [
-        { "label": "Yes", "next": "about_goals" },
-        { "label": "No, back to menu", "next": "about_menu" }
-      ]
-    }
+  "text": "Next?",
+  "options": [
+    { "label": "Goals", "next": "about_goals" },
+    { "label": "Tools", "next": "about_tools" },
+    { "label": "Inspiration", "next": "about_inspiration" },
+    { "label": "About menu", "next": "about_menu" }
+  ]
+}
   },
   {
     "id": "about_goals",
@@ -271,12 +423,14 @@
       "He's aiming to build one of the country's leading game studios, one built around games that teach as much as they entertain."
     ],
     "followUp": {
-      "text": "Shall I tell you about his major tools?",
-      "options": [
-        { "label": "Yes", "next": "about_tools" },
-        { "label": "No, back to menu", "next": "about_menu" }
-      ]
-    }
+  "text": "Keep exploring?",
+  "options": [
+    { "label": "Tools", "next": "about_tools" },
+    { "label": "Philosophy", "next": "about_philosophy" },
+    { "label": "Ambition", "next": "ambition_ai_games" },
+    { "label": "About menu", "next": "about_menu" }
+  ]
+}
   },
   {
     "id": "about_tools",
@@ -302,12 +456,13 @@
       "Python, Android Studio, and Unity cover most of his workflow - PCG algorithms, mobile deployment, and game development respectively. The scale of his projects is currently limited by resources, not ambition."
     ],
     "followUp": {
-      "text": "Do you need his contact information?",
-      "options": [
-        { "label": "Yes, contact", "next": "about_contact" },
-        { "label": "No, back to menu", "next": "about_menu" }
-      ]
-    }
+  "text": "Need contact?",
+  "options": [
+    { "label": "Contact", "next": "about_contact" },
+    { "label": "Goals", "next": "about_goals" },
+    { "label": "About menu", "next": "about_menu" }
+  ]
+}
   },
   {
     "id": "about_contact",
@@ -337,8 +492,9 @@
       { "label": "View CV", "url": "uploads/My_Resume.pdf", "icon": "fas fa-eye", "download": true }
     ],
     "buttons": [
-      { "label": "Back to main menu", "next": "greeting" }
-    ]
+  { "label": "About menu", "next": "about_menu" },
+  { "label": "Main menu", "next": "greeting" }
+]
   },
   {
     "id": "projects_menu",
@@ -370,6 +526,7 @@
       { "label": "WordLock", "next": "wordlock" },
       { "label": "MemWord", "next": "memword" },
       { "label": "Scientific Civilization", "next": "sciciv" },
+      { "label": "About Ikhlaq", "next": "about_menu" },
       { "label": "Back to main", "next": "greeting" }
     ]
   },
@@ -551,9 +708,10 @@
       { "label": "Email to Join Testers", "url": "mailto:akhlaqzahir810@gmail.com?subject=Tester%20Access%20Request%20-%20HSK%20Vocabulary&body=Hi%20Ikhlaq%2C%0A%0AI%27d%20love%20to%20be%20added%20to%20the%20closed%20testing%20list%20for%20HSK%20Vocabulary.", "icon": "fas fa-envelope" }
     ],
     "buttons": [
-      { "label": "Other projects", "next": "projects_menu" },
-      { "label": "Back to main", "next": "greeting" }
-    ]
+  { "label": "Other projects", "next": "projects_menu" },
+  { "label": "About Ikhlaq", "next": "about_menu" },
+  { "label": "Main menu", "next": "greeting" }
+]
   },
   {
     "id": "numatrix",
@@ -577,9 +735,10 @@
       { "label": "Email to Join Testers", "url": "mailto:akhlaqzahir810@gmail.com?subject=Tester%20Access%20Request%20-%20Numatrix&body=Hi%20Ikhlaq%2C%0A%0AI%27d%20love%20to%20be%20added%20to%20the%20closed%20testing%20list%20for%20Numatrix.", "icon": "fas fa-envelope" }
     ],
     "buttons": [
-      { "label": "Other projects", "next": "projects_menu" },
-      { "label": "Back to main", "next": "greeting" }
-    ]
+  { "label": "Other projects", "next": "projects_menu" },
+  { "label": "About Ikhlaq", "next": "about_menu" },
+  { "label": "Main menu", "next": "greeting" }
+]
   },
   {
     "id": "wordlock",
@@ -600,9 +759,10 @@
       "Still in the prototype stage - the core problem is generating a 5x5 grid where every active row and column forms valid words simultaneously, which is a brutal constraint-satisfaction challenge. Current runs take up to 45 minutes per grid, so he's exploring machine-learning-assisted generation to speed things up."
     ],
     "buttons": [
-      { "label": "Other projects", "next": "projects_menu" },
-      { "label": "Back to main", "next": "greeting" }
-    ]
+  { "label": "Other projects", "next": "projects_menu" },
+  { "label": "About Ikhlaq", "next": "about_menu" },
+  { "label": "Main menu", "next": "greeting" }
+]
   },
   {
     "id": "memword",
@@ -627,9 +787,10 @@
       { "label": "Email to Join Testers", "url": "mailto:akhlaqzahir810@gmail.com?subject=Tester%20Access%20Request%20-%20MemWord&body=Hi%20Ikhlaq%2C%0A%0AI%27d%20love%20to%20be%20added%20to%20the%20closed%20testing%20list%20for%20MemWord.", "icon": "fas fa-envelope" }
     ],
     "buttons": [
-      { "label": "Other projects", "next": "projects_menu" },
-      { "label": "Back to main", "next": "greeting" }
-    ]
+  { "label": "Other projects", "next": "projects_menu" },
+  { "label": "About Ikhlaq", "next": "about_menu" },
+  { "label": "Main menu", "next": "greeting" }
+]
   },
   {
     "id": "sciciv",
@@ -651,9 +812,10 @@
       "The pitch: you're stranded thousands of years in the past and have to rebuild the modern world from scratch, one discovery at a time. It's early in development, but it's the project Ikhlaq is most excited about long-term."
     ],
     "buttons": [
-      { "label": "Other projects", "next": "projects_menu" },
-      { "label": "Back to main", "next": "greeting" }
-    ]
+  { "label": "Other projects", "next": "projects_menu" },
+  { "label": "About Ikhlaq", "next": "about_menu" },
+  { "label": "Main menu", "next": "greeting" }
+]
   },
   {
     "id": "research",
@@ -675,8 +837,10 @@
       "Broadly: game architecture, game AI, HCI, procedural generation, educational games, and XR. If it involves making interactive systems smarter or more meaningful, he's interested."
     ],
     "buttons": [
-      { "label": "Back to main", "next": "greeting" }
-    ]
+  { "label": "Skills", "next": "skills" },
+  { "label": "Projects", "next": "projects_menu" },
+  { "label": "Main menu", "next": "greeting" }
+]
   },
   {
     "id": "skills",
@@ -696,8 +860,10 @@
       "Unity and C# for games, Kotlin and Jetpack Compose for Android, Python and PyTorch for AI/ML, plus a solid grounding in HCI and UI/UX design."
     ],
     "buttons": [
-      { "label": "Back to main", "next": "greeting" }
-    ]
+  { "label": "Research", "next": "research" },
+  { "label": "Projects", "next": "projects_menu" },
+  { "label": "Main menu", "next": "greeting" }
+]
   },
   {
     "id": "pcg",
@@ -714,13 +880,14 @@
   ],
     "answers": [
       "Procedural Content Generation (PCG) is using algorithms to create game content automatically. Ikhlaq is fascinated by how to generate not just puzzles but entire coherent worlds that respect objectives and narrative.",
-      "PCG (Procedural Content Generation) means designing rules that produce valid, interesting content. Ikhlaq's work in WordLock and Numatrix involves constraint-based generation—ensuring every output is solvable and meaningful.",
-      "Procedural Content Generation. Ikhlaq explores PCG for complex environments: generating levels, quests, and worlds that don't contradict game logic or player goals. He's especially interested in open-world generation with narrative coherence.",
-      "Procedural Content Generation. In short, algorithms writing the content instead of a human. Ikhlaq applies this to word grids, number puzzles, and eventually hopes to scale it up to entire coherent worlds."
+      "PCG means designing rules that produce valid, interesting content. Ikhlaq's work in WordLock and Numatrix involves constraint-based generation, ensuring every output is solvable and meaningful.",
+      "Ikhlaq explores PCG for complex environments: generating levels, quests, and worlds that don't contradict game logic or player goals. He's especially interested in open-world generation with narrative coherence.",
+      "In short, algorithms writing the content instead of a human. Ikhlaq applies this to word grids, number puzzles, and eventually hopes to scale it up to entire coherent worlds."
     ],
     "buttons": [
-      { "label": "Back to main", "next": "greeting" }
-    ]
+  { "label": "PCG Projects", "next": "projects_menu" },
+  { "label": "Main menu", "next": "greeting" }
+]
   },
   {
     "id": "ai_ml",
@@ -736,14 +903,15 @@
     "machine learning knowledge", "ai skills", "ai expertise"
   ],
     "answers": [
-      "Ikhlaq works with Python, PyTorch, and LLMs. He's interested in AI for game systems—NPC behavior, adaptive difficulty, and AI-assisted development.",
+      "Ikhlaq works with Python, PyTorch, and LLMs. He's interested in AI for game systems, NPC behavior, adaptive difficulty, and AI-assisted development.",
       "Yes, he has ML fundamentals, generative AI, and large language model experience. His focus is on using AI to enhance games and interactive learning.",
       "He uses PyTorch and Hugging Face for experiments. His research includes how AI agents can become intelligent tutors or companions in games.",
       "Python and PyTorch are his go-to tools, and he's particularly interested in applying AI to NPC behavior, adaptive difficulty, and AI-assisted game development workflows."
     ],
     "buttons": [
-      { "label": "Back to main", "next": "greeting" }
-    ]
+  { "label": "Research", "next": "research" },
+  { "label": "Main menu", "next": "greeting" }
+]
   },
   {
     "id": "game_dev",
@@ -765,8 +933,9 @@
       "Unity and C# are his primary game-dev toolkit, covering everything from 2D puzzle mechanics to AI and pathfinding for larger simulation projects."
     ],
     "buttons": [
-      { "label": "Back to main", "next": "greeting" }
-    ]
+  { "label": "Projects", "next": "projects_menu" },
+  { "label": "Main menu", "next": "greeting" }
+]
   },
   {
     "id": "android",
@@ -791,8 +960,9 @@
       { "label": "Browse all apps on Google Play", "url": "https://play.google.com/store/apps/developer?id=IsolatedVertex+Studios", "icon": "fab fa-google-play" }
     ],
     "buttons": [
-      { "label": "Back to main", "next": "greeting" }
-    ]
+  { "label": "Projects", "next": "projects_menu" },
+  { "label": "Main menu", "next": "greeting" }
+]
   },
   {
     "id": "contact",
@@ -820,7 +990,8 @@
       { "label": "View CV", "url": "uploads/My_Resume.pdf", "icon": "fas fa-eye", "download": false }
     ],
     "buttons": [
-      { "label": "Back to main", "next": "greeting" }
-    ]
+  { "label": "About", "next": "about_menu" },
+  { "label": "Main menu", "next": "greeting" }
+]
   }
 ]
