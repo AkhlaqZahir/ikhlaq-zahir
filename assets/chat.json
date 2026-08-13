@@ -714,9 +714,9 @@
   ],
     "answers": [
       "Procedural Content Generation (PCG) is using algorithms to create game content automatically. Ikhlaq is fascinated by how to generate not just puzzles but entire coherent worlds that respect objectives and narrative.",
-      "PCG means designing rules that produce valid, interesting content. Ikhlaq's work in WordLock and Numatrix involves constraint-based generation—ensuring every output is solvable and meaningful.",
-      "Ikhlaq explores PCG for complex environments: generating levels, quests, and worlds that don't contradict game logic or player goals. He's especially interested in open-world generation with narrative coherence.",
-      "In short, algorithms writing the content instead of a human. Ikhlaq applies this to word grids, number puzzles, and eventually hopes to scale it up to entire coherent worlds."
+      "PCG (Procedural Content Generation) means designing rules that produce valid, interesting content. Ikhlaq's work in WordLock and Numatrix involves constraint-based generation—ensuring every output is solvable and meaningful.",
+      "Procedural Content Generation. Ikhlaq explores PCG for complex environments: generating levels, quests, and worlds that don't contradict game logic or player goals. He's especially interested in open-world generation with narrative coherence.",
+      "Procedural Content Generation. In short, algorithms writing the content instead of a human. Ikhlaq applies this to word grids, number puzzles, and eventually hopes to scale it up to entire coherent worlds."
     ],
     "buttons": [
       { "label": "Back to main", "next": "greeting" }
