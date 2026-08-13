@@ -281,11 +281,43 @@
             padding: 16px;
         }
         .achievement-panel.open { display: block; }
-        .achievement-panel h3 { font-size: 1rem; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+        .achievement-panel h3 { font-size: 1rem; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+        .achievement-subtitle { font-size: 0.7rem; font-weight: 500; color: var(--text-muted); }
         .achievement-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
         .achievement-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--text-muted); }
         .achievement-item.unlocked { color: var(--accent); font-weight: 600; }
         .achievement-item i { width: 18px; text-align: center; }
+
+        .reward-claim-btn {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            margin: 10px 0 14px;
+            padding: 10px 12px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), #b98cff);
+            color: #080a0f;
+            font-weight: 700;
+            font-size: 0.8rem;
+            cursor: pointer;
+            box-shadow: 0 0 0 rgba(124, 156, 255, 0.5);
+            animation: rewardPulse 2s ease-in-out infinite;
+        }
+        .reward-claim-btn.visible { display: flex; }
+        @keyframes rewardPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(124, 156, 255, 0.45); }
+            50% { box-shadow: 0 0 0 8px rgba(124, 156, 255, 0); }
+        }
+        .achievement-toggle.has-reward {
+            animation: rewardTogglePulse 1.6s ease-in-out infinite;
+        }
+        @keyframes rewardTogglePulse {
+            0%, 100% { box-shadow: 0 4px 12px rgba(0,0,0,0.3), 0 0 0 0 rgba(124, 156, 255, 0.6); }
+            50% { box-shadow: 0 4px 12px rgba(0,0,0,0.3), 0 0 0 10px rgba(124, 156, 255, 0); }
+        }
 
         .achievement-toggle {
             position: fixed;
@@ -471,6 +503,38 @@
             30% { transform: translateY(-4px); opacity: 1; }
         }
 
+        .guardian-links {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-self: flex-start;
+            max-width: 85%;
+            margin-top: -2px;
+        }
+        .guardian-link-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s, transform 0.15s;
+        }
+        .guardian-link-btn i { color: var(--accent); width: 16px; text-align: center; flex-shrink: 0; }
+        .guardian-link-btn:hover {
+            background: var(--accent);
+            color: #080a0f;
+            border-color: transparent;
+            transform: translateX(2px);
+        }
+        .guardian-link-btn:hover i { color: #080a0f; }
+
         .guardian-suggestions {
             display: flex;
             flex-wrap: wrap;
@@ -531,6 +595,58 @@
         .guardian-input-area button:disabled {
             opacity: 0.5;
             cursor: not-allowed;
+        }
+
+        /* Certificate of Appreciation (secret reward) */
+        .cert-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(5, 6, 9, 0.82);
+            z-index: 2500;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .cert-overlay.active { display: flex; }
+        .cert-modal {
+            position: relative;
+            width: 100%;
+            max-width: 760px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+            animation: fadeIn 0.25s ease;
+        }
+        .cert-canvas-wrap {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--bg);
+        }
+        .cert-canvas-wrap canvas { display: block; width: 100%; height: auto; }
+        .cert-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+        .cert-close {
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.6rem;
+            line-height: 1;
+            cursor: pointer;
+        }
+        .cert-close:hover { color: var(--text); }
+        @media screen and (max-width: 600px) {
+            .cert-actions { flex-direction: column; }
         }
 
         @media screen and (max-width: 600px) {
@@ -632,7 +748,6 @@
                         <a href="https://www.linkedin.com/in/akhlaq-zahir-260831142/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/ikhlaq-zahir" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
                         <a href="https://play.google.com/store/apps/developer?id=IsolatedVertex+Studios" target="_blank" rel="noopener noreferrer" aria-label="Google Play"><i class="fab fa-google-play"></i></a>
-
                     </div>
                     <a href="uploads/My_Resume.pdf" class="button button-primary cv-button" download>Download CV</a>
                 </div>  
@@ -1077,7 +1192,10 @@ ACHIEVEMENT SYSTEM HTML
     <i class="fas fa-trophy"></i>
 </button>
 <div class="achievement-panel" id="achievementPanel">
-    <h3><i class="fas fa-trophy"></i> Achievements</h3>
+    <h3><i class="fas fa-trophy"></i> Achievements <span class="achievement-subtitle">(Earn all of them to unlock a secret reward)</span></h3>
+    <button class="reward-claim-btn" id="rewardClaimBtn" type="button">
+        <i class="fas fa-gift"></i> Secret reward unlocked - click here to claim it
+    </button>
     <ul class="achievement-list" id="achievementList"></ul>
 </div>
 <div class="toast" id="toast"></div>
@@ -1103,6 +1221,22 @@ GUARDIAN CHATBOT HTML
     <div class="guardian-input-area">
         <input type="text" id="guardianInput" placeholder="Type a question..." autocomplete="off" maxlength="200">
         <button id="guardianSend" aria-label="Send message"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+    </div>
+</div>
+
+<!-- =========================================================
+CERTIFICATE OF APPRECIATION (secret reward)
+========================================================= -->
+<div class="cert-overlay" id="certOverlay" aria-hidden="true">
+    <div class="cert-modal" role="dialog" aria-modal="true" aria-label="Certificate of Appreciation">
+        <button class="cert-close" id="certClose" type="button" aria-label="Close certificate">&times;</button>
+        <div class="cert-canvas-wrap">
+            <canvas id="certCanvas"></canvas>
+        </div>
+        <div class="cert-actions">
+            <button class="button button-primary" id="certDownloadPng" type="button">Download PNG</button>
+            <button class="button button-secondary" id="certDownloadJpg" type="button">Download JPG</button>
+        </div>
     </div>
 </div>
 
@@ -1634,293 +1768,426 @@ JAVASCRIPT
             updateWordlock();
         }
 
-        /* =========================================================
-           INJECTED: ACHIEVEMENT SYSTEM & GUARDIAN CHATBOT LOGIC
-           ========================================================= */
-        (function() {
-            // ========== ACHIEVEMENT SYSTEM ==========
-            const achievements = [
-                { id: "welcome", name: "Welcome, Traveler", icon: "fa-door-open" },
-                { id: "curious", name: "Curious Explorer", icon: "fa-search" },
-                { id: "deep_dive", name: "Deep Dive", icon: "fa-clock" },
-                { id: "scroll_master", name: "Master of Scroll", icon: "fa-scroll" },
-                { id: "gallery_seeker", name: "Gallery Seeker", icon: "fa-images" },
-                { id: "guardian_open", name: "Seeker of Knowledge", icon: "fa-hat-wizard" },
-                { id: "guardian_message", name: "Inquisitive Mind", icon: "fa-comment-dots" },
-                { id: "guardian_answer", name: "Wise Council", icon: "fa-reply" }
-            ];
-            let unlocked = {};
-            let projectClicks = 0, timerStarted = false;
+    }); // ===== END OF DOMContentLoaded =====
+    // (This closing was missing in the original file, causing a SyntaxError
+    //  that prevented the entire <script> block from executing.)
 
-            window.checkAchievement = function(id) {
-                if(!unlocked[id]) {
-                    unlocked[id] = true;
-                    const a = achievements.find(x=>x.id===id);
-                    showToast((a?a.name:id) + " unlocked!");
-                    refreshPanel();
-                }
-            };
+(function() {
+    // ========== ACHIEVEMENT SYSTEM ==========
+    const achievements = [
+        { id: "welcome", name: "Welcome, Traveler", icon: "fa-door-open" },
+        { id: "curious", name: "Curious Explorer", icon: "fa-search" },
+        { id: "deep_dive", name: "Deep Dive", icon: "fa-clock" },
+        { id: "scroll_master", name: "Master of Scroll", icon: "fa-scroll" },
+        { id: "gallery_seeker", name: "Gallery Seeker", icon: "fa-images" },
+        { id: "guardian_open", name: "Seeker of Knowledge", icon: "fa-hat-wizard" },
+        { id: "guardian_message", name: "Inquisitive Mind", icon: "fa-comment-dots" },
+        { id: "guardian_answer", name: "Wise Council", icon: "fa-reply" }
+    ];
 
-            function showToast(msg) {
-                const t = document.getElementById("toast");
-                t.textContent = msg;
-                t.classList.add("show");
-                setTimeout(() => t.classList.remove("show"), 3000);
-            }
+    let unlocked = {};
+    let totalUnlocked = 0;
+    let projectClicks = 0, timerStarted = false;
 
-            function refreshPanel() {
-                const list = document.getElementById("achievementList");
-                list.innerHTML = achievements.map(a => {
-                    const unlockedClass = unlocked[a.id] ? " unlocked" : "";
-                    const icon = unlocked[a.id] ? "✔️" : "🔒";
-                    return `<li class="achievement-item${unlockedClass}"><i class="fas ${a.icon}"></i> ${a.name} ${icon}</li>`;
-                }).join("");
-            }
+    // ----- Secret Reward & Certificate Elements -----
+    const rewardClaimBtn = document.getElementById('rewardClaimBtn');
+    const certOverlay = document.getElementById('certOverlay');
+    const certCanvas = document.getElementById('certCanvas');
+    const certClose = document.getElementById('certClose');
+    const certDownloadPng = document.getElementById('certDownloadPng');
+    const certDownloadJpg = document.getElementById('certDownloadJpg');
+    const allAchievementIds = achievements.map(a => a.id);
 
-            // Triggers
-            setTimeout(() => checkAchievement("welcome"), 1000);
-            document.querySelectorAll(".project-card").forEach(c => {
-                c.addEventListener("click", () => {
-                    projectClicks++;
-                    if(projectClicks >= 3) checkAchievement("curious");
-                });
-            });
-            window.addEventListener("load", () => {
-                if(!timerStarted) { timerStarted = true; setTimeout(() => checkAchievement("deep_dive"), 120000); }
-            });
-            const observer = new IntersectionObserver(([entry]) => {
-                if(entry.isIntersecting) checkAchievement("scroll_master");
-            }, { threshold: 0.2 });
-            const footer = document.querySelector("footer");
-            if(footer) observer.observe(footer);
-
-            document.addEventListener("click", e => {
-                if(e.target.closest("[data-gallery-trigger]")) {
-                    setTimeout(() => checkAchievement("gallery_seeker"), 200);
-                }
-            });
-
-            const toggleBtn = document.getElementById("achievementToggle");
-            const panel = document.getElementById("achievementPanel");
-            toggleBtn.addEventListener("click", (e) => {
-                e.stopPropagation();
-                panel.classList.toggle("open");
-            });
-            document.addEventListener("click", (e) => {
-                if(!panel.contains(e.target) && e.target !== toggleBtn && !e.target.closest(".achievement-toggle")) {
-                    panel.classList.remove("open");
-                }
-            });
-
+    // ----- Achievement Check (single definition) -----
+    window.checkAchievement = function(id) {
+        if (!unlocked[id]) {
+            unlocked[id] = true;
+            totalUnlocked++;
+            const a = achievements.find(x => x.id === id);
+            showToast((a ? a.name : id) + " unlocked!");
             refreshPanel();
+            checkAllUnlocked();
+        }
+    };
 
-            // ========== GUARDIAN CHATBOT ==========
-            const guardianPanel = document.getElementById('guardianPanel');
-            const guardianToggle = document.getElementById('guardianToggle');
-            const guardianClose = document.getElementById('guardianClose');
-            const guardianMessages = document.getElementById('guardianMessages');
-            const guardianSuggestions = document.getElementById('guardianSuggestions');
-            const guardianInput = document.getElementById('guardianInput');
-            const guardianSend = document.getElementById('guardianSend');
+    function checkAllUnlocked() {
+        if (totalUnlocked === allAchievementIds.length) {
+            rewardClaimBtn.classList.add('visible');
+            document.getElementById('achievementToggle').classList.add('has-reward');
+            showToast("Secret reward unlocked! 🎉");
+        }
+    }
 
-            let guardianData = [];               // loaded from chat.json
-            let guardianOpen = false;
-            let guardianLoadState = 'loading';    // 'loading' | 'ready' | 'error'
-            let loadingMsgEl = null;
-            let typingInterval = null;            // guards against overlapping typewriter animations
+    // ----- Certificate Functions -----
+    function drawCertificate() {
+        const ctx = certCanvas.getContext('2d');
+        const width = 1000, height = 700;
+        certCanvas.width = width;
+        certCanvas.height = height;
 
-            guardianPanel.addEventListener('click', (e) => e.stopPropagation());
+        // Background
+        ctx.fillStyle = '#151922';
+        ctx.fillRect(0, 0, width, height);
 
-            function setGuardianOpen(open) {
-                guardianOpen = open;
-                guardianPanel.classList.toggle('open', open);
-                guardianPanel.setAttribute('aria-hidden', String(!open));
-                guardianToggle.setAttribute('aria-expanded', String(open));
-                guardianToggle.classList.remove('has-unread');
-                if (open) {
-                    guardianInput.focus();
-                    checkAchievement("guardian_open");
-                    if (guardianLoadState === 'ready' && !guardianMessages.children.length) {
-                        showIntent('greeting');
-                    } else if (guardianLoadState === 'loading' && !loadingMsgEl) {
-                        loadingMsgEl = addMessage("Loading the Guardian's knowledge...", 'bot', null, { instant: true });
-                    }
-                }
-            }
+        // Outer border
+        ctx.strokeStyle = '#7c9cff';
+        ctx.lineWidth = 12;
+        ctx.strokeRect(20, 20, width - 40, height - 40);
 
-            guardianToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                setGuardianOpen(!guardianOpen);
-            });
+        // Inner border
+        ctx.strokeStyle = '#9ab2ff';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(40, 40, width - 80, height - 80);
 
-            guardianClose.addEventListener('click', (e) => {
-                e.stopPropagation();
-                setGuardianOpen(false);
-            });
+        // Title
+        ctx.fillStyle = '#f1f3f5';
+        ctx.textAlign = 'center';
+        ctx.font = 'bold 48px system-ui, sans-serif';
+        ctx.fillText('Certificate of Appreciation', width / 2, 150);
 
-            document.addEventListener('click', (e) => {
-                if (guardianOpen && !guardianPanel.contains(e.target) && !guardianToggle.contains(e.target)) {
-                    setGuardianOpen(false);
-                }
-            });
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && guardianOpen) setGuardianOpen(false);
-            });
+        // Subtitle
+        ctx.fillStyle = '#a7adb8';
+        ctx.font = '24px system-ui, sans-serif';
+        ctx.fillText('Awarded to', width / 2, 220);
 
-            function loadGuardianData() {
-                guardianLoadState = 'loading';
-                fetch('assets/chat.json')
-                    .then(res => {
-                        if (!res.ok) throw new Error('Network response not ok');
-                        return res.json();
-                    })
-                    .then(data => {
-                        guardianData = data;
-                        guardianLoadState = 'ready';
-                        if (loadingMsgEl) { loadingMsgEl.remove(); loadingMsgEl = null; }
-                        if (guardianOpen && !guardianMessages.children.length) showIntent('greeting');
-                    })
-                    .catch(err => {
-                        console.error('Failed to load chat.json:', err);
-                        guardianLoadState = 'error';
-                        if (loadingMsgEl) { loadingMsgEl.remove(); loadingMsgEl = null; }
-                        if (guardianOpen) {
-                            addMessage("I couldn't wake up just now - my knowledge failed to load.", 'bot error');
-                            guardianSuggestions.innerHTML = '';
-                            const retry = document.createElement('div');
-                            retry.className = 'guardian-suggestion-chip retry';
-                            retry.textContent = 'Try again';
-                            retry.addEventListener('click', () => {
-                                guardianSuggestions.innerHTML = '';
-                                addMessage("Trying again...", 'bot', null, { instant: true });
-                                loadGuardianData();
-                            });
-                            guardianSuggestions.appendChild(retry);
-                        }
-                    });
-            }
-            loadGuardianData();
+        // Name
+        ctx.fillStyle = '#7c9cff';
+        ctx.font = 'bold 40px system-ui, sans-serif';
+        ctx.fillText('Visitor', width / 2, 300);
 
-            function addMessage(text, sender, callback, opts) {
-                opts = opts || {};
-                const msgDiv = document.createElement('div');
-                msgDiv.className = `message ${sender}`;
-                guardianMessages.appendChild(msgDiv);
-                guardianMessages.scrollTop = guardianMessages.scrollHeight;
+        // Description
+        ctx.fillStyle = '#f1f3f5';
+        ctx.font = '22px system-ui, sans-serif';
+        const lines = [
+            'For unlocking all achievements and exploring',
+            'the interactive portfolio of Ikhlaq Zahir.',
+            'Thank you for your curiosity and engagement!'
+        ];
+        lines.forEach((line, i) => {
+            ctx.fillText(line, width / 2, 370 + i * 40);
+        });
 
-                if (sender === 'user' || opts.instant) {
-                    msgDiv.textContent = text;
-                    if (callback) callback();
-                    return msgDiv;
-                }
+        // Footer
+        ctx.fillStyle = '#a7adb8';
+        ctx.font = '18px system-ui, sans-serif';
+        ctx.fillText('Ikhlaq Zahir', width / 2, 570);
+        ctx.fillText('Game Development · AI · Interactive Systems', width / 2, 600);
+    }
 
-                if (typingInterval) clearInterval(typingInterval);
-
-                let i = 0;
-                typingInterval = setInterval(() => {
-                    msgDiv.textContent += text.charAt(i);
-                    i++;
-                    guardianMessages.scrollTop = guardianMessages.scrollHeight;
-                    if (i >= text.length) {
-                        clearInterval(typingInterval);
-                        typingInterval = null;
-                        if (callback) callback();
-                    }
-                }, 15);
-                return msgDiv;
-            }
-
-            function showIntent(intentId) {
-                const intent = guardianData.find(i => i.id === intentId);
-                if (!intent) return;
-                guardianSuggestions.classList.add('pending');
-                const answer = intent.answers[Math.floor(Math.random() * intent.answers.length)];
-                addMessage(answer, 'bot', () => {
-                    guardianSuggestions.classList.remove('pending');
-                    renderButtons(intent);
-                });
-            }
-
-            function renderButtons(intent) {
-                guardianSuggestions.innerHTML = '';
-                const buttons = intent.buttons || (intent.followUp ? intent.followUp.options : null);
-                if (buttons) {
-                    buttons.forEach(btn => {
-                        const chip = document.createElement('div');
-                        chip.className = 'guardian-suggestion-chip';
-                        chip.textContent = btn.label;
-                        chip.addEventListener('click', () => {
-                            addMessage(btn.label, 'user');
-                            showIntent(btn.next);
-                        });
-                        guardianSuggestions.appendChild(chip);
-                    });
-                    if (intent.followUp && intent.followUp.text) {
-                        const label = document.createElement('div');
-                        label.className = 'guardian-followup-text';
-                        label.textContent = intent.followUp.text;
-                        label.style.fontSize = '0.8rem';
-                        label.style.color = 'var(--text-muted)';
-                        label.style.marginTop = '5px';
-                        guardianSuggestions.appendChild(label);
-                    }
-                } else {
-                    const chip = document.createElement('div');
-                    chip.className = 'guardian-suggestion-chip';
-                    chip.textContent = 'Back to main';
-                    chip.addEventListener('click', () => showIntent('greeting'));
-                    guardianSuggestions.appendChild(chip);
-                }
-            }
-
-            function findBestIntent(message) {
-                const words = message.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(Boolean);
-                const wordSet = new Set(words);
-                let best = null, bestScore = 0;
-                guardianData.forEach(intent => {
-                    intent.questions.forEach(q => {
-                        const qWords = q.toLowerCase().split(/\s+/).filter(Boolean);
-                        const hits = qWords.filter(w => wordSet.has(w)).length;
-                        const score = hits / qWords.length; // fraction of the phrase matched
-                        if (hits > 0 && score > bestScore) {
-                            bestScore = score;
-                            best = intent;
-                        }
-                    });
-                });
-                return bestScore >= 0.5 ? best : null;
-            }
-
-            function handleUserMessage(message) {
-                addMessage(message, 'user');
-                const bestIntent = findBestIntent(message);
-                if (bestIntent) {
-                    checkAchievement("guardian_answer");
-                    showIntent(bestIntent.id);
-                } else {
-                    const fallback = [
-                        "I'm not sure about that. Try one of the buttons or ask about his background, projects, research, or contact.",
-                        "Hmm, I didn't understand. You can click a suggestion or ask about education, skills, projects, etc.",
-                        "I'm still learning. Maybe ask 'What are his research interests?' or 'Tell me about Wordle World'."
-                    ];
-                    addMessage(fallback[Math.floor(Math.random() * fallback.length)], 'bot');
-                }
-            }
-
-            function sendGuardianMessage() {
-                const text = guardianInput.value.trim();
-                if (!text || guardianLoadState !== 'ready') return;
-                guardianInput.value = '';
-                handleUserMessage(text);
-                checkAchievement("guardian_message");
-            }
-
-            guardianSend.addEventListener('click', sendGuardianMessage);
-            guardianInput.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter') { e.preventDefault(); sendGuardianMessage(); }
-            });
-        })();
+    rewardClaimBtn.addEventListener('click', function() {
+        certOverlay.classList.add('active');
+        certOverlay.setAttribute('aria-hidden', 'false');
+        drawCertificate();
     });
+
+    function closeCertificate() {
+        certOverlay.classList.remove('active');
+        certOverlay.setAttribute('aria-hidden', 'true');
+    }
+    certClose.addEventListener('click', closeCertificate);
+    certOverlay.addEventListener('click', function(e) {
+        if (e.target === certOverlay) closeCertificate();
+    });
+
+    certDownloadPng.addEventListener('click', function() {
+        const link = document.createElement('a');
+        link.download = 'certificate.png';
+        link.href = certCanvas.toDataURL('image/png');
+        link.click();
+    });
+    certDownloadJpg.addEventListener('click', function() {
+        const link = document.createElement('a');
+        link.download = 'certificate.jpg';
+        link.href = certCanvas.toDataURL('image/jpeg', 0.95);
+        link.click();
+    });
+
+    // ----- Toast & Panel Refresh -----
+    function showToast(msg) {
+        const t = document.getElementById("toast");
+        t.textContent = msg;
+        t.classList.add("show");
+        setTimeout(() => t.classList.remove("show"), 3000);
+    }
+
+    function refreshPanel() {
+        const list = document.getElementById("achievementList");
+        list.innerHTML = achievements.map(a => {
+            const unlockedClass = unlocked[a.id] ? " unlocked" : "";
+            const icon = unlocked[a.id] ? "✔️" : "🔒";
+            return `<li class="achievement-item${unlockedClass}"><i class="fas ${a.icon}"></i> ${a.name} ${icon}</li>`;
+        }).join("");
+    }
+
+    // ----- Achievement Triggers -----
+    setTimeout(() => checkAchievement("welcome"), 1000);
+    document.querySelectorAll(".project-card").forEach(c => {
+        c.addEventListener("click", () => {
+            projectClicks++;
+            if (projectClicks >= 3) checkAchievement("curious");
+        });
+    });
+    window.addEventListener("load", () => {
+        if (!timerStarted) { timerStarted = true; setTimeout(() => checkAchievement("deep_dive"), 120000); }
+    });
+    const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) checkAchievement("scroll_master");
+    }, { threshold: 0.2 });
+    const footer = document.querySelector("footer");
+    if (footer) observer.observe(footer);
+
+    document.addEventListener("click", e => {
+        if (e.target.closest("[data-gallery-trigger]")) {
+            setTimeout(() => checkAchievement("gallery_seeker"), 200);
+        }
+    });
+
+    // ----- Achievement Panel Toggle -----
+    const toggleBtn = document.getElementById("achievementToggle");
+    const panel = document.getElementById("achievementPanel");
+    toggleBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        panel.classList.toggle("open");
+    });
+    document.addEventListener("click", (e) => {
+        if (!panel.contains(e.target) && e.target !== toggleBtn && !e.target.closest(".achievement-toggle")) {
+            panel.classList.remove("open");
+        }
+    });
+
+    refreshPanel();
+
+    // ========== GUARDIAN CHATBOT ==========
+    const guardianPanel = document.getElementById('guardianPanel');
+    const guardianToggle = document.getElementById('guardianToggle');
+    const guardianClose = document.getElementById('guardianClose');
+    const guardianMessages = document.getElementById('guardianMessages');
+    const guardianSuggestions = document.getElementById('guardianSuggestions');
+    const guardianInput = document.getElementById('guardianInput');
+    const guardianSend = document.getElementById('guardianSend');
+
+    let guardianData = [];
+    let guardianOpen = false;
+    let guardianLoadState = 'loading';
+    let loadingMsgEl = null;
+    let typingInterval = null;
+
+    guardianPanel.addEventListener('click', (e) => e.stopPropagation());
+
+    function setGuardianOpen(open) {
+        guardianOpen = open;
+        guardianPanel.classList.toggle('open', open);
+        guardianPanel.setAttribute('aria-hidden', String(!open));
+        guardianToggle.setAttribute('aria-expanded', String(open));
+        guardianToggle.classList.remove('has-unread');
+        if (open) {
+            guardianInput.focus();
+            checkAchievement("guardian_open");
+            if (guardianLoadState === 'ready' && !guardianMessages.children.length) {
+                showIntent('greeting');
+            } else if (guardianLoadState === 'loading' && !loadingMsgEl) {
+                loadingMsgEl = addMessage("Loading the Guardian's knowledge...", 'bot', null, { instant: true });
+            }
+        }
+    }
+
+    guardianToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setGuardianOpen(!guardianOpen);
+    });
+
+    guardianClose.addEventListener('click', (e) => {
+        e.stopPropagation();
+        setGuardianOpen(false);
+    });
+
+    document.addEventListener('click', (e) => {
+        if (guardianOpen && !guardianPanel.contains(e.target) && !guardianToggle.contains(e.target)) {
+            setGuardianOpen(false);
+        }
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && guardianOpen) setGuardianOpen(false);
+    });
+
+    function loadGuardianData() {
+        guardianLoadState = 'loading';
+        fetch('assets/chat.json')
+            .then(res => {
+                if (!res.ok) throw new Error('Network response not ok');
+                return res.json();
+            })
+            .then(data => {
+                guardianData = data;
+                guardianLoadState = 'ready';
+                if (loadingMsgEl) { loadingMsgEl.remove(); loadingMsgEl = null; }
+                if (guardianOpen && !guardianMessages.children.length) showIntent('greeting');
+            })
+            .catch(err => {
+                console.error('Failed to load chat.json:', err);
+                guardianLoadState = 'error';
+                if (loadingMsgEl) { loadingMsgEl.remove(); loadingMsgEl = null; }
+                if (guardianOpen) {
+                    addMessage("I couldn't wake up just now - my knowledge failed to load.", 'bot error');
+                    guardianSuggestions.innerHTML = '';
+                    const retry = document.createElement('div');
+                    retry.className = 'guardian-suggestion-chip retry';
+                    retry.textContent = 'Try again';
+                    retry.addEventListener('click', () => {
+                        guardianSuggestions.innerHTML = '';
+                        addMessage("Trying again...", 'bot', null, { instant: true });
+                        loadGuardianData();
+                    });
+                    guardianSuggestions.appendChild(retry);
+                }
+            });
+    }
+    loadGuardianData();
+
+    function addMessage(text, sender, callback, opts) {
+        opts = opts || {};
+        const msgDiv = document.createElement('div');
+        msgDiv.className = `message ${sender}`;
+        guardianMessages.appendChild(msgDiv);
+        guardianMessages.scrollTop = guardianMessages.scrollHeight;
+
+        if (sender === 'user' || opts.instant) {
+            msgDiv.textContent = text;
+            if (callback) callback();
+            return msgDiv;
+        }
+
+        if (typingInterval) clearInterval(typingInterval);
+
+        let i = 0;
+        typingInterval = setInterval(() => {
+            msgDiv.textContent += text.charAt(i);
+            i++;
+            guardianMessages.scrollTop = guardianMessages.scrollHeight;
+            if (i >= text.length) {
+                clearInterval(typingInterval);
+                typingInterval = null;
+                if (callback) callback();
+            }
+        }, 15);
+        return msgDiv;
+    }
+
+    function renderLinks(intent) {
+        if (!intent.links || !intent.links.length) return;
+        const row = document.createElement('div');
+        row.className = 'guardian-links';
+        intent.links.forEach(link => {
+            const a = document.createElement('a');
+            a.className = 'guardian-link-btn';
+            a.href = link.url;
+            if (link.download) {
+                a.setAttribute('download', '');
+            } else if (link.url.indexOf('mailto:') !== 0 && link.url.indexOf('tel:') !== 0) {
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+            }
+            const icon = document.createElement('i');
+            icon.className = link.icon || 'fas fa-arrow-up-right-from-square';
+            a.appendChild(icon);
+            a.appendChild(document.createTextNode(link.label));
+            row.appendChild(a);
+        });
+        guardianMessages.appendChild(row);
+        guardianMessages.scrollTop = guardianMessages.scrollHeight;
+    }
+
+    function showIntent(intentId) {
+        const intent = guardianData.find(i => i.id === intentId);
+        if (!intent) return;
+        guardianSuggestions.classList.add('pending');
+        const answer = intent.answers[Math.floor(Math.random() * intent.answers.length)];
+        addMessage(answer, 'bot', () => {
+            renderLinks(intent);
+            guardianSuggestions.classList.remove('pending');
+            renderButtons(intent);
+        });
+    }
+
+    function renderButtons(intent) {
+        guardianSuggestions.innerHTML = '';
+        const buttons = intent.buttons || (intent.followUp ? intent.followUp.options : null);
+        if (buttons) {
+            buttons.forEach(btn => {
+                const chip = document.createElement('div');
+                chip.className = 'guardian-suggestion-chip';
+                chip.textContent = btn.label;
+                chip.addEventListener('click', () => {
+                    addMessage(btn.label, 'user');
+                    showIntent(btn.next);
+                });
+                guardianSuggestions.appendChild(chip);
+            });
+            if (intent.followUp && intent.followUp.text) {
+                const label = document.createElement('div');
+                label.className = 'guardian-followup-text';
+                label.textContent = intent.followUp.text;
+                label.style.fontSize = '0.8rem';
+                label.style.color = 'var(--text-muted)';
+                label.style.marginTop = '5px';
+                guardianSuggestions.appendChild(label);
+            }
+        } else {
+            const chip = document.createElement('div');
+            chip.className = 'guardian-suggestion-chip';
+            chip.textContent = 'Back to main';
+            chip.addEventListener('click', () => showIntent('greeting'));
+            guardianSuggestions.appendChild(chip);
+        }
+    }
+
+    function findBestIntent(message) {
+        const words = message.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(Boolean);
+        const wordSet = new Set(words);
+        let best = null, bestScore = 0;
+        guardianData.forEach(intent => {
+            intent.questions.forEach(q => {
+                const qWords = q.toLowerCase().split(/\s+/).filter(Boolean);
+                const hits = qWords.filter(w => wordSet.has(w)).length;
+                const score = hits / qWords.length;
+                if (hits > 0 && score > bestScore) {
+                    bestScore = score;
+                    best = intent;
+                }
+            });
+        });
+        return bestScore >= 0.5 ? best : null;
+    }
+
+    function handleUserMessage(message) {
+        addMessage(message, 'user');
+        const bestIntent = findBestIntent(message);
+        if (bestIntent) {
+            checkAchievement("guardian_answer");
+            showIntent(bestIntent.id);
+        } else {
+            const fallback = [
+                "I'm not sure about that. Try one of the buttons or ask about his background, projects, research, or contact.",
+                "Hmm, I didn't understand. You can click a suggestion or ask about education, skills, projects, etc.",
+                "I'm still learning. Maybe ask 'What are his research interests?' or 'Tell me about Wordle World'."
+            ];
+            addMessage(fallback[Math.floor(Math.random() * fallback.length)], 'bot');
+        }
+    }
+
+    function sendGuardianMessage() {
+        const text = guardianInput.value.trim();
+        if (!text || guardianLoadState !== 'ready') return;
+        guardianInput.value = '';
+        handleUserMessage(text);
+        checkAchievement("guardian_message");
+    }
+
+    guardianSend.addEventListener('click', sendGuardianMessage);
+    guardianInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') { e.preventDefault(); sendGuardianMessage(); }
+    });
+})();
 </script>
 
 </body>
