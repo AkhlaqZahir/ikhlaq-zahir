@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
     <style>
-        /* =========================================================
-           EXTRA STYLES FOR SIMULATIONS
-           ========================================================= */
+
 
         /* ---- In-Dev grid with simulation side-by-side ---- */
         .wip-sim-grid {
@@ -191,9 +189,6 @@
             border-color: rgba(124, 156, 255, 0.2);
         }
 
-        /* =========================================================
-           PROFILE CARD (ABOUT SECTION)
-           ========================================================= */
         .profile-card {
             display: flex;
             flex-direction: column;
@@ -262,9 +257,6 @@
             width: 100%;
         }
 
-        /* =========================================================
-           ACHIEVEMENT SYSTEM & GUARDIAN CHATBOT STYLES
-           ========================================================= */
         .achievement-panel {
             display: none;
             position: fixed;
@@ -1240,15 +1232,9 @@ CERTIFICATE OF APPRECIATION (secret reward)
     </div>
 </div>
 
-<!-- =========================================================
-JAVASCRIPT
-========================================================= -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
 
-        /* =========================================================
-           EXISTING: mobile menu, reveal, ripple, gallery, hero particles, navbar shrink
-           ========================================================= */
 
         // ---- mobile menu ----
         const menuButton = document.getElementById("mobileMenuButton");
@@ -1447,9 +1433,6 @@ JAVASCRIPT
         }, { passive: true });
 
 
-        /* =========================================================
-           NEW: SCIENTIFIC CIVILIZATION – MERGE SIMULATION (Canvas)
-           ========================================================= */
 
         const mergeCanvas = document.getElementById("mergeCanvas");
         if (mergeCanvas) {
@@ -1677,9 +1660,7 @@ JAVASCRIPT
             updateMerge();
         }
 
-        /* =========================================================
-           NEW: WORDLOCK – Grid Self-Assembly
-           ========================================================= */
+
         const gridEl = document.getElementById("wordlockGrid");
         if (gridEl) {
             const wordRows = [
@@ -1768,9 +1749,7 @@ JAVASCRIPT
             updateWordlock();
         }
 
-    }); // ===== END OF DOMContentLoaded =====
-    // (This closing was missing in the original file, causing a SyntaxError
-    //  that prevented the entire <script> block from executing.)
+    }); 
 
 (function() {
     // ========== ACHIEVEMENT SYSTEM ==========
