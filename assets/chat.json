@@ -1,11 +1,25 @@
 [
   {
     "id": "greeting",
-    "questions": ["hi", "hello", "hey", "who are you", "greetings"],
+    "questions": [
+    "hi", "hello", "salam","assalamualaikum","assalamu alaikum","hey", "who are you", "greetings", "yo", "sup",
+    "good morning", "good evening", "good afternoon", "howdy", "what's up",
+    "hi there", "hello guardian", "are you there", "can you help me",
+    "start", "begin", "let's talk", "who are you?", "what can you do",
+    "hey guardian", "yo guardian", "sup guardian", "hiya", "hii",
+    "helloo", "helo", "hey there", "good day", "greetings guardian",
+    "what's good", "how are you", "you there?", "guardian?", "bot?",
+    "chatbot?", "are you online", "are you awake", "wake up", "hello?",
+    "hiiii", "heya", "good to see you", "nice to meet you", "let's go",
+    "talk to me","help","salam alaikum", "aoa"
+  ],
     "answers": [
       "Hello there! I'm the Guardian of this portfolio. What would you like to know about?",
       "Greetings, traveler! Ask me anything about Ikhlaq Zahir.",
-      "Hi! I'm here to answer questions about Ikhlaq. What interests you?"
+      "Hi! I'm here to answer questions about Ikhlaq. What interests you?",
+      "Hey! I keep watch over this portfolio and everything in it. Where should we start?",
+      "Welcome. I know pretty much everything about Ikhlaq, his projects, and his research. Ask away.",
+      "Oh, a visitor! Curious about the person behind these projects, or the projects themselves?"
     ],
     "buttons": [
       { "label": "Tell me about Ikhlaq Zahir", "next": "about_menu" },
@@ -14,13 +28,119 @@
       { "label": "Skills", "next": "skills" }
     ]
   },
+   {
+        "id": "achievements",
+        "questions": [
+    "achievements", "achievement list", "how do i get achievements",
+    "how to unlock achievements", "what achievements are there",
+    "how do achievements work", "hidden achievements",
+    "how do achievements work?", "tell me about the trophy icon",
+    "what is the trophy for", "list all achievements",
+    "how many achievements are there", "unlock all achievements",
+    "what do achievements do", "explain the achievement system",
+    "how to complete achievements", "how to get all badges",
+    "what are the hidden trophies", "trophy list", "achievement guide",
+    "badges", "trophies", "unlock trophies", "what are the achievements",
+    "how to unlock all trophies", "what is the trophy button",
+    "how to get achievements", "what achievements exist",
+    "where are achievements", "show me achievements",
+    "achievement system", "hidden badges", "secret achievements",
+    "get all achievements", "complete all achievements",
+    "how to earn achievements", "what counts as achievements"
+  ],
+        "answers": [
+            "There's a little trophy icon floating in the corner - that's the achievement tracker. There are 8 to find: say hello to me, explore a few projects, stick around a bit, scroll all the way down, peek at some screenshots, open this chat, send me a message, and ask me something I actually have to think about. Some are obvious, a couple are sneaky. Find them all and something extra unlocks.",
+            "Eight achievements are scattered around this portfolio - some trigger just from browsing normally, others need a bit more curiosity. Click the trophy button to track your progress. Complete the full set and you'll get more than just bragging rights.",
+            "Keep an eye on the trophy icon - it fills up as you explore. Talking to me, browsing projects, and scrolling around all count. Collect every achievement and a secret reward unlocks.",
+            "There are 8 achievements hidden through the site, unlocked by actually exploring it - projects, scrolling, screenshots, and this very chat all count toward them. Finish the set for a surprise."
+        ],
+        "buttons": [
+            { "label": "What's the secret reward?", "next": "secret_reward" },
+            { "label": "Back to main", "next": "greeting" }
+        ]
+    },
+    {
+        "id": "secret_reward",
+        "questions": [
+    "secret reward","secret","whats the secret" ,"what is the secret reward", "what do i get",
+    "what happens when i unlock all achievements", "hidden reward",
+    "what's the prize", "what is the hidden prize",
+    "what is the reward for all achievements", "what's the surprise",
+    "what do I unlock", "what's the secret?", "tell me the secret",
+    "what happens after all achievements", "what is the big reward",
+    "what do you get for completing everything",
+    "is there a reward for finishing achievements",
+    "secret reward details", "what's the hidden reward",
+    "what is the prize for all achievements",
+    "what is the ultimate reward",
+    "what happens when all achievements are unlocked",
+    "what is the final reward", "reward for achievements",
+    "unlock secret reward", "how to get the secret reward",
+    "what is the special reward"
+  ],
+        "answers": [
+            "That's a secret 😏 You'll have to find it yourself - it's no fun if I spoil every surprise Ikhlaq worked hard to build.",
+            "Nice try. I'm not telling - part of the fun is discovering it yourself once you've earned every achievement.",
+            "A Guardian never reveals his secrets. Unlock all 8 achievements and you'll see exactly what I mean.",
+            "I could tell you... but where's the fun in that? Complete the set and find out for yourself."
+        ],
+        "buttons": [
+            { "label": "Show me the achievements", "next": "achievements" },
+            { "label": "Back to main", "next": "greeting" }
+        ]
+    },
+    {
+        "id": "cv_resume",
+        "questions": [
+    "cv", "resume", "download cv", "download resume", "view resume",
+    "view cv", "can i see his resume", "can i see his cv",
+    "send me his resume", "send me his cv",
+    "show me your resume", "show me your cv",
+    "can i download your cv", "can i download your resume",
+    "where is your cv", "give me your resume", "give me your cv",
+    "resume please", "cv please", "open resume", "open cv",
+    "view your resume", "view your cv", "send resume", "send cv",
+    "resume document", "cv document", "download cv file",
+    "get resume", "get cv", "show resume", "show cv",
+    "link to cv", "link to resume", "pdf resume", "pdf cv",
+    "curriculum vitae", "vitae", "job application document",
+    "work history document"
+  ],
+        "answers": [
+            "Of course - here's his CV, ready to view or download.",
+            "Here you go, straight from the source.",
+            "Sure thing, one tap and it's yours.",
+            "Here's his most up to date CV."
+        ],
+        "links": [
+            { "label": "View CV", "url": "uploads/My_Resume.pdf", "icon": "fas fa-eye", "download": false }
+        ],
+        "buttons": [
+            { "label": "Back to main", "next": "greeting" }
+        ]
+    },
   {
     "id": "about_menu",
-    "questions": ["about ikhlaq zahir", "tell me about him", "who is ikhlaq"],
+    "questions": [
+    "about ikhlaq zahir", "tell me about him", "who is ikhlaq", "ikhlaq",
+    "tell me about him", "about ikhlaq", "who is this person",
+    "who is the owner of this portfolio", "background of ikhlaq",
+    "info about ikhlaq zahir", "ikhlaq zahir biography",
+    "what is his story", "who is ikhlaq zahir?",
+    "about the developer", "biography", "story of ikhlaq",
+    "ikhlaq bio", "ikhlaq story", "who is this guy",
+    "who is the creator", "tell me about the guy",
+    "about the owner", "who made this portfolio",
+    "ikhlaq details", "more about ikhlaq", "personal background",
+    "who is he?", "introduce ikhlaq", "what's ikhlaq's story",
+    "what is ikhlaq known for"
+  ],
     "answers": [
       "Ikhlaq Zahir was born on 23rd Dec 2000 in District Ghizer of Gilgit Baltistan, often called the crown jewel of Pakistan. Born in a respectable family with a lawyer father, he was taught values and discipline. Want me to tell you more about his education, inspiration, goals, or something else?",
       "Ikhlaq is from Gilgit Baltistan, Pakistan. He's a CS graduate with a passion for game dev and AI. What aspect of his life would you like to explore?",
-      "Ikhlaq Zahir – a dreamer from the mountains of Gilgit. He's now a game developer and researcher. Shall I tell you about his education, inspiration, or professional philosophy?"
+      "Ikhlaq Zahir – a dreamer from the mountains of Gilgit. He's now a game developer and researcher. Shall I tell you about his education, inspiration, or professional philosophy?",
+      "He grew up in the mountains of Gilgit Baltistan and turned a childhood love of Sci-Fi into an actual career building games and AI systems. What would you like to dig into?",
+      "Short version: mountain kid, lawyer's son, CS graduate, now building games and researching AI. Long version available on request - education, inspiration, goals, tools, or contact?"
     ],
     "buttons": [
       { "label": "Education", "next": "about_education" },
@@ -34,11 +154,27 @@
   },
   {
     "id": "about_education",
-    "questions": ["education", "academic background", "study", "university"],
+    "questions": [
+    "education", "academic background", "study", "university",
+    "where did he go to school", "what degree does he have",
+    "college education", "academic qualifications",
+    "which university did he attend", "what did he study",
+    "his educational background", "schooling", "highest education",
+    "degree information", "what is he qualified in",
+    "education details", "where did he study",
+    "university info", "what school did he attend",
+    "academic history", "what is his major", "what did he major in",
+    "did he go to university", "what is his degree",
+    "education level", "what did he learn", "his studies",
+    "his academic qualifications", "university of management and technology?",
+    "aga khan school?", "what is his education"
+  ],
     "answers": [
       "Ikhlaq was always a high achiever and his extraordinary academic skills led him to study in the most prestigious school and college of Pakistan – Aga Khan Higher Secondary School. After that, he pursued Computer Science from the University of Management and Technology, Lahore.",
       "He attended Aga Khan Higher Secondary School and later earned a B.Sc. in Computer Science from UMT Lahore (2020–2024).",
-      "His academic journey: Aga Khan Higher Secondary School, then UMT Lahore for CS, with a focus on game development, AI, and HCI."
+      "His academic journey: Aga Khan Higher Secondary School, then UMT Lahore for CS, with a focus on game development, AI, and HCI.",
+      "Aga Khan Higher Secondary School first, then a Computer Science degree at UMT Lahore, where he leaned heavily into game dev, AI, and HCI coursework.",
+      "Solid academic pedigree: one of Pakistan's top secondary schools, followed by a CS degree from UMT Lahore focused on the intersection of games and intelligent systems."
     ],
     "followUp": {
       "text": "Want to know more about his education?",
@@ -50,11 +186,28 @@
   },
   {
     "id": "about_inspiration",
-    "questions": ["inspiration", "why this field", "what inspired him"],
+    "questions": [
+    "inspiration", "why this field", "what inspired him",
+    "what motivated him", "why did he become a developer",
+    "what got him into tech", "what influenced him",
+    "why game development", "what sparked his interest",
+    "what made him choose computer science",
+    "where does his passion come from",
+    "how did he get into this field",
+    "inspiration behind his career",
+    "what inspired him to be a developer",
+    "why computers", "why games", "why programming",
+    "what made him love technology", "why does he like sci-fi",
+    "iron man influence", "what is his inspiration",
+    "what drives his interest", "why did he choose this path",
+    "what got him interested in games"
+  ],
     "answers": [
       "From early childhood he had a strange fascination towards Sci-Fi and computers. The time he truly fell in love with science and technology was when he watched 'Iron Man'. This inspired him to pursue engineering and later leaned towards computer science for his love of games and development.",
       "His inspiration came from Sci-Fi and 'Iron Man'. That led him to engineering, then computer science, and finally game development.",
-      "A childhood love for science fiction, especially 'Iron Man', sparked his interest in technology and eventually game development."
+      "A childhood love for science fiction, especially 'Iron Man', sparked his interest in technology and eventually game development.",
+      "Blame Tony Stark, honestly. Watching 'Iron Man' as a kid lit a fire that took him from a general Sci-Fi obsession all the way to a computer science degree and a career building games.",
+      "It started with Sci-Fi movies and never really stopped. 'Iron Man' specifically pushed him toward engineering, and from there computer science and game development felt inevitable."
     ],
     "followUp": {
       "text": "Want to hear about his professional philosophy?",
@@ -66,11 +219,27 @@
   },
   {
     "id": "about_philosophy",
-    "questions": ["philosophy", "values", "professional philosophy"],
+    "questions": [
+    "philosophy", "values", "professional philosophy",
+    "what are his values", "what does he believe in",
+    "professional beliefs", "work philosophy", "what drives him",
+    "life philosophy", "what principles does he follow",
+    "his approach to work", "what is his mindset",
+    "what does he think about learning",
+    "philosophy of work", "what does he value most",
+    "what is important to him",
+    "what are his beliefs about learning",
+    "how does he view time", "what is his professional philosophy",
+    "what does he believe about knowledge",
+    "what are his work principles",
+    "what does he think about continuous learning"
+  ],
     "answers": [
       "He believes time is the ultimate teacher and the process of learning never stops at any age. Knowledge is growing every second, and he wants to wrap his arms around as much as he can while there's still time.",
-      "Ikhlaq’s philosophy: learning never ends; knowledge grows every second, and we should embrace it constantly.",
-      "He values continuous learning and believes in making the most of time to acquire knowledge."
+      "Ikhlaq's philosophy: learning never ends; knowledge grows every second, and we should embrace it constantly.",
+      "He values continuous learning and believes in making the most of time to acquire knowledge.",
+      "His core belief is simple: you're never done learning, and knowledge compounds every single day, so wasting time is the real loss.",
+      "He treats time as the ultimate teacher - every day is another chance to learn something, and he tries not to let that chance go to waste."
     ],
     "followUp": {
       "text": "Now, would you like to know his ultimate goal?",
@@ -82,11 +251,24 @@
   },
   {
     "id": "about_goals",
-    "questions": ["goals", "future goal", "what does he want to achieve"],
+    "questions": [
+    "goals", "future goal", "what does he want to achieve",
+    "future plans", "what does he want to achieve",
+    "career goals", "what is his dream", "what are his ambitions",
+    "long-term goals", "what is he working towards",
+    "what does he hope to accomplish", "ultimate goal",
+    "what is his vision", "what does he want to do in the future",
+    "what are his future goals", "what is his mission",
+    "what is he aiming for", "what is his ultimate ambition",
+    "what are his career aspirations", "what is his goal in life",
+    "what does he plan to build", "what is his business goal"
+  ],
     "answers": [
       "His ultimate future goal is to create one of the biggest Game Studios of the country that not only creates games but creates emotions and teaches something valuable every time.",
       "He dreams of building a major game studio in Pakistan that makes games which evoke emotions and impart wisdom.",
-      "His vision: a game studio that produces emotionally rich and educational games."
+      "His vision: a game studio that produces emotionally rich and educational games.",
+      "The long-term plan is a full-scale game studio - not just for entertainment, but one where every game leaves the player feeling something and having learned something.",
+      "He's aiming to build one of the country's leading game studios, one built around games that teach as much as they entertain."
     ],
     "followUp": {
       "text": "Shall I tell you about his major tools?",
@@ -98,11 +280,26 @@
   },
   {
     "id": "about_tools",
-    "questions": ["tools", "major tool", "software he uses"],
+    "questions": [
+    "tools", "major tool", "software he uses",
+    "what software does he use", "what technologies does he use",
+    "which programming languages", "what does he code in",
+    "development tools", "what stack does he use",
+    "what engine does he use", "does he use unity",
+    "does he use python", "what frameworks",
+    "what programming languages does he know",
+    "what tools does he work with", "what is his tech stack",
+    "what IDE does he use", "what game engine",
+    "what mobile development tools", "what AI tools",
+    "what is his primary language", "does he use android studio",
+    "what does he use for development", "what software does he prefer"
+  ],
     "answers": [
       "Ikhlaq frequently uses Python for procedural content generation algorithms and Android Studio for integration into apps/games. He has the most expertise using the Unity Engine, but given the lack of resources and scale of projects, he sticks to small-scale projects for now, though blueprints for bigger, ambitious projects are already ready.",
       "He uses Python for PCG, Android Studio for mobile, and Unity for larger game projects when resources allow. His ambition is bigger than his current tools.",
-      "His tools: Python (PCG), Android Studio (apps), and Unity (game engine). He's prepared for larger projects in the future."
+      "His tools: Python (PCG), Android Studio (apps), and Unity (game engine). He's prepared for larger projects in the future.",
+      "Day to day it's Python for procedural generation work, Android Studio for shipping mobile apps, and Unity when a project calls for a full game engine. He's already sketched out plans for bigger things once resources allow.",
+      "Python, Android Studio, and Unity cover most of his workflow - PCG algorithms, mobile deployment, and game development respectively. The scale of his projects is currently limited by resources, not ambition."
     ],
     "followUp": {
       "text": "Do you need his contact information?",
@@ -114,11 +311,30 @@
   },
   {
     "id": "about_contact",
-    "questions": ["contact", "how to reach", "email", "phone"],
+    "questions": [
+    "contact", "how to reach", "email", "phone",
+    "how do I get in touch", "how to contact him",
+    "contact information", "email address", "phone number",
+    "social media links", "where can I find him",
+    "how can I reach him", "whatsapp number", "linkedin profile",
+    "how do I contact ikhlaq", "contact details for ikhlaq",
+    "how to email him", "what is his phone number",
+    "what is his email", "contact info", "how can I talk to him",
+    "how to message him", "whatsapp contact", "linkedin url",
+    "github link", "social media", "how to follow him"
+  ],
     "answers": [
-      "He can be contacted via WhatsApp at +92 317 5958721, Gmail at akhlaqzahir810@gmail.com, and LinkedIn at linkedin.com/in/akhlaq-zahir-260831142. Feel free to reach him anytime.",
-      "Contact: WhatsApp +92 317 5958721, email akhlaqzahir810@gmail.com, LinkedIn linkedin.com/in/akhlaq-zahir-260831142.",
-      "You can reach Ikhlaq on WhatsApp, email, or LinkedIn. Details are in the contact section of the portfolio."
+      "He can be contacted via WhatsApp, Gmail, or LinkedIn. Feel free to reach him anytime using the buttons below.",
+      "You can reach Ikhlaq directly through email, WhatsApp, or LinkedIn - just tap a button below.",
+      "Reaching out is easy - email, WhatsApp, and LinkedIn are all one tap away below. He's usually quick to respond.",
+      "Contact details are below - pick whichever channel you prefer. He's happy to hear from recruiters, collaborators, or fellow developers alike."
+    ],
+    "links": [
+      { "label": "Email Ikhlaq", "url": "mailto:akhlaqzahir810@gmail.com", "icon": "fas fa-envelope" },
+      { "label": "WhatsApp", "url": "https://wa.me/923175958721", "icon": "fab fa-whatsapp" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/akhlaq-zahir-260831142/", "icon": "fab fa-linkedin" },
+      { "label": "GitHub", "url": "https://github.com/ikhlaq-zahir", "icon": "fab fa-github" },
+      { "label": "View CV", "url": "uploads/My_Resume.pdf", "icon": "fas fa-eye", "download": true }
     ],
     "buttons": [
       { "label": "Back to main menu", "next": "greeting" }
@@ -126,11 +342,26 @@
   },
   {
     "id": "projects_menu",
-    "questions": ["projects", "portfolio", "what has he built"],
+    "questions": [
+    "projects", "portfolio", "what has he built",
+    "show me your apps", "what have you made", "list your projects",
+    "what apps have you built", "tell me about your games",
+    "what software have you developed", "your portfolio projects",
+    "what are your works", "showcase", "what have you published",
+    "what projects do you have", "what has he built",
+    "list of projects", "all projects", "project list",
+    "work examples", "what has he created", "what has he developed",
+    "what is he working on", "current projects"
+  ],
     "answers": [
       "Ikhlaq has several projects. Which one would you like to know about?",
       "Here are his main projects. Pick one to learn more.",
-      "Choose a project:"
+      "Choose a project:",
+      "He's shipped a handful of Android apps and has a couple of bigger things in the oven. Which one has your attention?",
+      "From word puzzles to number puzzles to a full educational sim - take your pick."
+    ],
+    "links": [
+      { "label": "Browse all apps on Google Play", "url": "https://play.google.com/store/apps/developer?id=IsolatedVertex+Studios", "icon": "fab fa-google-play" }
     ],
     "buttons": [
       { "label": "Wordle World", "next": "wordle" },
@@ -144,11 +375,26 @@
   },
   {
     "id": "wordle",
-    "questions": ["wordle world", "wordle", "word puzzle"],
+    "questions": [
+    "wordle world", "wordle", "word puzzle",
+    "tell me about wordle world", "what is wordle world about",
+    "wordle game", "the word puzzle game", "wordle app",
+    "about wordle", "explain wordle world",
+    "what is that word game", "wordle world details",
+    "what is wordle", "the word game with story",
+    "the narrative word puzzle", "the project wordle world",
+    "what is wordle world project", "wordle world information",
+    "word puzzle game by ikhlaq", "his wordle game",
+    "the game wordle world"
+  ],
     "answers": [
-      "This was one of his earliest projects and has one of the strangest backstories. It incorporates a smart procedural generation algorithm that efficiently creates levels from a huge pool of words, handling 5–8 letter words with ease. Want to know the story behind this project?",
-      "Wordle World combines a narrative word puzzle with PCG. It has a fascinating origin story. Do you want to hear it?",
-      "A word-guessing adventure with a deep story and smart level generation. Shall I share the backstory?"
+      "This was one of his earliest projects and has one of the strangest backstories. It incorporates a smart procedural generation algorithm that efficiently creates levels from a huge pool of words, handling 5–8 letter words with ease. It's live and open for anyone to install right now. Want to know the story behind this project?",
+      "Wordle World combines a narrative word puzzle with PCG. It's in open testing, so you can grab it right away. It also has a fascinating origin story - do you want to hear it?",
+      "A word-guessing adventure with a deep story and smart level generation, available to install today. Shall I share the backstory?",
+      "One of his earliest and most personal projects. It's publicly installable right now, powered by a procedural level generator that handles 5-8 letter words on the fly. Curious about the story behind it?"
+    ],
+    "links": [
+      { "label": "Install Wordle World", "url": "https://play.google.com/store/apps/details?id=com.ivstudios.wordleworld2", "icon": "fab fa-google-play" }
     ],
     "followUp": {
       "text": "Want to know the story behind this project?",
@@ -160,11 +406,28 @@
   },
   {
     "id": "wordle_story_intro",
-    "questions": ["story behind wordle"],
+    "questions": [
+    "story behind wordle",
+    "how was wordle world created",
+    "what is the origin of wordle world",
+    "why did he make wordle world",
+    "wordle world backstory",
+    "the story behind the game",
+    "what's the history of wordle world",
+    "how did the idea come",
+    "how did he get the idea for wordle world",
+    "what inspired wordle world",
+    "the dream that inspired wordle world",
+    "where did wordle world come from",
+    "how did wordle world start",
+    "what led to wordle world",
+    "what is the story of its creation"
+  ],
     "answers": [
       "He says one night he had a strange dream that he kept on thinking about for weeks and couldn't get it out of his head. Neither could he explain it to his friends or near ones. So he wrote a story that covers that feeling and tries to convey it to the people. But he wasn't a writer; he couldn't write a book. However, there was something he could do to tell his story – build a game. So he did, and this is the result. Want to know what the story is about?",
       "The idea came from a recurring dream. He decided to turn that feeling into a game because words failed him. Want to hear the plot?",
-      "A dream inspired him to create Wordle World. The game is his way of telling a story that he couldn't put into words. Shall I explain the story?"
+      "A dream inspired him to create Wordle World. The game is his way of telling a story that he couldn't put into words. Shall I explain the story?",
+      "It began with a dream he couldn't shake for weeks. Since writing a novel wasn't in his skill set, he built a game instead - it turned out to be a much better fit. Want the plot?"
     ],
     "followUp": {
       "text": "Want to know what the story is about?",
@@ -176,11 +439,27 @@
   },
   {
     "id": "wordle_story_plot",
-    "questions": ["story of wordle", "what is the story"],
+    "questions": [
+    "story of wordle", "what is the story",
+    "what is the story of wordle world",
+    "what is the plot of wordle world",
+    "tell me the wordle world story",
+    "what's the story about",
+    "wordle world storyline",
+    "the narrative of wordle world",
+    "what is the plot",
+    "what is the story line",
+    "explain the wordle world plot",
+    "what is the main story",
+    "what is the plot about",
+    "what happens in wordle world",
+    "what is the game's story"
+  ],
     "answers": [
       "The story is about an entity called 'THE NOTHING' that existed before anything else. He had a kingdom of nothingness, but when THE LIGHT emerged, his kingdom was pushed away. Now it's back, devouring everything in existence one word at a time, and we have to save existence. Interestingly, Ikhlaq has already written the ending of the story. The entire story consists of 23 chapters, and every chapter gives the player a new perspective. Do you want to know how the story ends?",
       "It's about THE NOTHING, a primordial entity that returns to consume reality word by word. The full story has 23 chapters. Want to know the ending?",
-      "A cosmic tale of nothingness versus light, told through word puzzles. The ending is already written. Shall I reveal it?"
+      "A cosmic tale of nothingness versus light, told through word puzzles. The ending is already written. Shall I reveal it?",
+      "23 chapters, one primordial villain called THE NOTHING, and a world being unmade one word at a time. Ikhlaq already knows how it ends. Want the spoiler?"
     ],
     "followUp": {
       "text": "Do you want to know how the story ends?",
@@ -192,11 +471,30 @@
   },
   {
     "id": "wordle_story_ending",
-    "questions": ["ending of wordle story"],
+    "questions": [
+    "ending of wordle story",
+    "how does wordle world end",
+    "what is the ending",
+    "tell me the ending",
+    "what happens at the end of wordle world",
+    "does the story have an ending",
+    "what is the final chapter",
+    "how does the story end",
+    "what is the ending of the story",
+    "wordle world ending",
+    "what is the conclusion",
+    "how does it conclude",
+    "what happens in the end",
+    "tell me the ending of wordle world"
+  ],
     "answers": [
       "That's confidential 😉 but Ikhlaq says after this, people will not look at this world the same way they used to. So stay tuned. The first 3 chapters are already out and can be played in the game; more to come soon.",
       "The ending is a secret, but Ikhlaq promises it will change how players see the world. The first three chapters are playable now.",
-      "I can't reveal the ending, but it will be mind‑bending. The game currently includes the first three chapters."
+      "I can't reveal the ending, but it will be mind‑bending. The game currently includes the first three chapters.",
+      "Sworn to secrecy on that one. What I can say: the first three chapters are already playable, with more on the way."
+    ],
+    "links": [
+      { "label": "Install Wordle World", "url": "https://play.google.com/store/apps/details?id=com.ivstudios.wordleworld2", "icon": "fab fa-google-play" }
     ],
     "buttons": [
       { "label": "Other projects", "next": "projects_menu" },
@@ -205,11 +503,26 @@
   },
   {
     "id": "wordle_story_no_ending",
-    "questions": ["no ending"],
+    "questions": [
+    "no ending",
+    "i don't want to hear the ending",
+    "no spoilers",
+    "don't tell me the ending",
+    "skip the ending",
+    "not the ending",
+    "i'll pass on that",
+    "no, don't spoil",
+    "no spoilers please",
+    "i don't want spoilers",
+    "stop at the plot",
+    "don't reveal the ending",
+    "no ending please"
+  ],
     "answers": [
       "Alright, the story of Wordle World ends here. What other project do you want to talk about?",
       "Okay, no spoilers then. Which other project would you like to know about?",
-      "Fine, we'll leave the mystery intact. Choose another project."
+      "Fine, we'll leave the mystery intact. Choose another project.",
+      "Fair enough, mystery preserved. Where to next?"
     ],
     "buttons": [
       { "label": "Other projects", "next": "projects_menu" },
@@ -218,11 +531,24 @@
   },
   {
     "id": "hsk",
-    "questions": ["hsk vocabulary", "chinese", "language learning"],
+    "questions": [
+    "hsk vocabulary", "chinese", "language learning",
+    "tell me about hsk", "what is hsk vocabulary",
+    "chinese learning app", "hsk app", "what is the hsk app",
+    "hsk language app", "about hsk vocabulary", "hsk vocab",
+    "chinese vocabulary app", "hsk chinese", "hsk exam prep",
+    "what is hsk", "the hsk project",
+    "tell me about the chinese app", "language learning app"
+  ],
     "answers": [
-      "This was the second project after Wordle World. It focuses on preparing vocabulary for students taking the Chinese language test HSK. It covers all HSK levels from 1 to 6 and creates custom quizzes based on them. Quizzes include multiple choice, listening, and meaning. Users can track weak words and revise them instantly for better retention.",
-      "HSK Vocabulary is a language learning app for Chinese HSK exams. It has quizzes, progress tracking, and smart revision of weak words. It's in closed testing.",
-      "A vocabulary app for HSK levels 1–6, with custom quizzes (multiple choice, listening, meaning) and instant weak‑word revision."
+      "This was the second project after Wordle World. It focuses on preparing vocabulary for students taking the Chinese language test HSK. It covers all HSK levels from 1 to 6 and creates custom quizzes based on them. Quizzes include multiple choice, listening, and meaning. Users can track weak words and revise them instantly for better retention. It's currently in closed testing, so I'm sorry it's not open to the public just yet - if you'd like early access, reach out and Ikhlaq can add you to the tester list.",
+      "HSK Vocabulary is a language learning app for Chinese HSK exams, with quizzes, progress tracking, and smart revision of weak words. It's in closed testing right now, so a public install isn't available yet - my apologies for that. Email him if you'd like to be added as a tester.",
+      "A vocabulary app for HSK levels 1–6, with custom quizzes (multiple choice, listening, meaning) and instant weak‑word revision. It's still in closed testing, sorry about that - but Ikhlaq can add you to the tester list if you ask.",
+      "Covers all six HSK levels with adaptive quizzes and weak-word tracking. It's not public yet since it's in closed testing - apologies for the inconvenience. Want in? Just email him."
+    ],
+    "links": [
+      { "label": "View on Google Play (Closed Testing)", "url": "https://play.google.com/store/apps/details?id=com.ivstudios.hskvocabv2", "icon": "fab fa-google-play" },
+      { "label": "Email to Join Testers", "url": "mailto:akhlaqzahir810@gmail.com?subject=Tester%20Access%20Request%20-%20HSK%20Vocabulary&body=Hi%20Ikhlaq%2C%0A%0AI%27d%20love%20to%20be%20added%20to%20the%20closed%20testing%20list%20for%20HSK%20Vocabulary.", "icon": "fas fa-envelope" }
     ],
     "buttons": [
       { "label": "Other projects", "next": "projects_menu" },
@@ -231,11 +557,24 @@
   },
   {
     "id": "numatrix",
-    "questions": ["numatrix", "number puzzle", "cross-sum"],
+    "questions": [
+    "numatrix", "number puzzle", "cross-sum",
+    "tell me about numatrix", "what is numatrix",
+    "number puzzle game", "cross sum puzzle", "numatrix app",
+    "about numatrix", "the math puzzle game", "numatrix details",
+    "what is the number game", "numatrix project",
+    "numatrix info", "cross sum game", "the arithmetic puzzle",
+    "his number puzzle game", "the 10x10 puzzle"
+  ],
     "answers": [
-      "Numatrix is another masterpiece that incorporates procedural content generation. Imagine a 10×10 grid where every number in every cell must be valid for its row and column arithmetic. This game generates a valid level within 1 second, and all arithmetic happens in real time. There's also an experimental mode 'Number Forge' that uses arithmetic operations to reach a specific goal.",
-      "It's a cross‑sum puzzle with algorithmic level generation. Each 10×10 grid is solvable and generated instantly. Number Forge adds a creative arithmetic mode.",
-      "Numatrix challenges players with grid‑based arithmetic where every cell matters. It uses PCG to create valid boards and includes a sandbox mode."
+      "Numatrix is another masterpiece that incorporates procedural content generation. Imagine a 10×10 grid where every number in every cell must be valid for its row and column arithmetic. This game generates a valid level within 1 second, and all arithmetic happens in real time. There's also an experimental mode 'Number Forge' that uses arithmetic operations to reach a specific goal. It's currently in closed testing, so I apologize that it isn't publicly downloadable yet - let Ikhlaq know if you'd like to be added as a tester.",
+      "It's a cross‑sum puzzle with algorithmic level generation. Each 10×10 grid is solvable and generated instantly. Number Forge adds a creative arithmetic mode. It's still in closed testing at the moment, sorry it's not public - reach out by email if you want early access.",
+      "Numatrix challenges players with grid‑based arithmetic where every cell matters. It uses PCG to create valid boards and includes a sandbox mode. Currently closed testing only, my apologies - email Ikhlaq if you'd like to be added to the tester list.",
+      "A 10x10 arithmetic puzzle generated in under a second, plus an experimental 'Number Forge' sandbox mode. It's closed-testing only right now, so it can't be installed publicly yet - Ikhlaq can add testers on request though."
+    ],
+    "links": [
+      { "label": "View on Google Play (Closed Testing)", "url": "https://play.google.com/store/apps/details?id=com.ivstudios.numatrix", "icon": "fab fa-google-play" },
+      { "label": "Email to Join Testers", "url": "mailto:akhlaqzahir810@gmail.com?subject=Tester%20Access%20Request%20-%20Numatrix&body=Hi%20Ikhlaq%2C%0A%0AI%27d%20love%20to%20be%20added%20to%20the%20closed%20testing%20list%20for%20Numatrix.", "icon": "fas fa-envelope" }
     ],
     "buttons": [
       { "label": "Other projects", "next": "projects_menu" },
@@ -244,11 +583,21 @@
   },
   {
     "id": "wordlock",
-    "questions": ["wordlock", "procedural word puzzle", "word grid"],
+    "questions": [
+    "wordlock", "procedural word puzzle", "word grid",
+    "tell me about wordlock", "what is wordlock",
+    "wordlock project", "procedural word puzzle game",
+    "word grid puzzle", "about wordlock",
+    "the word lock puzzle", "wordlock details",
+    "what is wordlock about", "wordlock algorithm",
+    "wordlock puzzle generator", "the word grid generator",
+    "wordlock development", "what is the wordlock project"
+  ],
     "answers": [
       "This is procedural generation on steroids… imagine a 5×5 grid where every cell contains a letter. It can either participate in making a word or not, but if it does, it must contribute to its row and column simultaneously. The main reason it's still under development is that a simple 5×5 grid level generation took 45 minutes. Ikhlaq is thinking of creating a model with pre‑trained data, but data creation is taking time due to limited resources and CPU power.",
       "WordLock is a hardcore constraint‑satisfaction problem: generate a grid where every active letter forms valid words both across and down. Current algorithms are too slow (45 min for 5×5), so he's exploring ML‑assisted generation.",
-      "It's an in‑development puzzle generator. The challenge is simultaneous row/column word constraints. Ikhlaq is researching faster approaches, possibly using trained models."
+      "It's an in‑development puzzle generator. The challenge is simultaneous row/column word constraints. Ikhlaq is researching faster approaches, possibly using trained models.",
+      "Still in the prototype stage - the core problem is generating a 5x5 grid where every active row and column forms valid words simultaneously, which is a brutal constraint-satisfaction challenge. Current runs take up to 45 minutes per grid, so he's exploring machine-learning-assisted generation to speed things up."
     ],
     "buttons": [
       { "label": "Other projects", "next": "projects_menu" },
@@ -257,11 +606,25 @@
   },
   {
     "id": "memword",
-    "questions": ["memword", "vocabulary", "memory app"],
+    "questions": [
+    "memword", "vocabulary", "memory app",
+    "tell me about memword", "what is memword",
+    "memword app", "vocabulary app", "memory app",
+    "about memword", "the vocab retention app",
+    "memword details", "what is memword about",
+    "the memory retention app", "what is the vocab app",
+    "memword project", "his vocabulary building app",
+    "the neural anchor app"
+  ],
     "answers": [
-      "This is a vocabulary building app, not ordinary flip‑card apps. It's a memory retention system with core neural anchor methods that permanently engrave words in the brain. It includes Observe, Listen, Read, Write, daily 5 words, and the Knowledge Tower where a wrong block collapses the tower. It also has quizzes, IELTS/TOEFL marking, certificates, and result sharing. It's currently in closed testing.",
-      "MemWord uses a four‑step Neural Anchor process to make words unforgettable. It includes speech recognition, daily practice, and a Knowledge Tower game to reinforce learning. It's highly effective and in closed testing.",
-      "This app is built for deep vocabulary retention using multi‑sensory methods and gamified revision. Features include Knowledge Tower, quizzes, and shareable results."
+      "This is a vocabulary building app, not ordinary flip‑card apps. It's a memory retention system with core neural anchor methods that permanently engrave words in the brain. It includes Observe, Listen, Read, Write, daily 5 words, and the Knowledge Tower where a wrong block collapses the tower. It also has quizzes, IELTS/TOEFL marking, certificates, and result sharing. It's currently in closed testing, so my apologies that it isn't open to everyone yet - email Ikhlaq if you'd like to join the tester list.",
+      "MemWord uses a four‑step Neural Anchor process to make words unforgettable. It includes speech recognition, daily practice, and a Knowledge Tower game to reinforce learning. It's highly effective and still in closed testing right now - sorry it's not public yet, but you can request tester access.",
+      "This app is built for deep vocabulary retention using multi‑sensory methods and gamified revision. Features include Knowledge Tower, quizzes, and shareable results. It's in closed testing at the moment, apologies for that - reach out by email for early access.",
+      "Four learning steps - Observe, Listen, Read, Write - plus a Knowledge Tower game where a wrong answer literally topples your progress. It's closed testing only for now, so it's not publicly installable yet; Ikhlaq can add testers who reach out."
+    ],
+    "links": [
+      { "label": "View on Google Play (Closed Testing)", "url": "https://play.google.com/store/apps/details?id=com.ivstudios.memword2", "icon": "fab fa-google-play" },
+      { "label": "Email to Join Testers", "url": "mailto:akhlaqzahir810@gmail.com?subject=Tester%20Access%20Request%20-%20MemWord&body=Hi%20Ikhlaq%2C%0A%0AI%27d%20love%20to%20be%20added%20to%20the%20closed%20testing%20list%20for%20MemWord.", "icon": "fas fa-envelope" }
     ],
     "buttons": [
       { "label": "Other projects", "next": "projects_menu" },
@@ -270,11 +633,22 @@
   },
   {
     "id": "sciciv",
-    "questions": ["scientific civilization", "educational game", "simulation"],
+    "questions": [
+    "scientific civilization", "educational game", "simulation",
+    "tell me about scientific civilization",
+    "what is scientific civilization",
+    "the educational simulation game", "sci civ game",
+    "scientific civilization project", "about the science game",
+    "what is the simulation game", "scientific civilization details",
+    "what is sci civ", "the science simulation",
+    "what is the educational game", "scientific civilization info",
+    "his simulation project", "the tech tree game"
+  ],
     "answers": [
       "This is another ambitious project that will take a lot of time given the thought and effort required and overall complexity. The theme is simple: suppose you go back thousands of years in time and you have to explain the 21st century to the people of that time – not only explain but rebuild everything from scratch. This triggers users’ intrigue towards learning how things were actually built and how things work. This also has one of the greatest stories, and the story is in progress. This project incorporates all science and non‑science concepts.",
       "Scientific Civilization is a large‑scale educational simulation where you rebuild technology from raw materials. It uses a technology‑dependency model and has a rich narrative. It's in pre‑production.",
-      "In this game, you time‑travel to an ancient village and must reconstruct modern science and technology. It combines resource management, experimentation, and a deep story."
+      "In this game, you time‑travel to an ancient village and must reconstruct modern science and technology. It combines resource management, experimentation, and a deep story.",
+      "The pitch: you're stranded thousands of years in the past and have to rebuild the modern world from scratch, one discovery at a time. It's early in development, but it's the project Ikhlaq is most excited about long-term."
     ],
     "buttons": [
       { "label": "Other projects", "next": "projects_menu" },
@@ -283,11 +657,22 @@
   },
   {
     "id": "research",
-    "questions": ["research", "research interests", "what do you want to study"],
+    "questions": [
+    "research", "research interests", "what do you want to study",
+    "what are his research interests", "research areas",
+    "what does he research", "academic interests", "research topics",
+    "what is he interested in researching",
+    "what would he study in grad school",
+    "research focus", "research directions",
+    "what areas of research", "what does he want to research",
+    "research interest list", "what is his academic focus",
+    "research goals", "graduate research interests"
+  ],
     "answers": [
       "Ikhlaq's research interests include Game Development & Architecture, Game AI, HCI, Procedural Content Generation, Educational Games, and XR/Immersive Experiences.",
       "He wants to explore how games can teach complex concepts through procedural generation, adaptive AI, and interactive simulation. His graduate focus would be at the intersection of these fields.",
-      "His research goals: intelligent game systems, PCG for coherent open worlds, human-AI collaboration in games, and using games for learning."
+      "His research goals: intelligent game systems, PCG for coherent open worlds, human-AI collaboration in games, and using games for learning.",
+      "Broadly: game architecture, game AI, HCI, procedural generation, educational games, and XR. If it involves making interactive systems smarter or more meaningful, he's interested."
     ],
     "buttons": [
       { "label": "Back to main", "next": "greeting" }
@@ -295,11 +680,20 @@
   },
   {
     "id": "skills",
-    "questions": ["skills", "tech stack", "technologies", "what can you do"],
+    "questions": [
+    "skills", "tech stack", "technologies", "what can you do",
+    "what are his skills", "technical skills", "what is he good at",
+    "what languages does he know", "what can he do", "expertise",
+    "competencies", "what technologies does he know",
+    "skill set", "what is he proficient in",
+    "what are his abilities", "what programming languages",
+    "what software skills", "what tools can he use", "his skills list"
+  ],
     "answers": [
       "Ikhlaq is skilled in Unity/C#, Kotlin/Android, Python/PyTorch, and UI/UX design. He works with game engines, procedural generation, AI, and HCI.",
       "Core skills: Game Development (Unity, C#), Android (Kotlin, Jetpack Compose), AI/ML (Python, PyTorch), and Human-Computer Interaction.",
-      "He's proficient in C#, Kotlin, Python, JavaScript, and tools like Unity, Android Studio, PyTorch, and Hugging Face. His focus is interactive systems."
+      "He's proficient in C#, Kotlin, Python, JavaScript, and tools like Unity, Android Studio, PyTorch, and Hugging Face. His focus is interactive systems.",
+      "Unity and C# for games, Kotlin and Jetpack Compose for Android, Python and PyTorch for AI/ML, plus a solid grounding in HCI and UI/UX design."
     ],
     "buttons": [
       { "label": "Back to main", "next": "greeting" }
@@ -307,11 +701,22 @@
   },
   {
     "id": "pcg",
-    "questions": ["procedural content generation", "pcg", "how does pcg work"],
+    "questions": [
+    "procedural content generation", "pcg", "how does pcg work",
+    "what is procedural generation", "procedural content",
+    "how does he use pcg", "explain procedural content generation",
+    "pcg in games", "what is algorithmic generation",
+    "how does procedural generation work",
+    "what is procedural content generation",
+    "procedural generation explained", "how does pcg work",
+    "what is pcg", "procedural content generation in his projects",
+    "what does procedural generation mean"
+  ],
     "answers": [
       "Procedural Content Generation (PCG) is using algorithms to create game content automatically. Ikhlaq is fascinated by how to generate not just puzzles but entire coherent worlds that respect objectives and narrative.",
       "PCG means designing rules that produce valid, interesting content. Ikhlaq's work in WordLock and Numatrix involves constraint-based generation—ensuring every output is solvable and meaningful.",
-      "Ikhlaq explores PCG for complex environments: generating levels, quests, and worlds that don't contradict game logic or player goals. He's especially interested in open-world generation with narrative coherence."
+      "Ikhlaq explores PCG for complex environments: generating levels, quests, and worlds that don't contradict game logic or player goals. He's especially interested in open-world generation with narrative coherence.",
+      "In short, algorithms writing the content instead of a human. Ikhlaq applies this to word grids, number puzzles, and eventually hopes to scale it up to entire coherent worlds."
     ],
     "buttons": [
       { "label": "Back to main", "next": "greeting" }
@@ -319,11 +724,22 @@
   },
   {
     "id": "ai_ml",
-    "questions": ["ai", "machine learning", "ml", "artificial intelligence", "pytorch", "llm"],
+    "questions": [
+    "ai", "machine learning", "ml", "artificial intelligence",
+    "pytorch", "llm", "does he know ai",
+    "machine learning experience", "what ai experience does he have",
+    "artificial intelligence skills", "deep learning",
+    "neural networks", "what ml work has he done",
+    "llm experience", "ai knowledge", "ml background",
+    "does he work with pytorch", "does he use python for ai",
+    "what ai projects", "what is his ai experience",
+    "machine learning knowledge", "ai skills", "ai expertise"
+  ],
     "answers": [
       "Ikhlaq works with Python, PyTorch, and LLMs. He's interested in AI for game systems—NPC behavior, adaptive difficulty, and AI-assisted development.",
       "Yes, he has ML fundamentals, generative AI, and large language model experience. His focus is on using AI to enhance games and interactive learning.",
-      "He uses PyTorch and Hugging Face for experiments. His research includes how AI agents can become intelligent tutors or companions in games."
+      "He uses PyTorch and Hugging Face for experiments. His research includes how AI agents can become intelligent tutors or companions in games.",
+      "Python and PyTorch are his go-to tools, and he's particularly interested in applying AI to NPC behavior, adaptive difficulty, and AI-assisted game development workflows."
     ],
     "buttons": [
       { "label": "Back to main", "next": "greeting" }
@@ -331,11 +747,22 @@
   },
   {
     "id": "game_dev",
-    "questions": ["game development", "unity", "game engine", "c#", "game developer"],
+    "questions": [
+    "game development", "unity", "game engine", "c#", "game developer",
+    "is he a game developer", "game development experience",
+    "what game engines does he use", "does he use unity",
+    "what games has he made", "game design skills", "game programming",
+    "what game development experience does he have",
+    "does he make games", "game dev background",
+    "game engine proficiency", "unity experience",
+    "c# game development", "game architecture",
+    "game systems design", "his game development work"
+  ],
     "answers": [
       "Ikhlaq develops games in Unity with C#. He's built 2D and 3D projects, designed game systems, AI, pathfinding, and procedural generation. His latest is the educational simulation 'Scientific Civilization'.",
       "He is a game developer using Unity and C#. His portfolio includes shipped Android games and a large-scale educational game in development.",
-      "He has deep experience in game architecture, mechanics, and systems. From puzzle games to simulation, he loves building interactive worlds."
+      "He has deep experience in game architecture, mechanics, and systems. From puzzle games to simulation, he loves building interactive worlds.",
+      "Unity and C# are his primary game-dev toolkit, covering everything from 2D puzzle mechanics to AI and pathfinding for larger simulation projects."
     ],
     "buttons": [
       { "label": "Back to main", "next": "greeting" }
@@ -343,11 +770,25 @@
   },
   {
     "id": "android",
-    "questions": ["android", "kotlin", "mobile", "app development", "google play"],
+    "questions": [
+    "android", "kotlin", "mobile", "app development", "google play",
+    "does he make android apps", "android development experience",
+    "what mobile apps has he built", "kotlin developer",
+    "android apps portfolio", "google play developer",
+    "mobile app development", "android app development",
+    "does he develop for android", "what android apps",
+    "kotlin experience", "jetpack compose", "android projects",
+    "his android apps", "mobile development skills",
+    "android studio experience"
+  ],
     "answers": [
       "Ikhlaq builds Android apps with Kotlin and Jetpack Compose. He has multiple apps on Google Play (open/closed testing), including Wordle World, Numatrix, MemWord, and HSK Vocabulary.",
       "His Android stack includes Kotlin, Android SDK, Jetpack Compose, SQLite, and in-app billing. He handles the full cycle from concept to deployment.",
-      "He has independently published several Android applications. You can find them on Google Play under 'IsolatedVertex Studios'."
+      "He has independently published several Android applications. You can find them on Google Play under 'IsolatedVertex Studios'.",
+      "Kotlin and Jetpack Compose end to end - concept, build, and Play Store deployment - across four published apps so far."
+    ],
+    "links": [
+      { "label": "Browse all apps on Google Play", "url": "https://play.google.com/store/apps/developer?id=IsolatedVertex+Studios", "icon": "fab fa-google-play" }
     ],
     "buttons": [
       { "label": "Back to main", "next": "greeting" }
@@ -355,11 +796,28 @@
   },
   {
     "id": "contact",
-    "questions": ["contact", "email", "linkedin", "how to reach", "whatsapp"],
+    "questions": [
+    "contact", "email", "linkedin", "how to reach", "whatsapp",
+    "how do I contact him", "where can I reach him",
+    "contact details", "social media", "whatsapp",
+    "email him", "linkedin", "github",
+    "contact information", "how to get in touch with ikhlaq",
+    "how to message him", "whatsapp number",
+    "email address for ikhlaq", "linkedin profile",
+    "github link", "contact methods"
+  ],
     "answers": [
-      "You can contact Ikhlaq via email at akhlaqzahir810@gmail.com, or find him on LinkedIn and GitHub. Links are in the contact section below.",
-      "Email: akhlaqzahir810@gmail.com | WhatsApp: +92 317 5958721 | LinkedIn: linkedin.com/in/akhlaq-zahir-260831142",
-      "Check the 'Contact' section for his email, LinkedIn, WhatsApp, and other links. His portfolio is akhlaqzahir.github.io/ikhlaq-zahir."
+      "You can contact Ikhlaq via email, WhatsApp, or find him on LinkedIn and GitHub. Just tap a button below.",
+      "Email, WhatsApp, LinkedIn, GitHub - pick whichever works best for you, all linked below.",
+      "Reaching him is easy - the buttons below go straight to his email, WhatsApp, LinkedIn, and GitHub.",
+      "Here's every way to reach him, one tap away below. He's generally quick to reply."
+    ],
+    "links": [
+      { "label": "Email Ikhlaq", "url": "mailto:akhlaqzahir810@gmail.com", "icon": "fas fa-envelope" },
+      { "label": "WhatsApp", "url": "https://wa.me/923175958721", "icon": "fab fa-whatsapp" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/akhlaq-zahir-260831142/", "icon": "fab fa-linkedin" },
+      { "label": "GitHub", "url": "https://github.com/ikhlaq-zahir", "icon": "fab fa-github" },
+      { "label": "View CV", "url": "uploads/My_Resume.pdf", "icon": "fas fa-eye", "download": false }
     ],
     "buttons": [
       { "label": "Back to main", "next": "greeting" }
