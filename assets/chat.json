@@ -76,7 +76,7 @@
     "The crown jewel of Pakistan is Gilgit Baltistan – a region of towering peaks, turquoise rivers, and ancient traditions. For Ikhlaq, it's not just a scenic postcard; it's the place that taught him to dream big despite isolation. He's always eager to give back to his community through education and technology."
   ],
   "buttons": [
-    { "label": "His childhood", "next": "computer_journey" },
+    { "label": "His childhood", "next": "about_menu" },
     { "label": "Main menu", "next": "greeting" }
   ]
 },
